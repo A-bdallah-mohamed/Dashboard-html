@@ -2,11 +2,16 @@
  max-height: 200px;
  max-width: 800px;
 }
+.p ,p{
+  white-space: nowrap;        /* keep text on one line */
+  overflow: hidden;           /* hide overflowing text */
+  text-overflow: ellipsis;    /* add the dots (…) */
+}
 body{
     background-color: #f3f7fe;
 }
 .sidebar{
-    padding: 35px 0px;
+    padding: 0 0 20px 0;
     background-color: white;
     height: 100%;
     align-items: center;
@@ -14,6 +19,10 @@ body{
     flex-direction: column;
     position: fixed;
     width: 250px;
+    justify-content: space-between;
+}
+.sidebarcontainer{
+    width: 270px;
 }
 .grayline{
     width: 100%;
@@ -22,7 +31,7 @@ body{
 }
 .sidebar .imgcontainer{
     max-width: 80%;
-    padding: 0px 25px 35px 25px;
+    padding: 35px 25px 35px 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +73,7 @@ border-right: 3px solid ;
     flex-direction: column;
 }
 #content{
-    padding: 20px 50px;
+    padding: 20px 20px 20px 50px;
     width: 100%;
     overflow-y: auto;
 }
@@ -73,6 +82,10 @@ border-right: 3px solid ;
 display: flex;
 justify-content: space-between;
 align-items: center;
+}
+.getpro{
+    cursor: pointer;
+    max-width: 100%;
 }
 .section .sectionhead p,.section .sectionhead h1{
 margin: 0;
@@ -117,7 +130,7 @@ font-size: 12px;
 }
 
 .nftmarketbannercontent{
-    padding: 30px;
+    padding: 45px;
     height: 100%;
     max-height: 100%;
     color: white;
@@ -126,10 +139,10 @@ font-size: 12px;
     justify-content: space-between;
 }
 .nftmarketbannercontent h4{
-    font-size:  clamp(14px, 2vw + 10px, 18px);
+    font-size:  clamp(14px, 2vw + 10px, 25px);
 }
 .nftmarketbannercontent p{
-  font-size: clamp(1px, 2vw, 18px);
+  font-size: clamp(1px, 2vw, 12px);
 }
 .nftmarketbannercontent .buttoncontainer{
         font-size: 13px;
@@ -150,20 +163,32 @@ padding: 13px 20px;
     font-weight: 600;
     cursor: pointer;
 }
-.nft{
+.filter.active{
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 15px;
+}
+.nftscontainer .nft{
     background-color: white;
     padding: 25px 15px;
     border-radius: 18px;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
-.nft img{
+.nftscontainer .nft img{
     max-width: 100%;
     border-radius: 16px;
     min-width: 100%;
 }
-.nft p{
+.nftscontainer .nft p{
     margin: 0;
 }
-.nft button{
+.nftscontainer{
+    height: 100%;
+}
+.nftscontainer .nft button{
     border: none;
     background-color: #0b0479;
     color: white;
@@ -173,5 +198,296 @@ padding: 13px 20px;
     font-size: 13px;
 }
 .textgray{
-    color: rgb(176, 176, 176);
+    color: #6b7fae;
+}
+.button{
+    color: #4018fd;
+    background-color: #f2f6fd;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-weight: 500;
+}
+.topcreators{
+    background-color: white;
+border-radius: 15px;
+flex-grow: 1;
+}
+.topcreators .header{
+    padding: 20px 20px 5px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.085);
+
+}
+.topcreators .header p{
+margin-bottom: 5px;
+}
+.topcreators .body{
+    padding: 15px 15px;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.topcreators .body p{
+    color: #9faed0;
+    margin: 0;
+}
+.topcreators .header p{
+    color: #9faed0;
+    font-weight: 500;
+}
+.creator{
+    display: flex;
+    align-items: center;
+}
+.creatorname{
+    width: 50%;
+    font-weight: 500;
+    color: #253774;
+}
+.rating{
+    height: 10px;
+    width: 20%;
+    border-radius: 50px;
+    background-color: #edf4fb;
+}
+.rating .indicator{
+    background-color: #4017fd;
+    height: 100%;
+        border-radius: 50px;
+
+}
+.History{
+    background-color: white;
+border-radius: 15px;
+padding: 20px;
+flex-grow: 1;
+display: flex;
+flex-direction: column;
+gap: 20px;
+
+justify-content: center;
+}
+.History .nft{
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease all;
+}
+
+.History .nft p{
+margin: 0;
+}
+.history .nft .imgcontainer{
+    width: 50%;
+}
+
+.History .nft:hover{
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.085);
+      border-radius: 15px;
+      
+}
+.navv{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 30px;
+}
+footer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: rgb(185, 185, 185);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+footer ul{
+    display: flex;
+  flex-direction: row;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.fav{
+    position: absolute;
+    top: 10px;
+    display: flex;
+    right: 10px;
+ max-width: 20%;
+}
+.History .imgcontainer img{
+    width: 80px;
+}
+@media (max-width: 1600px) {
+.History .nft{
+    font-size: 12px;
+    padding: 7px 20px;
+}
+
+.nftscontainer .nft p {
+font-size: 12px;
+}
+
+
+}
+@media (max-width: 1500px) {
+.nftscontainer .nft{
+    font-size: 11px;
+}
+.History{
+    gap: 0px;
+}
+
+.History .nft{
+    font-size: 10px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.creatorname{
+    font-size: 12px;
+}
+.topcreators .header,.w-25{
+    font-size: 10px;
+}
+.rating{
+    height: 5px;
+}
+   .History .imgcontainer img{
+        width: 60px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .filter{
+        font-size: 12px;
+    }
+.nftscontainer .nft{
+    padding: 15px 10px;
+}
+.nftscontainer .nft p {
+font-size: 11px;
+}
+.nftscontainer .nft button{
+    font-size: 10px;
+}
+
+.History .header{
+    font-size: 12px;
+}
+   .History .imgcontainer img{
+        width: 60px;
+    }
+
+        .imgcontainer p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 85%; /* ensure it knows its limit */
+}
+
+
+
+}
+
+@media (max-width: 1300px) {
+    .creatorname img{
+        max-width: 20px;
+        max-height: 20px;
+    }
+    .nftmarketbannercontent h4{
+        font-size: 20px;
+    }
+    .nftmarketbannercontent .buttoncontainer button {
+    padding: 10px 15px;
+    }
+    .fav{
+    position: absolute;
+    top: 10px;
+    display: flex;
+    right: 10px;
+ max-width: 15%;
+}
+    .filter{
+        font-size: 11px;
+    }
+.nftscontainer .nft{
+    padding: 15px 10px;
+}
+.nftscontainer .nft p {
+font-size: 9px;
+}
+.nftscontainer .nft button{
+    font-size: 8px;
+}
+.creatorname{
+    font-size: 10px;
+}
+   .History .imgcontainer img{
+        width: 55px;
+    }
+
+    
+}
+
+@media (max-width : 1200px) {
+
+ .filter{
+    font-size: 10px;
+ }
+  .nftscontainer h5{
+    font-size: 15px;
+  }
+    .horizontal{
+        max-width: 70px !important;
+    }
+    .sidebar{
+        width: 200px;
+    }
+    .sidebarcontainer{
+        width: 220px;
+    }
+       .History .imgcontainer img{
+        width: 40px;
+    }
+}
+
+@media (max-width : 1100px) {
+  
+    .History .imgcontainer img{
+        width: 40px;
+    }
+    .History .nft{
+        font-size: 7px;
+    }
+    .nftscontainer .nft p{
+font-size: 8px;
+    }
+ 
+    .horizontal{
+        max-width: 50px !important;
+    }
+}
+
+
+@media (max-width : 1060px) {
+    .nftscontainer .nft p{
+font-size: 7px;
+    }
+ .nftscontainer .nft button{
+    font-size: 6px;
+ }
+    .horizontal{
+        max-width: 50px !important;
+    }
 }

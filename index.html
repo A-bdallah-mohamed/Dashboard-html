@@ -12,8 +12,9 @@
 
 <body>
     <div class="d-flex">
-        <div class="position-relative" style="width: 300px;">
+        <div class="position-relative sidebarcontainer" >
         <div class="sidebar colormain flex-grow-1">
+            <div class="d-flex flex-column align-items-center">
             <div class="imgcontainer">
             <img src="./Assets/Logo.png" class="logo" alt="logo">
             </div>
@@ -26,6 +27,10 @@
                 <li><i class="bi bi-person-fill"></i>Profile</li>
                 <li><i class="bi bi-lock-fill"></i>Sign in</li>
             </ul>
+</div>
+<div style="max-width: 100%; max-height: auto; padding: 5px;">
+<img src="./Assets/Get PRO.png" alt="" class="getpro">
+</div>  
         </div>
         </div>
   <div id="content" class="colormain">
@@ -33,7 +38,7 @@
 
             <div class="Dashboard section ">
             <div class="sectionhead d-flex">
-            <div> <p>page/Dashboard</p><h4>Dashboard</h4></div>
+            <div> <p>page / Dashboard</p><h4>Dashboard</h4></div>
             <div class="searchcontainer">
 <div class="inputcontainer">
     <i class="bi bi-search"></i>
@@ -47,13 +52,14 @@
             </div>
             
           </div>
+          <div>a</div>
                 <canvas id="Dashboard"></canvas>
                 </div>
 
                 
             <div class="NFTMarketplace section active">
              <div class="sectionhead d-flex">
-            <div> <p>page/NFT Marketplace</p><h4>NFT Marketplace</h4></div>
+            <div> <p class="textgray" style="font-weight: 500;">page / NFT Marketplace</p><h4 class="fw-bold">NFT Marketplace</h4></div>
             <div class="searchcontainer">
 <div class="inputcontainer">
     <i class="bi bi-search"></i>
@@ -70,9 +76,9 @@
             
           </div>
 <div class="row mt-3">
-    <div class="col-7">
-        <div class="row">
-            <div class="col-12 position-relative p-0"> 
+    <div class="col-8" style="min-height: 100%;">
+        <div class="row nftscontainer">
+            <div class="col-12 position-relative p-0 d-flex"> 
 
                 <div style="background-image: url(./Assets/Products\ 2.png); height: 250px; width: 100%;background-size: cover; border-radius: 15px;" >
 <div class="nftmarketbannercontent">
@@ -94,8 +100,8 @@
 
           <div class="d-flex justify-content-between">
           <h5>Trending NFTs</h5>
-          <div class="d-flex gap-5">
-                <div class="filter">Arts</div>
+          <div class="d-flex gap-xl-5 gap-3">
+                <div class="filter active">Arts</div>
                 <div class="filter">Music</div>
                 <div class="filter">Collectibles</div>
                 <div class="filter">Sports</div>
@@ -108,16 +114,24 @@
 
 <div class="col-4 ps-0">
     <div class="nft">
+        <div class="position-relative">
+            <div class="fav">
+                <img src="./Assets/Badge Stats (Favorite).png" alt="">
+            </div>
     <img src="./Assets/fakurian-design-kakvfQBniyI-unsplash 1.png" alt="">
-    <div>
-        <div class="mt-3">
-        <p class="fw-bold m-0">Abstract Colors</p>
     </div>
-        <p class="textgray">By Esthera Jackson</p>
+    <div class="d-flex align-items-center justify-content-between mt-2">
+        <div >
+        <p class="fw-bold m-0">Abstract Colors</p>
+                <p class="textgray">By Esthera Jackson</p>
 
     </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-4">
-        <p style="color: #4017fd; font-weight: 500; font-size: 13px;">Current Bid: 0.91 ETH</p>
+    <div>
+<img src="./Assets/Avatars Group 1 (Horizontal).png"  al class="horizontal"t="">
+</div>
+    </div>
+    <div class="d-flex w-100 justify-content-between align-items-center mt-2 mt-xl-4">
+        <p style="color: #4017fd; font-weight: 500;">Current Bid: 0.91 ETH</p>
         <button>Place Bid</button>
     </div>
     </div>
@@ -127,16 +141,23 @@
 
 <div class="col-4 ps-0">
     <div class="nft">
+        <div class="position-relative">
+            <div class="fav">
+                <img src="./Assets/Badge Stats (Favorite).png" alt="">
+            </div>
     <img src="./Assets/fakurian-design-58Z17lnVS4U-unsplash (1) 1.png" alt="">
-    <div>
-        <div class="mt-3">
-        <p class="fw-bold m-0">Abstract Colors</p>
     </div>
-        <p class="textgray">By Nick Wilson</p>
+    <div class="d-flex align-items-center justify-content-between my-2">
+        <div>
+        <p class="fw-bold m-0">Abstract Colors</p>
+                <p class="textgray">By Nick Wilson</p>
 
     </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-4">
-        <p style="color: #4017fd; font-weight: 500;font-size: 13px;">Current Bid: 2.82 ETH</p>
+    <div >
+<img src="./Assets/Avatars Group 1 (Horizontal) (1).png" class="horizontal" alt=""></div>
+    </div>
+    <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
+        <p style="color: #4017fd; font-weight: 500;">Current Bid: 2.82 ETH</p>
         <button>Place Bid</button>
     </div>
     </div>
@@ -145,16 +166,24 @@
 
 <div class="col-4 ps-0">
     <div class="nft">
+        <div class="position-relative">
+            <div class="fav">
+                <img src="./Assets/Badge Stats (Favorite).png" alt="">
+            </div>
     <img src="./Assets/fakurian-design-bexwsdM5BCw-unsplash (2) 1.png" alt="">
-    <div>
-        <div class="mt-3">
-        <p class="fw-bold m-0">Mesh Gradients</p>
     </div>
-        <p class="textgray">By Will Smith</p>
+    <div class="d-flex align-items-center justify-content-between my-2">
+        <div>
+        <p class="fw-bold m-0">Mesh Gradients</p>
+                <p class="textgray">By Will Smith</p>
 
     </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-4">
-        <p style="color: #4017fd; font-weight: 500;font-size: 13px;">Current Bid: 0.56 ETH</p>
+<div>
+    <img src="./Assets/Avatars Group 1 (Horizontal) (3).png" class="horizontal" alt="">
+</div>
+    </div>
+    <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
+        <p style="color: #4017fd; font-weight: 500; ">Current Bid: 0.56 ETH</p>
         <button>Place Bid</button>
     </div>
     </div>
@@ -175,7 +204,7 @@
     
 
 
-    <div class="col-12 mt-4"> 
+    <div class="col-12 mt-4 d-flex flex-column"> 
 
           <div class="d-flex justify-content-between">
           <h5>Recently Added</h5>
@@ -184,20 +213,29 @@
    
 
 
-<div class="row mt-3">
+<div class="row mt-3 flex-grow-1">
 
 <div class="col-4 ps-0">
     <div class="nft">
+        <div class="position-relative">
+            <div class="fav">
+                <img src="./Assets/Badge Stats (Favorite).png" alt="">
+            </div>
     <img src="./Assets/fakurian-design-PGdW_bHDbpI-unsplash (1) 1.png" alt="">
-    <div>
-        <div class="mt-3">
+    </div>
+    <div class="d-flex align-items-center justify-content-between my-2">
+        <div >
         <p class="fw-bold m-0">Swipe Circles</p>
-    </div>
-        <p class="textgray">By Esthera Jackson</p>
+                <p class="textgray">By Esthera Jackson</p>
 
     </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-4">
-        <p style="color: #4017fd; font-weight: 500; font-size: 13px;">Current Bid: 2.30 ETH</p>
+
+    <div>
+        <img src="./Assets/Avatars Group 1 (Horizontal) (4).png" class="horizontal" alt="">
+    </div>
+    </div>
+    <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
+        <p style="color: #4017fd; font-weight: 500; ">Current Bid: 2.30 ETH</p>
         <button>Place Bid</button>
     </div>
     </div>
@@ -207,16 +245,24 @@
 
 <div class="col-4 ps-0">
     <div class="nft">
+        <div class="position-relative">
+            <div class="fav">
+                <img src="./Assets/Badge Stats (Favorite).png" alt="">
+            </div>
     <img src="./Assets/fakurian-design-jkqGsgsE0RY-unsplash 1 (1).png" alt="">
-    <div>
-        <div class="mt-3">
-        <p class="fw-bold m-0">Colorful Heaven</p>
     </div>
-        <p class="textgray">By Nick Wilson</p>
+    <div class="d-flex align-items-center justify-content-between my-2">
+        <div>
+        <p class="fw-bold m-0">Colorful Heaven</p>
+                <p class="textgray">By Nick Wilson</p>
 
     </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-4">
-        <p style="color: #4017fd; font-weight: 500;font-size: 13px;">Current Bid: 1.30 ETH</p>
+<div>
+    <img src="./Assets/Avatars Group 1 (Horizontal) (4).png" class="horizontal" alt="">
+</div>
+    </div>
+    <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
+        <p style="color: #4017fd; font-weight: 500;">Current Bid: 1.30 ETH</p>
         <button>Place Bid</button>
     </div>
     </div>
@@ -225,16 +271,25 @@
 
 <div class="col-4 ps-0">
     <div class="nft">
+        <div class="position-relative">
+            <div class="fav">
+            <img src="./Assets/Badge Stats (Favorite).png" alt="" >
+            </div>
     <img src="./Assets/fakurian-design-SPxVnxu_ZGM-unsplash 1.png" alt="">
-    <div>
-        <div class="mt-3">
-        <p class="fw-bold m-0">3D Cubes Art</p>
     </div>
-        <p class="textgray">By Will Smith</p>
+    <div class="d-flex align-items-center justify-content-between my-2">
+        <div >
+        <p class="fw-bold m-0">3D Cubes Art</p>
+                <p class="textgray">By Will Smith</p>
 
     </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-4">
-        <p style="color: #4017fd; font-weight: 500;font-size: 13px;">Current Bid: 6.58 ETH</p>
+    <div>
+        <img src="./Assets//Avatars Group 1 (Horizontal) (5).png" class="horizontal" alt="">
+    </div>
+
+    </div>
+    <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
+        <p style="color: #4017fd; font-weight: 500;">Current Bid: 6.58 ETH</p>
         <button>Place Bid</button>
     </div>
     </div>
@@ -263,10 +318,173 @@
     </div>
 
 
-    <div class="col-5">
+    <div class="col-4">
 
-        <div class="row">
-            <div class="col-12">a</div>
+        <div class="row gap-4 h-100">
+            <div class="col-12 d-flex">
+                <div class="topcreators overflow-hidden">
+                    <div class="header">
+                        <div class="d-flex w-100 align-items-center justify-content-between">
+                            <h5>Top Creators</h5>
+                            <div class="button">See all</div>
+                        </div>
+                        <div class="d-flex w-100 align-items-center">
+                            <p class="w-50">Name</p>
+                            <p class="w-25">Artworks</p>
+                            <p class="w-25">Rating</p>
+                        </div>
+                </div>
+                  <div class="body">
+<div class="creator">
+    <div class="creatorname"><img src="./Assets/Rectangle 346.png" alt=""> @maddison_c21</div>
+    <p class="w-25">9821</p>
+    <div class="rating"><div class="indicator" style="width: 90%;"></div></div>
+</div>
+
+<div class="creator">
+    <div class="creatorname"><img src="./Assets/Rectangle 346 (1).png" alt=""> @Karl.will02</div>
+    <p class="w-25">7032</p>
+    <div class="rating"><div class="indicator" style="width: 80%;"></div></div>
+</div>
+
+<div class="creator">
+    <div class="creatorname"><img src="./Assets/Rectangle 346 (2).png" alt=""> @andreea.1z</div>
+    <p class="w-25">5204</p>
+    <div class="rating"><div class="indicator" style="width: 70%;"></div></div>
+</div>
+
+<div class="creator">
+    <div class="creatorname"><img src="./Assets/Rectangle 346 (3).png" alt=""> @abraham47.y</div>
+    <p class="w-25">4309</p>
+    <div class="rating"><div class="indicator" style="width: 95%;"></div></div>
+</div>
+
+<div class="creator">
+    <div class="creatorname"><img src="./Assets/image.png" alt=""> @simmmple.web</div>
+    <p class="w-25">3871</p>
+    <div class="rating"><div class="indicator" style="width: 15%;"></div></div>
+</div>
+
+
+<div class="creator">
+    <div class="creatorname"><img src="./Assets/Image (1).png" alt=""> @venus.sys</div>
+    <p class="w-25">3152</p>
+    <div class="rating"><div class="indicator" style="width: 65%;"></div></div>
+</div>
+
+
+<div class="creator">
+    <div class="creatorname"><img src="./Assets/Rectangle 346 (4).png" alt=""> @ape.vpp8</div>
+    <p class="w-25">2907</p>
+    <div class="rating"><div class="indicator" style="width: 40%;"></div></div>
+</div>
+
+
+<div class="creator">
+    <div class="creatorname"><img src="./Assets/Rectangle 346 (5).png" alt=""> @leon.pwrr</div>
+    <p class="w-25">2309</p>
+    <div class="rating"><div class="indicator" style="width: 85%;"></div></div>
+</div>
+
+                  </div>
+                </div>
+            </div>
+
+
+
+                <div class="col-12 d-flex">
+                <div class="History overflow-hidden">
+                    <div class="header">
+                        <div class="d-flex w-100 align-items-center justify-content-between">
+                            <h5>History</h5>
+                            <div class="button">See all</div>
+                        </div>
+                      
+                </div>
+                  <div class="body">
+
+
+<div class="nft">
+    <div class="imgcontainer d-flex align-items-center gap-2 w-50 p">
+<img src="./Assets/Image (2).png" alt="">
+<div>
+    <p class="fw-bold">Colorful Heaven</p>
+    <p class="text-muted">By Mark Benjamin</p>
+</div>
+</div>
+
+<div class="d-flex align-items-center gap-2 fw-bold"><img src="./Assets/Icon (1).png" alt="">1.30 ETH</div>
+<p class="text-muted">30s ago</p>
+</div>
+
+
+
+<div class="nft">
+    <div class="imgcontainer d-flex align-items-center gap-2">
+<img src="./Assets/Image (3).png" alt="">
+<div>
+    <p class="fw-bold">Abstract Colors</p>
+    <p class="text-muted">By Esthera Jackson</p>
+</div>
+    </div>
+
+<div class="d-flex align-items-center gap-2 fw-bold"><img src="./Assets/Icon (1).png" alt="">0.91 ETH</div>
+<p class="text-muted">58s ago</p>
+</div>
+
+
+
+<div class="nft">
+        <div class="imgcontainer d-flex align-items-center gap-2">
+
+<img src="./Assets/Image (4).png" alt="">
+<div>
+    <p class="fw-bold">ETH AI Brain</p>
+    <p class="text-muted">By Nick Wilson</p>
+</div>
+        </div>
+<div class="d-flex align-items-center gap-2 fw-bold"><img src="./Assets/Icon (1).png" alt="">2.82 ETH</div>
+<p class="text-muted">1m ago</p>
+</div>
+
+
+
+<div class="nft">
+        <div class="imgcontainer d-flex align-items-center gap-2">
+
+<img src="./Assets/Image (5).png" alt="">
+<div>
+    <p class="fw-bold">Swipe Circles</p>
+    <p class="text-muted">By Peter Will</p>
+</div>
+        </div>
+<div class="d-flex align-items-center gap-2 fw-bold"><img src="./Assets/Icon (1).png" alt="">2.30 ETH</div>
+<p class="text-muted">1m ago</p>
+</div>
+
+
+
+<div class="nft">
+        <div class="imgcontainer d-flex align-items-center gap-2">
+
+<img src="./Assets/Image (6).png" alt="">
+<div>
+    <p class="fw-bold">Mesh Gradients</p>
+    <p class="text-muted">By Will Smith</p>
+</div>
+        </div>
+<div class="d-flex align-items-center gap-2 fw-bold"><img src="./Assets/Icon (1).png" alt="">0.56 ETH</div>
+<p class="text-muted">2m ago</p>
+</div>
+
+
+
+
+                </div>
+            </div>
+
+
+
         </div>
 
     </div>
@@ -276,6 +494,16 @@
 </div>
                 </div>
 
+
+                <footer>
+                    <p class="m-0">@ 2022 Horizon UI. All Rights Reserved. Made with love by Simmmple!</p>
+                    <ul>
+                        <li>Marketplace</li>
+                        <li>License</li>
+                        <li>Terms of Use</li>
+                        <li>Blog</li>
+                    </ul>
+                </footer>
         </div></div>
 </body>
 <script>

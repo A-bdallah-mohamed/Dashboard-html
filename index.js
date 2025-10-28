@@ -35,8 +35,8 @@ new Chart(ctx, {
 
     },
           scales: { 
-      x : { grid: {display:false}, },
-      y : { grid: {display:false},ticks: { display: false } }
+      x : { grid: {display:false},border : {display:false}},
+      y : { grid: {display:false},ticks: { display: false },border : {display:false} }
       }
   }
 });
