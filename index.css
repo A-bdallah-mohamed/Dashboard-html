@@ -1,7 +1,60 @@
 #Dashboard{
- max-height: 200px;
- max-width: 800px;
+ max-height: 150px;
+ max-width: 75%;
+ overflow: visible !important;
 }
+#weeklyRevenue{
+    max-height: 150px;
+}
+.graphcontainer,.Revenue{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    height: 100%;
+}
+.graphcontainer .header i,.Revenue .header i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#f4f7fe ;
+    color: #4318ff ;
+    padding: 0 15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 15px;
+}
+.graphcontainer .header p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#f4f7fe ;
+    color: #a3aed0 !important;
+    padding: 10px 12px 10px 5px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 0;
+    font-size: 14px;
+}
+.graphcontainer .header p i{
+    background-color:#f4f7fe ;
+    color: #a3aed0 ;
+    padding: 0;
+}
+.graphcontainer .body p{
+    color: #a3aed0 !important;
+font-size: 12px;
+margin: 0;
+}
+
+.graphcontainer .body span{
+    color: #05cd99;
+font-size: 10px;
+margin: 0;
+font-weight: 500;
+}
+
 .p ,p{
   white-space: nowrap;        /* keep text on one line */
   overflow: hidden;           /* hide overflowing text */
@@ -60,7 +113,11 @@ li{
 .sidebar ul .active{
 opacity: 1;
 font-weight: 600;
-border-right: 3px solid ;
+border-right: 3px solid #4318ff;
+}
+.sidebar .active i{
+
+color: #4318ff;
 }
 .colormain{
     color: #253774;
@@ -259,19 +316,18 @@ margin-bottom: 5px;
     background-color: #4017fd;
     height: 100%;
         border-radius: 50px;
-
 }
+
 .History{
-    background-color: white;
+background-color: white;
 border-radius: 15px;
 padding: 20px;
 flex-grow: 1;
 display: flex;
 flex-direction: column;
 gap: 20px;
-
-justify-content: center;
 }
+
 .History .nft{
     display: flex;
     width: 100%;
@@ -297,6 +353,7 @@ margin: 0;
     display: flex;
     flex-direction: column;
     padding: 10px 0 0 30px;
+    width: 100%;
 }
 footer{
     display: flex;
@@ -324,8 +381,64 @@ footer ul{
     right: 10px;
  max-width: 20%;
 }
-.History .imgcontainer img{
-    width: 80px;
+
+.nft .avatarscontainer img{
+  min-width: inherit;
+  min-height: inherit;
+  height: 100%;
+}
+.moreavatars{
+    background-color: #dfe6f2;
+    border-radius: 100%;
+    font-size: 10px;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 3px solid white;
+    color: #4017fd;
+    font-weight: bolder;
+}
+.stat-card{
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+.stat-card p{
+  color: #a3aed0;
+  font-weight: 500;
+  margin: 0;
+  font-size: 13px;
+}
+
+.stat-card h5{
+  font-weight: 700;
+}
+.stat-card i{ 
+color: #4318ff;
+background-color: #f4f7fe;
+padding: 15px;
+font-size: 25px;
+border-radius: 50px;
+}
+.stat-card.tasks i{ 
+color: white;
+background: linear-gradient(to right ,#4482eb ,#04befe);
+padding: 15px;
+font-size: 25px;
+border-radius: 50px;
+}
+
+.stat-card span{ 
+color: #33d6ac;
+font-weight: bolder;
+}
+.dropdown button{
+    border: 0;
+    background-color: inherit;
 }
 @media (max-width: 1600px) {
 .History .nft{
@@ -388,6 +501,13 @@ font-size: 11px;
         width: 60px;
     }
 
+ 
+
+
+}
+
+@media (max-width: 1300px) {
+    
         .imgcontainer p {
   white-space: nowrap;
   overflow: hidden;
@@ -396,11 +516,6 @@ font-size: 11px;
   max-width: 85%; /* ensure it knows its limit */
 }
 
-
-
-}
-
-@media (max-width: 1300px) {
     .creatorname img{
         max-width: 20px;
         max-height: 20px;

@@ -4,7 +4,7 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
 />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
 <link rel="stylesheet" href="./index.css">
@@ -14,14 +14,14 @@
     <div class="d-flex">
         <div class="position-relative sidebarcontainer" >
         <div class="sidebar colormain flex-grow-1">
-            <div class="d-flex flex-column align-items-center">
+            <div class="d-flex flex-column align-items-center w-100">
             <div class="imgcontainer">
             <img src="./Assets/Logo.png" class="logo" alt="logo">
             </div>
             <div class="grayline"></div>
             <ul class="navv">
-                <li ><i class="bi bi-house-door-fill"></i>Dashboard</li>
-                <li class="active"><i class="bi bi-cart"></i> NFT Marketplace</li>
+                <li class="active"><i class="bi bi-house-door-fill"></i>Dashboard</li>
+                <li ><i class="bi bi-cart"></i> NFT Marketplace</li>
                 <li><i class="bi bi-bar-chart-fill"></i> Tables</li>
                 <li><i class="bi bi-grid-1x2-fill"></i>Kanban</li>
                 <li><i class="bi bi-person-fill"></i>Profile</li>
@@ -36,7 +36,7 @@
   <div id="content" class="colormain">
 
 
-            <div class="Dashboard section ">
+            <div class="Dashboard section active">
             <div class="sectionhead d-flex">
             <div> <p>page / Dashboard</p><h4>Dashboard</h4></div>
             <div class="searchcontainer">
@@ -52,12 +52,137 @@
             </div>
             
           </div>
-          <div>a</div>
-                <canvas id="Dashboard"></canvas>
+
+
+
+
+          <div  class="row my-3">
+<div class="col">
+    <div class="stat-card">
+        
+<i class="bi bi-bar-chart-fill"></i>
+<div class="d-flex flex-column">
+    <p>Earnings</p>
+    <h5>$350.4</h5>
+</div>
+    </div>
+</div>
+<div class="col">
+    <div class="stat-card">
+                
+<i class="bi bi-currency-dollar"></i>
+<div class="d-flex flex-column">
+    <p>Spend this month</p>
+    <h5>$642.39</h5>
+</div>
+    </div>
+</div>
+<div class="col">
+    <div class="stat-card">
+                
+<div class="d-flex flex-column">
+    <p>Sales</p>
+    <h5>$574.34</h5>
+    <p style="font-size: 10px;"><span>+23%</span> since last month</p>
+</div>
+    </div>
+</div>
+<div class="col">
+    <div class="stat-card justify-content-between">
+                
+<div class="d-flex flex-column">
+    <p>Your balance</p>
+    <h5>$1,000</h5>
+</div>
+
+<div class="dropdown">
+  <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+    <img src="./Assets/Ellipse 80.png" alt="">
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Dollar</a></li>
+    <li><a class="dropdown-item" href="#">Euro</a></li>
+    <li><a class="dropdown-item" href="#">Pound</a></li>
+  </ul>
+</div>
+
+
+
+    </div>
+</div>
+<div class="col">
+    <div class="stat-card tasks">
+                
+<i class="bi bi-check2-circle"></i>
+<div class="d-flex flex-column">
+    <p>New Tasks</p>
+    <h5>154</h5>
+</div>
+
+    </div>
+</div>
+<div class="col">
+    <div class="stat-card">
+                
+<i class="bi bi-file-earmark-text"></i>
+<div class="d-flex flex-column">
+    <p>Total Projects</p>
+    <h5>2935</h5>
+</div>
+    </div>
+</div>
+          </div>
+
+
+
+
+<div class="row d-flex">
+    <div class="col-6">
+        <div class="graphcontainer">
+            <div class="d-flex justify-content-between header mb-3">
+                <p><i class="bi bi-calendar"></i> this month</p>
+               <i class="bi bi-bar-chart-fill"></i>
+            </div>
+            <div class="d-flex align-items-start justify-content-between">
+
+                <div class="d-flex flex-column justify-content-start h-100 body">
+                    <h2 class="fw-bold">$37.5k</h2>
+                    <div class="d-flex align-items-center gap-2">
+                        <p>Total Spent</p>
+                         <span class="d-flex align-items-center">
+                            <i class="bi bi-caret-up-fill"></i>
+                             +2.45%
+                            </span>
+                        </div>
+                    <span class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill"></i> On track</span>
                 </div>
 
+    <canvas id="Dashboard"></canvas>
+
+            </div>
+    </div>
+    </div>
+
+<div class="col-6">
+               <div class="Revenue">
+            <div class="d-flex justify-content-between header mb-3">
+                <p class="fs-5 fw-bold">Weekly Revenue</p>
+               <i class="bi bi-bar-chart-fill"></i>
+            </div>
+            <div class="d-flex align-items-start justify-content-between">
                 
-            <div class="NFTMarketplace section active">
+    <canvas id="weeklyRevenue"></canvas>
+
+
+            </div>
+    </div>
+    </div>
+    
+     </div>
+            </div>
+
+                
+            <div class="NFTMarketplace section ">
              <div class="sectionhead d-flex">
             <div> <p class="textgray" style="font-weight: 500;">page / NFT Marketplace</p><h4 class="fw-bold">NFT Marketplace</h4></div>
             <div class="searchcontainer">
@@ -126,8 +251,12 @@
                 <p class="textgray">By Esthera Jackson</p>
 
     </div>
-    <div>
-<img src="./Assets/Avatars Group 1 (Horizontal).png"  al class="horizontal"t="">
+    <div class="d-flex align-items-center avatarscontainer">
+  
+<img src="./Assets/Avatar 1 (1).png" alt="" class="border-3 border-white border" style="margin-right: -15px;">
+<img src="./Assets/Avatar 2 (1).png" alt="" style="margin-right: -15px;">
+<img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
+      <div class="d-flex align-items-center moreavatars">15+</div>
 </div>
     </div>
     <div class="d-flex w-100 justify-content-between align-items-center mt-2 mt-xl-4">
@@ -153,8 +282,12 @@
                 <p class="textgray">By Nick Wilson</p>
 
     </div>
-    <div >
-<img src="./Assets/Avatars Group 1 (Horizontal) (1).png" class="horizontal" alt=""></div>
+     <div class="d-flex align-items-center avatarscontainer">
+  
+<img src="./Assets/Avatar 2 (1).png" alt="" style="margin-right: -15px;">
+<img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
+      <div class="d-flex align-items-center moreavatars">5+</div>
+</div>
     </div>
     <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
         <p style="color: #4017fd; font-weight: 500;">Current Bid: 2.82 ETH</p>
@@ -178,8 +311,12 @@
                 <p class="textgray">By Will Smith</p>
 
     </div>
-<div>
-    <img src="./Assets/Avatars Group 1 (Horizontal) (3).png" class="horizontal" alt="">
+    <div class="d-flex align-items-center avatarscontainer">
+  
+<img src="./Assets/Avatar 1 (1).png" alt="" class="border-3 border-white border" style="margin-right: -15px;">
+<img src="./Assets/Avatar 3.png" alt="" >
+
+      
 </div>
     </div>
     <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
@@ -229,10 +366,12 @@
                 <p class="textgray">By Esthera Jackson</p>
 
     </div>
-
-    <div>
-        <img src="./Assets/Avatars Group 1 (Horizontal) (4).png" class="horizontal" alt="">
-    </div>
+   <div class="d-flex align-items-center avatarscontainer">
+  
+<img src="./Assets/Avatar 2 (1).png" alt="" style="margin-right: -15px;">
+<img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
+      <div class="d-flex align-items-center moreavatars">10+</div>
+</div>
     </div>
     <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
         <p style="color: #4017fd; font-weight: 500; ">Current Bid: 2.30 ETH</p>
@@ -257,8 +396,10 @@
                 <p class="textgray">By Nick Wilson</p>
 
     </div>
-<div>
-    <img src="./Assets/Avatars Group 1 (Horizontal) (4).png" class="horizontal" alt="">
+   <div class="d-flex align-items-center avatarscontainer">
+  
+<img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
+      <div class="d-flex align-items-center moreavatars">21+</div>
 </div>
     </div>
     <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
@@ -283,9 +424,12 @@
                 <p class="textgray">By Will Smith</p>
 
     </div>
-    <div>
-        <img src="./Assets//Avatars Group 1 (Horizontal) (5).png" class="horizontal" alt="">
-    </div>
+      <div class="d-flex align-items-center avatarscontainer">
+  
+<img src="./Assets/Avatar 1 (1).png" alt="" class="border-3 border-white border" style="margin-right: -15px;">
+<img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
+      <div class="d-flex align-items-center moreavatars">21+</div>
+</div>
 
     </div>
     <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
@@ -511,4 +655,6 @@
 
 </script>
 <script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </html>
