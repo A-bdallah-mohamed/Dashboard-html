@@ -1,20 +1,272 @@
+a,a:focus,a:visited{
+    color: inherit;
+    text-decoration: none;
+}
 #Dashboard{
  max-height: 150px;
  max-width: 75%;
+ height: 250px !important;
  overflow: visible !important;
 }
 #weeklyRevenue{
     max-height: 150px;
 }
-.graphcontainer,.Revenue{
+#myPieChart{
+    max-height: 180px;
+}
+#calendar{
+    width: 100%;
+    padding: 0;
+}
+.piechart .label{
+width: 10px;
+height: 10px;
+border-radius: 50%;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.graphcontainer,.Revenue,.piechart,.checktable,.taskscontainer,.teamembers,.fingerprint,.starbucks,.lession,.calendar,.dailytraffic {
     background-color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
     height: 100%;
+    overflow: hidden;
 }
-.graphcontainer .header i,.Revenue .header i{
+.profilecomponent{
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.secondrow .profilecomponent{
+
+    height: 100%; 
+    gap: 20px;
+}
+.profilecomponent h4{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
+.profilecomponent p{
+    font-weight: 500;
+    color: #9faed0;
+    font-size: 12px ;
+  white-space: wrap;
+  margin: 0;
+}
+.profilecomponent .info p,.profilecomponent .info h6{
+    margin: 0;
+}
+.profilecomponent .info{ 
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.074);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.notificationoption {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.switch{
+    width: 33px;
+    height: 18px;
+    background-color: #dee5f2;
+    border-radius: 50px;
+    display: flex;
+    padding: 2px;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+.switch.active{
+    background-color: #4017fd;
+} 
+.switch.active .swtichindicator{
+  left: 45%;
+}
+.swtichindicator{
+    position: absolute;
+    height: 80%;
+    left: 3px;
+    top: 9.5%;
+    aspect-ratio: 1/1;
+    border-radius: 50px;
+    background-color: white;
+    transition: 0.2s ease all;
+}
+.profilecomponent .head i {
+    padding: 10px;
+    background-color: #f3f7fe;
+    color: #4017fd;
+    border-radius: 10px;
+}
+.profilecomponent .body i {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+padding: 20px;
+    background-color: #f3f7fe;
+    color: #4017fd;
+    border-radius: 50%;
+    font-size: 40px;
+}
+.uploadimageinputcontainer{
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #4017fd;
+    font-weight: bold;
+    background-color: #f9fcfe;
+    border: dashed 1px  #e1e8f4;
+    padding: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+.uploadimageinputcontainer:hover{
+    background-color: #f1f9fe;
+}
+.uploadimageinputcontainer i{
+    font-size: 50px;
+}
+.uploadimageinputcontainer input,.uploadimageinputcontainer label{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.uploadimageinputcontainer h3{
+    font-size: 20px;
+}
+.table{
+    background-color: white;
+}
+.lession{
+    padding: 0;
+}
+.lession .header{
+    padding: 20px;
+}
+.lession .header i {
+    color: #ff5142;
+    background-color: #ff524229;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 22px;
+}
+.lession p,.lession h5{
+    margin: 0;
+}
+.lession p{
+    font-size: 12px;
+    font-weight: 500;
+}
+.lession h5{
+    font-size: 18px;
+    font-weight: bold;
+}
+.lession .body{
+    background-color: #f9fcfe;
+    padding: 20px;
+}
+.starbucks{
+    position: relative;
+}
+.starbucks .iconcontainer{
+    padding: 15px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 20px;
+  background: rgba(255, 255, 255, 0.182); /* semi-transparent white */
+  backdrop-filter: blur(5px) saturate(100%);
+  -webkit-backdrop-filter: blur(5px) saturate(1000%);
+    border-radius: 15px;
+    color: white;
+}
+.starbucks .logocontainer{
+    margin-top: -35px;
+}
+.starbucks .logocontainer h5{
+font-size: 25px;
+font-weight: bold;
+}
+.starbucks .logocontainer p{
+font-size: 15px;
+font-weight: 500;
+}
+.fingerprint{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    text-align: left;
+}
+.fingerprint p{
+    font-size:12px  ;
+    font-weight: 500;
+}
+.fingerprint button{
+    background-color: #4017fd;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s ease all;
+    width: 100%;
+}
+.fingerprint button:hover{
+    background-color: #6b4cf7;
+ 
+}
+.fingerprint img{
+    max-width: 100px;
+}
+.Revenue{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Revenue p{
+    font-size: 12px;
+    margin: 0;
+}
+.Revenue sub{margin-bottom: 17px;font-size: 12px;font-weight: 500;}
+.Revenue h1{margin: 0;}
+.dailytraffic span{
+    font-size: 12px;
+    color: #05cd99;
+}
+.piechart .textgray{
+    font-size: 12px;
+    font-weight: 500;
+}
+.piechart i{
+font-size: 10px;
+}
+.graphcontainer .header i,.checktable .header i,.taskscontainer .header i,.teamembers .header i,.Revenue .header i{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +276,80 @@
     height: 40px;
     width: 40px;
     border-radius: 15px;
+    cursor: pointer;
+}
+.lession .body button{
+    background-color: #4017fd;
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 15px;
+}
+.table{
+    border-radius: 15px;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.table .header{
+    padding: 15px 15px 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.table .body{
+    display: flex;
+flex-direction: column;
+padding-bottom: 15px;
+gap: 15px;
+justify-content: space-between;
+flex-grow: 1;
+}
+.tablerow{
+display: flex;
+width: 100%;
+justify-content: space-between;
+padding:  0px 20px ;
+}
+.sortable{
+    height: 100%;
+}
+.statusicon{
+    color: white !important;
+    border-radius: 50px;
+    aspect-ratio: 1/1;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tablerow div{
+    margin: 0;
+    align-items: center;
+    width: 25%;
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+    padding: 0px !important;
+    font-size: 12px;
+    color: #253774;
+}
+.tablerow div p{
+width: 20%;
+margin: 0;
+}
+.checktablee div p{
+    width: 100%;
+    padding: 0;
+}
+.tablerow .rating{
+width: 60%;
+}
+.tablerow i{
+color: #dee5f2;
 }
 .graphcontainer .header p{
     display: flex;
@@ -41,6 +367,205 @@
     background-color:#f4f7fe ;
     color: #a3aed0 ;
     padding: 0;
+}
+.titles{
+    color:#a3aed0 ;
+    font-weight: 500;
+    font-size: 14px;
+}
+.logcontainer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    gap: 40px;
+}
+.logcontainer .header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.checkitem{
+    color: #2b3674;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+.logcontainer .body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.logcontainer .component{
+          box-shadow: 0 4px 40px rgba(0, 0, 0, 0.085);
+padding: 40px 40px 30px 40px;
+border-radius: 15px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.logcontainer .component .head,.logcontainer .component .foot{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+}
+.logcontainer .component .head i{
+    color: rgba(128, 128, 128, 0.587);
+    cursor: pointer;
+}
+.signingrightside{
+    border-radius: 0 0px 0px 300px;
+    background-size: cover;
+}
+.logcontainer p{
+    overflow: inherit;
+    white-space: wrap;
+    font-size: 14px;
+    color: #9faed0;
+    margin: 0;
+}
+.logcontainer .body h6{
+    margin: 0;
+}
+.logcontainer .component .status {
+    border: 0;
+    padding: 8px 30px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.profilecomponent .status{
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #4017fd;
+    color: white;
+}
+.profilecomponent .project { 
+          box-shadow: 0 4px 40px rgba(0, 0, 0, 0.085);
+display: flex;
+align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    border-radius: 15px;
+}
+.profilecomponent .project i{ 
+     color: #8b9bba;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 12px;
+}
+.profilecomponent .project img{ 
+   max-width: 20%;
+}
+.profilecomponent .project .body{ 
+padding: 10px;
+}
+.profilecomponent .project .body p{ 
+    font-size: 10px;
+margin: 0;
+}
+.profilecomponent .project .body p span{ 
+    color: #4017fd;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.profilecomponent .project .body h6{ 
+font-size: 12px;
+margin: 0;
+}
+.checkitem p { 
+ margin: 0;
+}
+.tasks p{
+    color: #0b0479;
+    margin: 0;
+}
+.tasks div{
+    justify-content: center;
+}
+.checktable .rating{
+width: 80%;
+}
+.tasks .status{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+.tasks .status i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: white; */
+    width: 20px;
+height: 20px;
+border-radius: 50px;
+}
+.checkitem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.checkitem input[type="checkbox"],.inputs input[type="checkbox"] {
+  appearance: none;       
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bbb;  
+  border-radius: 6px;     
+  transition: all 0.25s ease;
+  cursor: pointer;
+  position: relative;
+  padding: 0 !important;
+}
+
+.checkitem input[type="checkbox"]:checked,.inputs input[type="checkbox"]:checked {
+  border-color: #4318ff;          
+  background-color: #4318ff;      
+}
+
+.checkitem input[type="checkbox"]:checked::after ,.inputs input[type="checkbox"]:checked::after{
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.checkitem input[type="checkbox"]:hover,.inputs input[type="checkbox"]:hover {
+  border-color: #666;
+}
+
+#color-calendar{
+    width: 100%;
+    height: 100%;
+}
+
+
+.checkitem p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.taskscontainer .checkitem input + p {
+  color: gray; 
+  opacity: 0.7; 
+}
+.taskscontainer .checkitem input:checked + p {
+  color: #2b3674; 
+  opacity: 1; 
+  font-weight: bold;
 }
 .graphcontainer .body p{
     color: #a3aed0 !important;
@@ -80,7 +605,7 @@ body{
 .grayline{
     width: 100%;
     height: 1px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.068);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.134);
 }
 .sidebar .imgcontainer{
     max-width: 80%;
@@ -93,7 +618,7 @@ body{
 width: 100%;
 height: auto;
 }
-ul {
+.sidebar ul {
     list-style: none;
     padding: 30px 0 30px 30px;
     font-weight: 500;
@@ -109,6 +634,9 @@ li{
     gap: 15px;
     opacity: 0.5;
     cursor: pointer;
+}
+.teamembers .members{
+    margin-top: 25px;
 }
 .sidebar ul .active{
 opacity: 1;
@@ -199,7 +727,14 @@ font-size: 12px;
     font-size:  clamp(14px, 2vw + 10px, 25px);
 }
 .nftmarketbannercontent p{
-  font-size: clamp(1px, 2vw, 12px);
+overflow: inherit;
+}
+.starbucks .imgcontainer img{
+    max-width: 100%;
+    min-width: 100%;
+}
+.clickable{
+    position: relative;
 }
 .nftmarketbannercontent .buttoncontainer{
         font-size: 13px;
@@ -215,7 +750,7 @@ padding: 13px 20px;
 
 }
 .filter{
-    padding: 5px;
+    padding: 5px 15px;
     color: #4d25fd;
     font-weight: 600;
     cursor: pointer;
@@ -255,7 +790,66 @@ padding: 13px 20px;
     font-size: 13px;
 }
 .textgray{
-    color: #6b7fae;
+    color: #6b7fae9c !important;
+}
+.textgray div{
+        color: #6b7fae9c !important;
+
+}
+.inputs h3{
+    font-size: 28px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.inputs label{
+    color: #253774;
+    font-size: 12px;
+    font-weight: 500;
+}
+.inputs label sup{
+    color: #4017fd;
+    font-weight: 500;
+    font-size: 15px;
+top: 1px;
+}
+.inputs input{
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid #dee5f2;
+}
+.inputs input::placeholder{
+  
+   color:  #dee5f2;
+}
+.back a{
+gap: 15px;
+display: flex;
+align-items: center;
+transition: 0.3s ease all;
+}
+.back a:hover{
+    gap: 25px;
+}
+.or{
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    margin: 10px 0;
+}
+.or::before{
+    content: "";
+    width: 50%;
+    border-bottom: 1px solid #dee5f2;
+}
+.or::after{
+    content: "";
+    width: 50%;
+    border-bottom: 1px solid #dee5f2;
 }
 .button{
     color: #4018fd;
@@ -264,10 +858,44 @@ padding: 13px 20px;
     border-radius: 25px;
     font-weight: 500;
 }
+.google{
+    background-color: #f3f7fe;
+    border: none;
+    color: #253774;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.signinbutton{
+        background-color: #4017fd;
+    border: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 12px;
+    margin-top: 15px;
+    font-size: 12px;
+}
+.signin span{
+    color: #4017fd;
+    font-weight: 500;
+    cursor: pointer;
+}
 .topcreators{
     background-color: white;
 border-radius: 15px;
 flex-grow: 1;
+display: flex;
+flex-direction: column;
 }
 .topcreators .header{
     padding: 20px 20px 5px 20px;
@@ -283,12 +911,28 @@ flex-grow: 1;
 margin-bottom: 5px;
 }
 .topcreators .body{
-    padding: 15px 15px;
-    z-index: -1;
+    padding: 25px 25px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: space-between;
+    height: 100%;
 }
+/* stationary element */
+
+.draggable{
+    user-select: none;
+    cursor: inherit;
+}
+.draggable img{
+        user-select: none;
+    cursor: pointer;
+}
+.hidden-ghost {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
 .topcreators .body p{
     color: #9faed0;
     margin: 0;
@@ -317,7 +961,6 @@ margin-bottom: 5px;
     height: 100%;
         border-radius: 50px;
 }
-
 .History{
 background-color: white;
 border-radius: 15px;
@@ -327,7 +970,12 @@ display: flex;
 flex-direction: column;
 gap: 20px;
 }
-
+.History .body{
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
 .History .nft{
     display: flex;
     width: 100%;
@@ -348,6 +996,20 @@ margin: 0;
       box-shadow: 0 4px 40px rgba(0, 0, 0, 0.085);
       border-radius: 15px;
       
+}
+.member{
+          box-shadow: 0 4px 40px rgba(0, 0, 0, 0.085);
+padding: 15px;
+border-radius: 15px;
+width: 100%;
+}
+.member p{
+    font-weight: 500;
+    font-size: 12px;
+}
+.member h5{
+    font-weight: 500;
+    font-size: 15px;
 }
 .navv{
     display: flex;
@@ -380,6 +1042,54 @@ footer ul{
     display: flex;
     right: 10px;
  max-width: 20%;
+ background-color: white;
+ padding: 10px;
+ border: 0;
+ border-radius: 50px;
+ align-items: center;
+ justify-content: center;
+ transition: 0.3s ease all;
+ cursor: pointer;
+}
+table tr,table td{
+border: 0;
+ padding:   15px 15px 5px 15px;
+}
+
+.rotate::before{
+transform: rotate(180deg);
+}
+thead{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+thead td{
+    color:#a3aed0 ;
+font-weight: 500;
+cursor: pointer;
+}
+tbody p{
+    margin: 0;
+    width: 40%;
+}
+.profileicon{
+    cursor: pointer;
+}
+tbody td{
+    color: #2b3674;
+    font-weight: 500;
+}
+table{
+    margin-bottom: 15px;
+}
+.fav:hover{
+  
+ background-color: rgb(255, 184, 184);
+
+}
+.fav.active{
+     background-color: rgb(255, 104, 104);
+
 }
 
 .nft .avatarscontainer img{
@@ -413,7 +1123,11 @@ footer ul{
   margin: 0;
   font-size: 13px;
 }
-
+.horizon{
+    border: 1px solid #5a6efe; 
+    padding: 20px 100px;
+     border-radius: 30px;
+}
 .stat-card h5{
   font-weight: 700;
 }
@@ -440,12 +1154,86 @@ font-weight: bolder;
     border: 0;
     background-color: inherit;
 }
+.signin{
+    overflow-x: hidden;
+}
+.signin .foot{
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forgot,.create{
+    font-size: 12px ;
+}
+.signin .foot ul{
+display: flex;
+gap: 45px;
+color: white;
+}
+.signin .foot ul li{
+font-size: 12px;
+opacity: 1;
+}
+.signin .foot ul li:hover{
+text-decoration: underline;
+}
+.signin .dark{
+    color: white;
+background: linear-gradient(to right,#a3a0ff,#d5ccff00);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+.signin .dark:hover{
+background: linear-gradient(to right,#cccaff,#d5ccff34);
+}
+.signincontainer{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 30px 0;
+}
+  .profilecomponent .body{
+        gap: 20px;
+    }
+    .signincontainer .footer{
+        font-size: 11px;
+    }
 @media (max-width: 1600px) {
+    .logcontainer .component{
+        padding: 25px 25px 15px 25px;
+    }
 .History .nft{
     font-size: 12px;
     padding: 7px 20px;
 }
 
+.uploadimageinputcontainer{
+    position: relative;
+    display: flex;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #4017fd;
+    font-weight: bold;
+    background-color: #f9fcfe;
+    border: dashed 1px  #e1e8f4;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
 .nftscontainer .nft p {
 font-size: 12px;
 }
@@ -453,6 +1241,56 @@ font-size: 12px;
 
 }
 @media (max-width: 1500px) {
+    table td{
+        padding: 10px 10px 5px 10px;
+    }
+  .table h4{
+    font-size: 16px;
+  }
+    tbody td,thead td{
+        font-size: 12px;
+    }
+    .uploadimageinputcontainer{
+        max-height: 80%;
+    }
+    .profilecomponent .info{
+        padding: 20px;
+    }
+    .signin img{
+        width: 50%;
+    }
+    .fingerprint button{
+        padding: 5px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    .member{
+        padding: 10px;
+    }
+    .member h5{
+        font-size: 13px;
+    }
+    .member p{
+        font-size: 10px;
+    }
+    .member img{
+        width: 20%;
+    }
+    .lession h5{
+        font-size: 16px;
+    }
+    .lession h4{
+        font-size: 18px;
+    }
+    .fingerprint h3,.starbucks .logocontainer h5{
+        font-size: 20px;
+    }
+    .lession .body button{
+        padding: 10px 15px;
+    }
+    .dropdown img{
+        max-width: 80%;
+    }
 .nftscontainer .nft{
     font-size: 11px;
 }
@@ -604,5 +1442,309 @@ font-size: 7px;
  }
     .horizontal{
         max-width: 50px !important;
+    }
+}
+@media (max-width : 1600px){
+    .google img{
+        width: 20px;
+    }
+
+  
+}
+@media (max-width : 1366px){
+    .profilecomponent p{
+        font-size: 8px;
+    }
+    .uploadimageinputcontainer h3{
+        font-size: 15px;
+    }
+    .uploadimageinputcontainer i{
+        font-size: 30px;
+    }
+ .sidebar ul{
+    font-size: 10px;
+    gap: 15px;
+ }
+    .forgot,.create{
+        font-size: 12px;
+    }
+    .signin .dark{
+        bottom: 25px;
+        right: 25px;
+    }
+    .signin .foot{
+        bottom: 10px;
+    }
+    .signingrightside{
+    border-radius: 0 0px 0px 200px;
+    background-size: cover;
+}
+    .inputs label{
+        font-size: 13px;
+    }
+    .or{
+        margin: 0 0 10px 0;
+    }
+    .inputs {
+        gap: 5px;
+    }
+    .inputs input{
+        padding: 8px 30px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+    .google,.signinbutton{
+        font-size: 12px;
+        padding: 10px;
+    }
+ .inputs h3{
+    font-size: 20px;
+ }
+ 
+    .signincontainer .footer, .signincontainer .back{
+        font-size: 10px;
+    }
+    .google img{
+        width: 10px;
+    }
+    .horizon{
+padding: 20px 50px;
+    }
+       .horizon p{
+        font-size: 15px;
+    }
+    .horizon h3{
+        font-size: 20px;
+    }
+    .uploadimageinputcontainer{
+        max-height: 80%;
+    }
+    .profilecomponent{
+        padding: 15px;
+    }
+    .logcontainer .component{
+        padding: 25px 25px 15px 25px;
+    }
+    .horizontalavatars img{
+        height: 25px !important;
+     
+    }
+    .nftscontainer .nft{
+        padding: 10px;
+    }
+    .nft .avatarscontainer img{
+
+max-height: 25px;   
+max-width: 25px;
+}
+.moreavatars{
+    width: 25px;
+    height: 25px;
+    font-size: 7px;
+}
+    .sidebarcontainer{
+        width: 200px;
+    }
+    .sidebar{
+        width: 200px;
+    }
+    .profilecomponent .project{
+        padding: 15px;
+    }
+
+    .secondrow .profilecomponent{
+        gap: 10px;
+    }
+    .profilecomponent .info{
+        padding: 20px 15px;
+        margin-bottom: 10px;
+    }
+    .profilecomponent .info h6{
+        font-size: 11px;
+    }
+    .profilecomponent .body{
+        gap: 10px;
+        height: 100%;
+        justify-content: center;
+    }
+    .notificationoption{
+        font-size: 10px;
+    }
+    .profilecomponent h5{
+        font-size: 14px;
+    }
+    .profilecomponent h4{
+        font-size: 14px;
+    }
+    .profilecomponent p{
+        font-size: 10px;
+    }
+    .profilecomponent .status{
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: #4017fd;
+    color: white;
+    font-size: 12px;
+}
+    .logcontainer{
+        gap: 20px;
+    }
+    .stat-card h5{
+        font-size: 15px;
+    }
+    .logcontainer .component .status{
+        padding: 5px 15px;
+        font-size: 10px;
+    }
+    .logcontainer p{
+        font-size: 10px;
+    }
+        .stat-card p{
+        font-size: 11px;
+    }
+         .stat-card i{
+        font-size: 13px;
+        padding: 10px;
+    }
+    .stat-card.tasks i {
+    padding: 10px;
+    font-size: 20px;
+    }
+    .dropdown img{
+        max-width: 70%;
+    }
+  .graphcontainer .header p{
+    font-size: 12px;
+    padding: 8px 10px 8px 3px;
+  }
+  .graphcontainer h2,.Revenue h1{
+    font-size: 25px;
+  }
+  .checkitem p{
+    font-size: 12px;
+    margin: 0;
+  }
+  .checkitem{
+    margin-bottom: 8px;
+  }
+  #myPieChart{
+    max-height: 130px;
+  }
+  .piechart{
+    justify-content: space-between;
+  }
+  #calendar{
+    padding: 0px 25px;
+  }
+  .calendar {
+    padding:  10px 25px;
+  }
+  .fingerprint{
+    padding: 20px;
+    gap: 15px;
+  }
+  .fingerprint img{
+    max-width: 50px;
+  }
+    .fingerprint h3{
+font-size: 20px;
+  }
+  .fingerprint p{
+    font-size:12px  ;
+    font-weight: 500;
+    white-space: inherit;
+}
+.member h5{
+    font-size: 12px;
+}
+.member p{
+    font-size: 8px;
+}
+.member{
+    padding: 10px;
+    width: 100%;
+}
+.lession h5{
+    font-size: 15px;
+}
+.lession h4{
+    font-size: 14px;
+}
+.lession .body{
+    font-size: 12px;
+}
+.lession .body button{
+    padding: 5px 15px;
+}
+.fingerprint button{
+    padding: 10px;
+    font-weight: 500;
+}
+.starbucks .imgcontainer img{
+    max-width: 100%;
+}
+.teamembers .members{
+    margin-top: 10px;
+}
+.starbucks .iconcontainer{
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 15px;
+  background: rgba(255, 255, 255, 0.182); /* semi-transparent white */
+  backdrop-filter: blur(5px) saturate(100%);
+  -webkit-backdrop-filter: blur(5px) saturate(1000%);
+    border-radius: 15px;
+    color: white;
+}
+.starbucks .logocontainer h5{
+    font-size: 20px;
+}
+.starbucks .logocontainer p{
+    font-size: 12px;
+}
+.teamembers img{
+    max-width: 25%;
+}
+}
+
+.sectionhead{
+    p{
+        color: red !important;
+        box-align: center
+        9
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        ;
     }
 }

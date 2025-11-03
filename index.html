@@ -1,641 +1,1132 @@
 <html>
-<head>
- <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
-<link rel="stylesheet" href="./index.css">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- calendar library cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   
+    <link rel="stylesheet" href="./index.css">
+
 </head>
 
 <body>
     <div class="d-flex">
-        <div class="position-relative sidebarcontainer" >
-        <div class="sidebar colormain flex-grow-1">
-            <div class="d-flex flex-column align-items-center w-100">
-            <div class="imgcontainer">
-            <img src="./Assets/Logo.png" class="logo" alt="logo">
+        <div class="position-relative sidebarcontainer">
+            <div class="sidebar colormain flex-grow-1">
+                <div class="d-flex flex-column align-items-center w-100">
+                    <div class="imgcontainer">
+                        <img src="./Assets/Logo.png" class="logo" alt="logo">
+                    </div>
+                    <div class="grayline"></div>
+                    <ul class="navv">
+                        <li class="active"><i class="bi bi-house-door-fill"></i>Dashboard</li>
+                        <li><i class="bi bi-cart"></i> NFT Marketplace</li>
+                        <li><i class="bi bi-bar-chart-fill"></i> Tables</li>
+                        <li> <i class="bi bi-grid-1x2-fill"></i>Kanban</li>
+                        <li ><i class="bi bi-person-fill"></i>Profile</li>
+                       <a href="./singin.html"> <li><i class="bi bi-lock-fill"></i>Sign in</li></a>
+                    </ul>
+                </div>
+                <div style="max-width: 100%; max-height: auto; padding: 5px;">
+                    <img src="./Assets/Get PRO.png" alt="" class="getpro">
+                </div>
             </div>
-            <div class="grayline"></div>
-            <ul class="navv">
-                <li class="active"><i class="bi bi-house-door-fill"></i>Dashboard</li>
-                <li ><i class="bi bi-cart"></i> NFT Marketplace</li>
-                <li><i class="bi bi-bar-chart-fill"></i> Tables</li>
-                <li><i class="bi bi-grid-1x2-fill"></i>Kanban</li>
-                <li><i class="bi bi-person-fill"></i>Profile</li>
-                <li><i class="bi bi-lock-fill"></i>Sign in</li>
-            </ul>
-</div>
-<div style="max-width: 100%; max-height: auto; padding: 5px;">
-<img src="./Assets/Get PRO.png" alt="" class="getpro">
-</div>  
         </div>
-        </div>
-  <div id="content" class="colormain">
+        <div id="content" class="colormain">
 
 
             <div class="Dashboard section active">
-            <div class="sectionhead d-flex">
-            <div> <p>page / Dashboard</p><h4>Dashboard</h4></div>
-            <div class="searchcontainer">
-<div class="inputcontainer">
-    <i class="bi bi-search"></i>
-    <input type="text" placeholder="search" class="colormain">
-</div>
-
-            <i class="bi bi-bell"></i>
-<i class="bi bi-moon-fill"></i>
-<i class="bi bi-info-circle"></i>
-<img src="./Assets/Avatar.png" alt="">
-            </div>
-            
-          </div>
-
-
-
-
-          <div  class="row my-3">
-<div class="col">
-    <div class="stat-card">
-        
-<i class="bi bi-bar-chart-fill"></i>
-<div class="d-flex flex-column">
-    <p>Earnings</p>
-    <h5>$350.4</h5>
-</div>
-    </div>
-</div>
-<div class="col">
-    <div class="stat-card">
-                
-<i class="bi bi-currency-dollar"></i>
-<div class="d-flex flex-column">
-    <p>Spend this month</p>
-    <h5>$642.39</h5>
-</div>
-    </div>
-</div>
-<div class="col">
-    <div class="stat-card">
-                
-<div class="d-flex flex-column">
-    <p>Sales</p>
-    <h5>$574.34</h5>
-    <p style="font-size: 10px;"><span>+23%</span> since last month</p>
-</div>
-    </div>
-</div>
-<div class="col">
-    <div class="stat-card justify-content-between">
-                
-<div class="d-flex flex-column">
-    <p>Your balance</p>
-    <h5>$1,000</h5>
-</div>
-
-<div class="dropdown">
-  <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-    <img src="./Assets/Ellipse 80.png" alt="">
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Dollar</a></li>
-    <li><a class="dropdown-item" href="#">Euro</a></li>
-    <li><a class="dropdown-item" href="#">Pound</a></li>
-  </ul>
-</div>
-
-
-
-    </div>
-</div>
-<div class="col">
-    <div class="stat-card tasks">
-                
-<i class="bi bi-check2-circle"></i>
-<div class="d-flex flex-column">
-    <p>New Tasks</p>
-    <h5>154</h5>
-</div>
-
-    </div>
-</div>
-<div class="col">
-    <div class="stat-card">
-                
-<i class="bi bi-file-earmark-text"></i>
-<div class="d-flex flex-column">
-    <p>Total Projects</p>
-    <h5>2935</h5>
-</div>
-    </div>
-</div>
-          </div>
-
-
-
-
-<div class="row d-flex">
-    <div class="col-6">
-        <div class="graphcontainer">
-            <div class="d-flex justify-content-between header mb-3">
-                <p><i class="bi bi-calendar"></i> this month</p>
-               <i class="bi bi-bar-chart-fill"></i>
-            </div>
-            <div class="d-flex align-items-start justify-content-between">
-
-                <div class="d-flex flex-column justify-content-start h-100 body">
-                    <h2 class="fw-bold">$37.5k</h2>
-                    <div class="d-flex align-items-center gap-2">
-                        <p>Total Spent</p>
-                         <span class="d-flex align-items-center">
-                            <i class="bi bi-caret-up-fill"></i>
-                             +2.45%
-                            </span>
+                <div class="sectionhead d-flex">
+                    <div>
+                        <p class="textgray" style="font-weight: 500;">page / Dashboard</p>
+                        <h4 class="fw-bold">Dashboard</h4>
+                    </div>
+                    <div class="searchcontainer">
+                        <div class="inputcontainer">
+                            <i class="bi bi-search"></i>
+                            <input type="text" placeholder="search" class="colormain">
                         </div>
-                    <span class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill"></i> On track</span>
+
+                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-moon-fill"></i>
+                        <i class="bi bi-info-circle"></i>
+                        <img src="./Assets/Avatar 3.png" alt="" style="min-height: 35px; " class="profileicon">
+                    </div>
+
                 </div>
 
-    <canvas id="Dashboard"></canvas>
+
+
+
+                <div class="row my-3">
+                    <div class="col-2">
+                        <div class="stat-card">
+
+                            <i class="bi bi-bar-chart-fill"></i>
+                            <div class="d-flex flex-column">
+                                <p>Earnings</p>
+                                <h5>$350.4</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="stat-card">
+
+                            <i class="bi bi-currency-dollar"></i>
+                            <div class="d-flex flex-column">
+                                <p>Spend this month</p>
+                                <h5>$642.39</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="stat-card">
+
+                            <div class="d-flex flex-column">
+                                <p>Sales</p>
+                                <h5>$574.34</h5>
+                                <p style="font-size: 10px;"><span>+23%</span> since last month</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="stat-card justify-content-between">
+
+                            <div class="d-flex flex-column">
+                                <p>Your balance</p>
+                                <h5>$1,000</h5>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="true">
+                                    <img src="./Assets/Ellipse 80.png" alt="">
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Dollar</a></li>
+                                    <li><a class="dropdown-item" href="#">Euro</a></li>
+                                    <li><a class="dropdown-item" href="#">Pound</a></li>
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="stat-card tasks">
+
+                            <i class="bi bi-check2-circle"></i>
+                            <div class="d-flex flex-column">
+                                <p>New Tasks</p>
+                                <h5>154</h5>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="stat-card">
+
+                            <i class="bi bi-file-earmark-text"></i>
+                            <div class="d-flex flex-column">
+                                <p>Total Projects</p>
+                                <h5>2935</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row d-flex">
+                    <div class="col-6">
+                        <div class="graphcontainer">
+                            <div class="d-flex justify-content-between header mb-3">
+                                <p><i class="bi bi-calendar"></i> this month</p>
+                                <i class="bi bi-bar-chart-fill"></i>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-between">
+
+                                <div class="d-flex flex-column justify-content-start h-100 body">
+                                    <h2 class="fw-bold">$37.5k</h2>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <p>Total Spent</p>
+                                        <span class="d-flex align-items-center">
+                                            <i class="bi bi-caret-up-fill"></i>
+                                            +2.45%
+                                        </span>
+                                    </div>
+                                    <span class="d-flex align-items-center gap-2"><i
+                                            class="bi bi-check-circle-fill"></i> On track</span>
+                                </div>
+
+                                <canvas id="Dashboard"></canvas>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="Revenue">
+                            <div class="d-flex justify-content-between header mb-3">
+                                <p class="fs-5 fw-bold">Weekly Revenue</p>
+                                <i class="bi bi-bar-chart-fill"></i>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-between">
+
+                                <canvas id="weeklyRevenue"></canvas>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="row my-3">
+                    <div class="col-6">
+
+                        <div class="checktable">
+                            <div class="d-flex justify-content-between header mb-3">
+                                <p class="fs-5 fw-bold"> Check Table</p>
+                                <i class="bi bi-three-dots"></i>
+                            </div>
+                            <div class="d-flex align-items-start h-100">
+
+                                <div class="d-flex w-100 titles h-100">
+                                    <div class="d-flex flex-column justify-content-between" style="width: 35%;">
+                                        <p>NAME</p>
+                                        <div class="checkitem"><input type="checkbox">
+                                            <p>Horizon UI PRO</p>
+                                        </div>
+
+                                        <div class="checkitem"><input type="checkbox">
+                                            <p>Horizon UI Free</p>
+                                        </div>
+
+
+                                        <div class="checkitem"><input type="checkbox">
+                                            <p>Weekly Update</p>
+                                        </div>
+
+
+                                        <div class="checkitem"><input type="checkbox">
+                                            <p>Venus 3D Assets</p>
+                                        </div>
+
+
+                                        <div class="checkitem"><input type="checkbox">
+                                            <p>Marketplace</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-between" style="width: 25%;">
+                                        <p>PROGRESS</p>
+                                        <div class="checkitem">
+                                            <p>17.5%</p>
+                                        </div>
+                                        <div class="checkitem">
+                                            <p>10.8%</p>
+                                        </div>
+
+                                        <div class="checkitem">
+                                            <p>21.3%</p>
+                                        </div>
+
+                                        <div class="checkitem">
+                                            <p>31.5%</p>
+                                        </div>
+
+                                        <div class="checkitem">
+                                            <p>12.2%</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-between" style="width: 20%;">
+                                        <p>QUANTITY</p>
+                                        <div class="checkitem">2.458</p>
+                                        </div>
+                                        <div class="checkitem">1.485</p>
+                                        </div>
+
+                                        <div class="checkitem">1.024</p>
+                                        </div>
+
+                                        <div class="checkitem">858</p>
+                                        </div>
+
+                                        <div class="checkitem">258</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-between" style="width: 20%;">
+                                        <p>DATE</p>
+                                        <div class="checkitem">
+                                            <p>24.Jan.2021</p>
+                                        </div>
+                                        <div class="checkitem">
+                                            <p>12.Jun.2021</p>
+                                        </div>
+
+                                        <div class="checkitem">
+                                            <p>5.Jan.2021</p>
+                                        </div>
+
+                                        <div class="checkitem">
+                                            <p>7.Mar.2021</p>
+                                        </div>
+
+                                        <div class="checkitem">
+                                            <p>17.Dec.2021</p>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-3">
+                        <div class="dailytraffic">
+                            <div class="d-flex justify-content-between header textgray">
+                                <p class="">Daily Traffic</p>
+                                <span><i class="bi bi-caret-up-fill"></i> +2.45%</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-between flex-column h-100">
+                                <div class="d-flex align-items-end justify-content-end">
+                                    <h1>2.579 </h1><sub class="textgray">Visitors</sub>
+                                </div>
+                                <canvas id="Dailytraffic"></canvas>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="piechart">
+                            <div class="d-flex justify-content-between header">
+                                <p class="fw-bold" style="font-size: 14px;">Your pie chart</p>
+                                <p class="textgray">Monthly <i class="bi bi-caret-down-fill"></i></p>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-between flex-column">
+
+                                <canvas id="myPieChart"></canvas>
+                                <div class="d-flex align-items-center justify-content-center gap-5 w-100 mt-3">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <div class="d-flex align-items-center gap-2 textgray fw-bold">
+                                            <div class="label" style="background-color: #4318ff;"></div>Your Files
+                                        </div>
+                                        <div class="fw-bold">63%</div>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-center">
+                                        <div class="d-flex align-items-center gap-2 textgray fw-bold">
+                                            <div class="label" style="background-color: #6ad2ff;"></div>System
+                                        </div>
+                                        <div class="fw-bold">25%</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="row my-3">
+                    <div class="col-6">
+
+                        <div class="checktable">
+                            <div class="d-flex justify-content-between header mb-3">
+                                <p class="fs-5 fw-bold"> Complex Table</p>
+                                <i class="bi bi-three-dots clickable"></i>
+                            </div>
+                            <div class="d-flex align-items-start">
+
+                                <div class="d-flex w-100 titles flex-column">
+
+                                    <div class="d-flex w-100 border-bottom border-1">
+                                        <P style="width: 35%;"> NAME</P>
+                                        <P style="width: 25%;"> STATUS</P>
+                                        <P style="width: 20%;"> DATE</P>
+                                        <P style="width: 20%;"> PROGRESS</P>
+
+                                    </div>
+                                    <div class="d-flex tasks mt-3">
+                                        <div class="d-flex flex-column gap-3" style="width: 35%;">
+                                            <p>Horizon UI Pro</p>
+                                            <p>Horizon UI Free</p>
+                                            <p>MarketPlace</p>
+                                            <p>Weekly Updates</p>
+
+
+                                        </div>
+                                        <div class="d-flex flex-column gap-3" style="width: 25%;">
+                                            <p class="status"><i class="bi bi-check-lg"
+                                                    style="background-color: #05cd99;"></i> Approved</p>
+                                            <p class="status"><i class="bi bi-x-lg"
+                                                    style="background-color: #ee5d50;"></i> Disabled</p>
+
+                                            <p class="status"><i class="bi bi-exclamation-lg"
+                                                    style="background-color: #ffce20;"></i> Error</p>
+
+                                            <p class="status"><i class="bi bi-check-lg"
+                                                    style="background-color: #05cd99;"></i> Approved</p>
+
+                                        </div>
+                                        <div class="d-flex flex-column gap-3" style="width: 20%;">
+                                            <p>18 Apr 2021</p>
+                                            <p>18 Apr 2021</p>
+                                            <p>20 May 2021</p>
+                                            <p>12 Jul 2021</p>
+
+                                        </div>
+                                        <div class="d-flex flex-column gap-4" style="width: 20%;">
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 80%;"></div>
+                                            </div>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 30%;"></div>
+                                            </div>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 90%;"></div>
+                                            </div>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 50%;"></div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-3">
+               <div class="taskscontainer" id="SimpleList">
+  <div class="d-flex justify-content-between header textgray align-items-center">
+    <div class="d-flex align-items-center gap-3 checkitem m-0">
+      <input type="checkbox"> Tasks
+    </div>
+    <i class="bi bi-three-dots"></i>
+  </div>
+
+  <div class="d-flex flex-column mt-4 position-relative " id="myList">
+    <div class="checkitem d-flex justify-content-between draggable w-100 ">
+      <div class="d-flex align-items-center gap-2"><input type="checkbox">
+        <p>Landing Page Design</p>
+      </div><img src="./Assets/drag_indicator.png" alt="" class="icon">
+    </div>
+
+    <div class="checkitem d-flex justify-content-between draggable w-100 ">
+      <div class="d-flex align-items-center gap-2"><input type="checkbox">
+        <p>Dashboard</p>
+      </div><img src="./Assets/drag_indicator.png" alt="" class="icon">
+    </div>
+
+    <div class="checkitem d-flex justify-content-between draggable w-100 ">
+      <div class="d-flex align-items-center gap-2"><input type="checkbox">
+        <p>Mobile App Design</p>
+      </div><img src="./Assets/drag_indicator.png" alt="" class="icon">
+    </div>
+
+    <div class="checkitem d-flex justify-content-between draggable w-100 ">
+      <div class="d-flex align-items-center gap-2"><input type="checkbox">
+        <p>Illustrations</p>
+      </div><img src="./Assets/drag_indicator.png" alt="" class="icon">
+    </div>
+
+    <div class="checkitem d-flex justify-content-between draggable w-100 ">
+      <div class="d-flex align-items-center gap-2"><input type="checkbox">
+        <p>Promotional LP</p>
+      </div><img src="./Assets/drag_indicator.png" alt="" class="icon">
+    </div>
+  </div>
+</div>
+
+                    </div>
+                    <div class="col-3">
+                        <div class="piechart center">
+
+
+                            <!-- calendarr -->
+                            <div id="calendar"></div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- last row -->
+
+                <div class="row my-3">
+
+                    <div class="col-3">
+                        <div class="lession d-flex flex-column justify-content-between">
+                            <div class="d-flex header  align-items-center gap-3">
+                                <i class="bi bi-fire"></i>
+                                <div>
+                                    <p class="textgray">Business Design</p>
+                                    <h5>New lession is available</h5>
+                                </div>
+
+                            </div>
+
+                            <h4 class="px-4">What do you need to know to create better products?</h4>
+
+                            <div class="body gap-4 d-flex flex-column">
+                                <div class="d-flex gap-4">
+                                    <div style="font-weight: 500;"><i class="bi bi-clock-history"
+                                            style="color: #00b87a;"></i> 85 mins</div>
+                                    <div style="font-weight: 500;"><i class="bi bi-play-circle"
+                                            style="color: #ff5142;"></i> Video format</div>
+                                </div>
+
+
+                                <div class="d-flex w-100 justify-content-between">
+                                    <div class="d-flex align-items-center avatarscontainer">
+
+                                        <img src="./Assets/Avatar 1 (1).png" alt="" class="border-3 border-white border"
+                                            style="margin-right: -15px;">
+                                        <img src="./Assets/Avatar 2 (1).png" alt="" style="margin-right: -15px;">
+                                        <img src="./Assets/Avatar 3 (1).png" style="margin-right: -15px;" alt="">
+                                        <img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
+                                        <div class="d-flex align-items-center moreavatars">18+</div>
+                                    </div>
+                                    <button>Get Started</button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="teamembers center">
+                            <!-- Header -->
+                            <div class="d-flex justify-content-between align-items-center header w-100">
+                                <h5>
+                                    Team members
+                                </h5>
+                                <i class="bi bi-plus-circle-fill"></i>
+                            </div>
+
+                            <!-- Members list -->
+                            <div class="d-flex flex-column members gap-3 w-100">
+                                <!-- Member 1 -->
+                                <div class="d-flex justify-content-between align-items-center member">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./Assets/Ellipse 75.png" alt="">
+                                        <div>
+                                            <h5 class="mb-0">Adela Parkson</h5>
+                                            <p class="mb-0 textgray">Creative Director</p>
+                                        </div>
+                                    </div>
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </div>
+
+                                <!-- Member 2 -->
+                                <div class="d-flex justify-content-between align-items-center member">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./Assets/Ellipse 75 (1).png" alt="">
+                                        <div>
+                                            <h5 class="mb-0">Christian Mad</h5>
+                                            <p class="mb-0 textgray">Product Designer</p>
+                                        </div>
+                                    </div>
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </div>
+
+                                <!-- Member 3 -->
+                                <div class="d-flex justify-content-between align-items-center member">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./Assets/Ellipse 75 (2).png" alt="">
+                                        <div>
+                                            <h5 class="mb-0">Jason Sratham</h5>
+                                            <p class="mb-0 textgray">Junior Graphic Designer</p>
+                                        </div>
+                                    </div>
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-3">
+                        <div class="fingerprint">
+                            <img src="./Assets/fingerprint.png" alt="">
+                            <h3>Coontrol card security in-app with a tap</h3>
+                            <p class="textgray">Discover our cards benefits, with one tap.</p>
+                            <button>Cards</button>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="starbucks ">
+                            <div class="imgcontainer">
+                                <img src="./Assets/Image Background.png" alt="">
+                                <div class="iconcontainer"><i class="bi bi-clock"></i></div>
+                            </div>
+                            <div class="d-flex  flex-column px-3 logocontainer gap-2">
+                                <div>
+                                    <img src="./Assets/Logo (1).png" alt="">
+                                </div>
+                                <h5>Starbucks</h5>
+                                <p class="textgray"><i class="bi bi-cup-straw"></i> 10% Cashback & off</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
 
             </div>
-    </div>
-    </div>
-
-<div class="col-6">
-               <div class="Revenue">
-            <div class="d-flex justify-content-between header mb-3">
-                <p class="fs-5 fw-bold">Weekly Revenue</p>
-               <i class="bi bi-bar-chart-fill"></i>
-            </div>
-            <div class="d-flex align-items-start justify-content-between">
-                
-    <canvas id="weeklyRevenue"></canvas>
 
 
-            </div>
-    </div>
-    </div>
-    
-     </div>
-            </div>
 
-                
+
+
+
+
+
+
+
+
             <div class="NFTMarketplace section ">
-             <div class="sectionhead d-flex">
-            <div> <p class="textgray" style="font-weight: 500;">page / NFT Marketplace</p><h4 class="fw-bold">NFT Marketplace</h4></div>
-            <div class="searchcontainer">
-<div class="inputcontainer">
-    <i class="bi bi-search"></i>
-    <input type="text" placeholder="search" class="colormain">
-</div>
-<div class="balancecontainer">
-    <img src="./Assets/Icon.png" alt=""> 1,924 ETH
-</div>
-            <i class="bi bi-bell"></i>
-<i class="bi bi-moon-fill"></i>
-<i class="bi bi-info-circle"></i>
-<img src="./Assets/Avatar.png" alt="">
-            </div>
-            
-          </div>
-<div class="row mt-3">
-    <div class="col-8" style="min-height: 100%;">
-        <div class="row nftscontainer">
-            <div class="col-12 position-relative p-0 d-flex"> 
-
-                <div style="background-image: url(./Assets/Products\ 2.png); height: 250px; width: 100%;background-size: cover; border-radius: 15px;" >
-<div class="nftmarketbannercontent">
-    <h4>Discover, collect, and<br />sell extraordinary NFTs</h4>
-    <P>Enter in this creative world. Discover now the <br />latest NFTs or start creating your own!</P>
-    <div class="buttoncontainer">
-        <button class="text-black bg-white buttonwhitebg">Discover now</button>
-        <button style="color: #eae3fe;" >Watch video</button>
-    </div>
-</div>
-</div>
-          </div>
-
-
-
-
-
-    <div class="col-12 mt-4"> 
-
-          <div class="d-flex justify-content-between">
-          <h5>Trending NFTs</h5>
-          <div class="d-flex gap-xl-5 gap-3">
-                <div class="filter active">Arts</div>
-                <div class="filter">Music</div>
-                <div class="filter">Collectibles</div>
-                <div class="filter">Sports</div>
-            </div>
-          </div>
-   
-
-
-<div class="row mt-3">
-
-<div class="col-4 ps-0">
-    <div class="nft">
-        <div class="position-relative">
-            <div class="fav">
-                <img src="./Assets/Badge Stats (Favorite).png" alt="">
-            </div>
-    <img src="./Assets/fakurian-design-kakvfQBniyI-unsplash 1.png" alt="">
-    </div>
-    <div class="d-flex align-items-center justify-content-between mt-2">
-        <div >
-        <p class="fw-bold m-0">Abstract Colors</p>
-                <p class="textgray">By Esthera Jackson</p>
-
-    </div>
-    <div class="d-flex align-items-center avatarscontainer">
-  
-<img src="./Assets/Avatar 1 (1).png" alt="" class="border-3 border-white border" style="margin-right: -15px;">
-<img src="./Assets/Avatar 2 (1).png" alt="" style="margin-right: -15px;">
-<img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
-      <div class="d-flex align-items-center moreavatars">15+</div>
-</div>
-    </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-2 mt-xl-4">
-        <p style="color: #4017fd; font-weight: 500;">Current Bid: 0.91 ETH</p>
-        <button>Place Bid</button>
-    </div>
-    </div>
-</div>
-
-
-
-<div class="col-4 ps-0">
-    <div class="nft">
-        <div class="position-relative">
-            <div class="fav">
-                <img src="./Assets/Badge Stats (Favorite).png" alt="">
-            </div>
-    <img src="./Assets/fakurian-design-58Z17lnVS4U-unsplash (1) 1.png" alt="">
-    </div>
-    <div class="d-flex align-items-center justify-content-between my-2">
-        <div>
-        <p class="fw-bold m-0">Abstract Colors</p>
-                <p class="textgray">By Nick Wilson</p>
-
-    </div>
-     <div class="d-flex align-items-center avatarscontainer">
-  
-<img src="./Assets/Avatar 2 (1).png" alt="" style="margin-right: -15px;">
-<img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
-      <div class="d-flex align-items-center moreavatars">5+</div>
-</div>
-    </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
-        <p style="color: #4017fd; font-weight: 500;">Current Bid: 2.82 ETH</p>
-        <button>Place Bid</button>
-    </div>
-    </div>
-</div>
-
-
-<div class="col-4 ps-0">
-    <div class="nft">
-        <div class="position-relative">
-            <div class="fav">
-                <img src="./Assets/Badge Stats (Favorite).png" alt="">
-            </div>
-    <img src="./Assets/fakurian-design-bexwsdM5BCw-unsplash (2) 1.png" alt="">
-    </div>
-    <div class="d-flex align-items-center justify-content-between my-2">
-        <div>
-        <p class="fw-bold m-0">Mesh Gradients</p>
-                <p class="textgray">By Will Smith</p>
-
-    </div>
-    <div class="d-flex align-items-center avatarscontainer">
-  
-<img src="./Assets/Avatar 1 (1).png" alt="" class="border-3 border-white border" style="margin-right: -15px;">
-<img src="./Assets/Avatar 3.png" alt="" >
-
-      
-</div>
-    </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
-        <p style="color: #4017fd; font-weight: 500; ">Current Bid: 0.56 ETH</p>
-        <button>Place Bid</button>
-    </div>
-    </div>
-</div>
-
-
-</div>
-
-
-
-
-
-    </div>
-
-
-
-
-    
-
-
-    <div class="col-12 mt-4 d-flex flex-column"> 
-
-          <div class="d-flex justify-content-between">
-          <h5>Recently Added</h5>
-
-          </div>
-   
-
-
-<div class="row mt-3 flex-grow-1">
-
-<div class="col-4 ps-0">
-    <div class="nft">
-        <div class="position-relative">
-            <div class="fav">
-                <img src="./Assets/Badge Stats (Favorite).png" alt="">
-            </div>
-    <img src="./Assets/fakurian-design-PGdW_bHDbpI-unsplash (1) 1.png" alt="">
-    </div>
-    <div class="d-flex align-items-center justify-content-between my-2">
-        <div >
-        <p class="fw-bold m-0">Swipe Circles</p>
-                <p class="textgray">By Esthera Jackson</p>
-
-    </div>
-   <div class="d-flex align-items-center avatarscontainer">
-  
-<img src="./Assets/Avatar 2 (1).png" alt="" style="margin-right: -15px;">
-<img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
-      <div class="d-flex align-items-center moreavatars">10+</div>
-</div>
-    </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
-        <p style="color: #4017fd; font-weight: 500; ">Current Bid: 2.30 ETH</p>
-        <button>Place Bid</button>
-    </div>
-    </div>
-</div>
-
-
-
-<div class="col-4 ps-0">
-    <div class="nft">
-        <div class="position-relative">
-            <div class="fav">
-                <img src="./Assets/Badge Stats (Favorite).png" alt="">
-            </div>
-    <img src="./Assets/fakurian-design-jkqGsgsE0RY-unsplash 1 (1).png" alt="">
-    </div>
-    <div class="d-flex align-items-center justify-content-between my-2">
-        <div>
-        <p class="fw-bold m-0">Colorful Heaven</p>
-                <p class="textgray">By Nick Wilson</p>
-
-    </div>
-   <div class="d-flex align-items-center avatarscontainer">
-  
-<img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
-      <div class="d-flex align-items-center moreavatars">21+</div>
-</div>
-    </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
-        <p style="color: #4017fd; font-weight: 500;">Current Bid: 1.30 ETH</p>
-        <button>Place Bid</button>
-    </div>
-    </div>
-</div>
-
-
-<div class="col-4 ps-0">
-    <div class="nft">
-        <div class="position-relative">
-            <div class="fav">
-            <img src="./Assets/Badge Stats (Favorite).png" alt="" >
-            </div>
-    <img src="./Assets/fakurian-design-SPxVnxu_ZGM-unsplash 1.png" alt="">
-    </div>
-    <div class="d-flex align-items-center justify-content-between my-2">
-        <div >
-        <p class="fw-bold m-0">3D Cubes Art</p>
-                <p class="textgray">By Will Smith</p>
-
-    </div>
-      <div class="d-flex align-items-center avatarscontainer">
-  
-<img src="./Assets/Avatar 1 (1).png" alt="" class="border-3 border-white border" style="margin-right: -15px;">
-<img src="./Assets/Avatar 3.png" alt="" style="margin-right: -15px;">
-      <div class="d-flex align-items-center moreavatars">21+</div>
-</div>
-
-    </div>
-    <div class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
-        <p style="color: #4017fd; font-weight: 500;">Current Bid: 6.58 ETH</p>
-        <button>Place Bid</button>
-    </div>
-    </div>
-</div>
-
-
-</div>
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-    </div>
-
-
-    <div class="col-4">
-
-        <div class="row gap-4 h-100">
-            <div class="col-12 d-flex">
-                <div class="topcreators overflow-hidden">
-                    <div class="header">
-                        <div class="d-flex w-100 align-items-center justify-content-between">
-                            <h5>Top Creators</h5>
-                            <div class="button">See all</div>
+                <div class="sectionhead d-flex">
+                    <div>
+                        <p class="textgray" style="font-weight: 500;">page / NFT Marketplace</p>
+                        <h4 class="fw-bold">NFT Marketplace</h4>
+                    </div>
+                    <div class="searchcontainer">
+                        <div class="inputcontainer">
+                            <i class="bi bi-search"></i>
+                            <input type="text" placeholder="search" class="colormain">
                         </div>
-                        <div class="d-flex w-100 align-items-center">
-                            <p class="w-50">Name</p>
-                            <p class="w-25">Artworks</p>
-                            <p class="w-25">Rating</p>
+                        <div class="balancecontainer">
+                            <img src="./Assets/Icon.png" alt=""> 1,924 ETH
                         </div>
+                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-moon-fill"></i>
+                        <i class="bi bi-info-circle"></i>
+                        <img src="./Assets/Avatar 3.png" alt="" style="min-height: 35px; " class="profileicon">
+                    </div>
+
                 </div>
-                  <div class="body">
-<div class="creator">
-    <div class="creatorname"><img src="./Assets/Rectangle 346.png" alt=""> @maddison_c21</div>
-    <p class="w-25">9821</p>
-    <div class="rating"><div class="indicator" style="width: 90%;"></div></div>
-</div>
+                <div class="row mt-3">
+                    <div class="col-8" style="min-height: 100%;">
+                        <div class="row nftscontainer">
+                            <div class="col-12 position-relative p-0 d-flex">
 
-<div class="creator">
-    <div class="creatorname"><img src="./Assets/Rectangle 346 (1).png" alt=""> @Karl.will02</div>
-    <p class="w-25">7032</p>
-    <div class="rating"><div class="indicator" style="width: 80%;"></div></div>
-</div>
-
-<div class="creator">
-    <div class="creatorname"><img src="./Assets/Rectangle 346 (2).png" alt=""> @andreea.1z</div>
-    <p class="w-25">5204</p>
-    <div class="rating"><div class="indicator" style="width: 70%;"></div></div>
-</div>
-
-<div class="creator">
-    <div class="creatorname"><img src="./Assets/Rectangle 346 (3).png" alt=""> @abraham47.y</div>
-    <p class="w-25">4309</p>
-    <div class="rating"><div class="indicator" style="width: 95%;"></div></div>
-</div>
-
-<div class="creator">
-    <div class="creatorname"><img src="./Assets/image.png" alt=""> @simmmple.web</div>
-    <p class="w-25">3871</p>
-    <div class="rating"><div class="indicator" style="width: 15%;"></div></div>
-</div>
-
-
-<div class="creator">
-    <div class="creatorname"><img src="./Assets/Image (1).png" alt=""> @venus.sys</div>
-    <p class="w-25">3152</p>
-    <div class="rating"><div class="indicator" style="width: 65%;"></div></div>
-</div>
-
-
-<div class="creator">
-    <div class="creatorname"><img src="./Assets/Rectangle 346 (4).png" alt=""> @ape.vpp8</div>
-    <p class="w-25">2907</p>
-    <div class="rating"><div class="indicator" style="width: 40%;"></div></div>
-</div>
-
-
-<div class="creator">
-    <div class="creatorname"><img src="./Assets/Rectangle 346 (5).png" alt=""> @leon.pwrr</div>
-    <p class="w-25">2309</p>
-    <div class="rating"><div class="indicator" style="width: 85%;"></div></div>
-</div>
-
-                  </div>
-                </div>
-            </div>
+                                <div
+                                    style="background-image: url(./Assets/Products\ 2.png); height: 250px; width: 100%;background-size: cover; border-radius: 15px;">
+                                    <div class="nftmarketbannercontent">
+                                        <h4>Discover, collect, and<br />sell extraordinary NFTs</h4>
+                                        <P>Enter in this creative world. Discover now the <br />latest NFTs or start
+                                            creating your own!</P>
+                                        <div class="buttoncontainer">
+                                            <button class="text-black bg-white buttonwhitebg">Discover now</button>
+                                            <button style="color: #eae3fe;">Watch video</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 
 
-                <div class="col-12 d-flex">
-                <div class="History overflow-hidden">
-                    <div class="header">
-                        <div class="d-flex w-100 align-items-center justify-content-between">
-                            <h5>History</h5>
-                            <div class="button">See all</div>
+
+
+                            <div class="col-12 mt-4">
+
+                                <div class="d-flex justify-content-between">
+                                    <h5>Trending NFTs</h5>
+                                    <div class="d-flex gap-xl-5 gap-3">
+                                        <div class="filter active">Arts</div>
+                                        <div class="filter">Music</div>
+                                        <div class="filter">Collectibles</div>
+                                        <div class="filter">Sports</div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row mt-3">
+
+                                    <div class="col-4 ps-0">
+                                        <div class="nft">
+                                            <div class="position-relative">
+                                                <div class="fav">
+<i class="bi bi-suit-heart"></i>                                                </div>
+                                                <img src="./Assets/fakurian-design-kakvfQBniyI-unsplash 1.png" alt="">
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-2">
+                                                <div>
+                                                    <p class="fw-bold m-0">Abstract Colors</p>
+                                                    <p class="textgray">By Esthera Jackson</p>
+
+                                                </div>
+                                                <div class="d-flex align-items-center avatarscontainer">
+
+                                                    <img src="./Assets/Avatar 1 (1).png" alt=""
+                                                        class="border-3 border-white border"
+                                                        style="margin-right: -15px;">
+                                                    <img src="./Assets/Avatar 2 (1).png" alt=""
+                                                        style="margin-right: -15px;">
+                                                    <img src="./Assets/Avatar 3.png" alt=""
+                                                        style="margin-right: -15px;">
+                                                    <div class="d-flex align-items-center moreavatars">15+</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex w-100 justify-content-between align-items-center mt-2 mt-xl-4">
+                                                <p style="color: #4017fd; font-weight: 500;">Current Bid: 0.91 ETH</p>
+                                                <button>Place Bid</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-4 ps-0">
+                                        <div class="nft">
+                                            <div class="position-relative">
+                                                <div class="fav">
+<i class="bi bi-suit-heart"></i>                                                </div>
+                                                <img src="./Assets/fakurian-design-58Z17lnVS4U-unsplash (1) 1.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between my-2">
+                                                <div>
+                                                    <p class="fw-bold m-0">Abstract Colors</p>
+                                                    <p class="textgray">By Nick Wilson</p>
+
+                                                </div>
+                                                <div class="d-flex align-items-center avatarscontainer">
+
+                                                    <img src="./Assets/Avatar 2 (1).png" alt=""
+                                                        style="margin-right: -15px;">
+                                                    <img src="./Assets/Avatar 3.png" alt=""
+                                                        style="margin-right: -15px;">
+                                                    <div class="d-flex align-items-center moreavatars">5+</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
+                                                <p style="color: #4017fd; font-weight: 500;">Current Bid: 2.82 ETH</p>
+                                                <button>Place Bid</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-4 ps-0">
+                                        <div class="nft">
+                                            <div class="position-relative">
+                                                <div class="fav">
+<i class="bi bi-suit-heart"></i>                                                </div>
+                                                <img src="./Assets/fakurian-design-bexwsdM5BCw-unsplash (2) 1.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between my-2">
+                                                <div>
+                                                    <p class="fw-bold m-0">Mesh Gradients</p>
+                                                    <p class="textgray">By Will Smith</p>
+
+                                                </div>
+                                                <div class="d-flex align-items-center avatarscontainer">
+
+                                                    <img src="./Assets/Avatar 1 (1).png" alt=""
+                                                        class="border-3 border-white border"
+                                                        style="margin-right: -15px;">
+                                                    <img src="./Assets/Avatar 3.png" alt="">
+
+
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
+                                                <p style="color: #4017fd; font-weight: 500; ">Current Bid: 0.56 ETH</p>
+                                                <button>Place Bid</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+
+
+
+
+
+
+                            <div class="col-12 mt-4 d-flex flex-column">
+
+                                <div class="d-flex justify-content-between">
+                                    <h5>Recently Added</h5>
+
+                                </div>
+
+
+
+                                <div class="row mt-3 flex-grow-1">
+
+                                    <div class="col-4 ps-0">
+                                        <div class="nft">
+                                            <div class="position-relative">
+                                                <div class="fav">
+<i class="bi bi-suit-heart"></i>                                                </div>
+                                                <img src="./Assets/fakurian-design-PGdW_bHDbpI-unsplash (1) 1.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between my-2">
+                                                <div>
+                                                    <p class="fw-bold m-0">Swipe Circles</p>
+                                                    <p class="textgray">By Esthera Jackson</p>
+
+                                                </div>
+                                                <div class="d-flex align-items-center avatarscontainer">
+
+                                                    <img src="./Assets/Avatar 2 (1).png" alt=""
+                                                        style="margin-right: -15px;">
+                                                    <img src="./Assets/Avatar 3.png" alt=""
+                                                        style="margin-right: -15px;">
+                                                    <div class="d-flex align-items-center moreavatars">10+</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
+                                                <p style="color: #4017fd; font-weight: 500; ">Current Bid: 2.30 ETH</p>
+                                                <button>Place Bid</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-4 ps-0">
+                                        <div class="nft">
+                                            <div class="position-relative">
+                                                <div class="fav">
+<i class="bi bi-suit-heart"></i>                                                </div>
+                                                <img src="./Assets/fakurian-design-jkqGsgsE0RY-unsplash 1 (1).png"
+                                                    alt="">
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between my-2">
+                                                <div>
+                                                    <p class="fw-bold m-0">Colorful Heaven</p>
+                                                    <p class="textgray">By Nick Wilson</p>
+
+                                                </div>
+                                                <div class="d-flex align-items-center avatarscontainer">
+
+                                                    <img src="./Assets/Avatar 3.png" alt=""
+                                                        style="margin-right: -15px;">
+                                                    <div class="d-flex align-items-center moreavatars">21+</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
+                                                <p style="color: #4017fd; font-weight: 500;">Current Bid: 1.30 ETH</p>
+                                                <button>Place Bid</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-4 ps-0">
+                                        <div class="nft">
+                                            <div class="position-relative">
+                                                <div class="fav">
+<i class="bi bi-suit-heart"></i>                                                </div>
+                                                <img src="./Assets/fakurian-design-SPxVnxu_ZGM-unsplash 1.png" alt="">
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between my-2">
+                                                <div>
+                                                    <p class="fw-bold m-0">3D Cubes Art</p>
+                                                    <p class="textgray">By Will Smith</p>
+
+                                                </div>
+                                                <div class="d-flex align-items-center avatarscontainer">
+
+                                                    <img src="./Assets/Avatar 1 (1).png" alt=""
+                                                        class="border-3 border-white border"
+                                                        style="margin-right: -15px;">
+                                                    <img src="./Assets/Avatar 3.png" alt=""
+                                                        style="margin-right: -15px;">
+                                                    <div class="d-flex align-items-center moreavatars">21+</div>
+                                                </div>
+
+                                            </div>
+                                            <div
+                                                class="d-flex w-100 justify-content-between align-items-center mt-w mt-xl-4">
+                                                <p style="color: #4017fd; font-weight: 500;">Current Bid: 6.58 ETH</p>
+                                                <button>Place Bid</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
                         </div>
-                      
-                </div>
-                  <div class="body">
+                    </div>
 
 
-<div class="nft">
-    <div class="imgcontainer d-flex align-items-center gap-2 w-50 p">
-<img src="./Assets/Image (2).png" alt="">
-<div>
-    <p class="fw-bold">Colorful Heaven</p>
-    <p class="text-muted">By Mark Benjamin</p>
-</div>
-</div>
+                    <div class="col-4">
 
-<div class="d-flex align-items-center gap-2 fw-bold"><img src="./Assets/Icon (1).png" alt="">1.30 ETH</div>
-<p class="text-muted">30s ago</p>
-</div>
+                        <div class="row gap-4 h-100">
+                            <div class="col-12 d-flex">
+                                <div class="topcreators overflow-hidden">
+                                    <div class="header">
+                                        <div class="d-flex w-100 align-items-center justify-content-between">
+                                            <h5>Top Creators</h5>
+                                            <div class="button">See all</div>
+                                        </div>
+                                        <div class="d-flex w-100 align-items-center">
+                                            <p class="w-50">Name</p>
+                                            <p class="w-25">Artworks</p>
+                                            <p class="w-25">Rating</p>
+                                        </div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="creator">
+                                            <div class="creatorname"><img src="./Assets/Rectangle 346.png" alt="">
+                                                @maddison_c21</div>
+                                            <p class="w-25">9821</p>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 90%;"></div>
+                                            </div>
+                                        </div>
 
+                                        <div class="creator">
+                                            <div class="creatorname"><img src="./Assets/Rectangle 346 (1).png" alt="">
+                                                @Karl.will02</div>
+                                            <p class="w-25">7032</p>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 80%;"></div>
+                                            </div>
+                                        </div>
 
+                                        <div class="creator">
+                                            <div class="creatorname"><img src="./Assets/Rectangle 346 (2).png" alt="">
+                                                @andreea.1z</div>
+                                            <p class="w-25">5204</p>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 70%;"></div>
+                                            </div>
+                                        </div>
 
-<div class="nft">
-    <div class="imgcontainer d-flex align-items-center gap-2">
-<img src="./Assets/Image (3).png" alt="">
-<div>
-    <p class="fw-bold">Abstract Colors</p>
-    <p class="text-muted">By Esthera Jackson</p>
-</div>
-    </div>
+                                        <div class="creator">
+                                            <div class="creatorname"><img src="./Assets/Rectangle 346 (3).png" alt="">
+                                                @abraham47.y</div>
+                                            <p class="w-25">4309</p>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 95%;"></div>
+                                            </div>
+                                        </div>
 
-<div class="d-flex align-items-center gap-2 fw-bold"><img src="./Assets/Icon (1).png" alt="">0.91 ETH</div>
-<p class="text-muted">58s ago</p>
-</div>
-
-
-
-<div class="nft">
-        <div class="imgcontainer d-flex align-items-center gap-2">
-
-<img src="./Assets/Image (4).png" alt="">
-<div>
-    <p class="fw-bold">ETH AI Brain</p>
-    <p class="text-muted">By Nick Wilson</p>
-</div>
-        </div>
-<div class="d-flex align-items-center gap-2 fw-bold"><img src="./Assets/Icon (1).png" alt="">2.82 ETH</div>
-<p class="text-muted">1m ago</p>
-</div>
-
-
-
-<div class="nft">
-        <div class="imgcontainer d-flex align-items-center gap-2">
-
-<img src="./Assets/Image (5).png" alt="">
-<div>
-    <p class="fw-bold">Swipe Circles</p>
-    <p class="text-muted">By Peter Will</p>
-</div>
-        </div>
-<div class="d-flex align-items-center gap-2 fw-bold"><img src="./Assets/Icon (1).png" alt="">2.30 ETH</div>
-<p class="text-muted">1m ago</p>
-</div>
-
-
-
-<div class="nft">
-        <div class="imgcontainer d-flex align-items-center gap-2">
-
-<img src="./Assets/Image (6).png" alt="">
-<div>
-    <p class="fw-bold">Mesh Gradients</p>
-    <p class="text-muted">By Will Smith</p>
-</div>
-        </div>
-<div class="d-flex align-items-center gap-2 fw-bold"><img src="./Assets/Icon (1).png" alt="">0.56 ETH</div>
-<p class="text-muted">2m ago</p>
-</div>
+                                        <div class="creator">
+                                            <div class="creatorname"><img src="./Assets/image.png" alt=""> @simmmple.web
+                                            </div>
+                                            <p class="w-25">3871</p>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 15%;"></div>
+                                            </div>
+                                        </div>
 
 
+                                        <div class="creator">
+                                            <div class="creatorname"><img src="./Assets/Image (1).png" alt="">
+                                                @venus.sys</div>
+                                            <p class="w-25">3152</p>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 65%;"></div>
+                                            </div>
+                                        </div>
 
 
-                </div>
-            </div>
+                                        <div class="creator">
+                                            <div class="creatorname"><img src="./Assets/Rectangle 346 (4).png" alt="">
+                                                @ape.vpp8</div>
+                                            <p class="w-25">2907</p>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 40%;"></div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="creator">
+                                            <div class="creatorname"><img src="./Assets/Rectangle 346 (5).png" alt="">
+                                                @leon.pwrr</div>
+                                            <p class="w-25">2309</p>
+                                            <div class="rating">
+                                                <div class="indicator" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
 
 
 
-        </div>
+                            <div class="col-12 d-flex">
+                                <div class="History overflow-hidden">
+                                    <div class="header">
+                                        <div class="d-flex w-100 align-items-center justify-content-between">
+                                            <h5>History</h5>
+                                            <div class="button">See all</div>
+                                        </div>
 
-    </div>
+                                    </div>
+                                    <div class="body">
+
+
+                                        <div class="nft">
+                                            <div class="imgcontainer d-flex align-items-center gap-2 w-50 p">
+                                                <img src="./Assets/Image (2).png" alt="">
+                                                <div>
+                                                    <p class="fw-bold">Colorful Heaven</p>
+                                                    <p class="text-muted">By Mark Benjamin</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-center gap-2 fw-bold"><img
+                                                    src="./Assets/Icon (1).png" alt="">1.30 ETH</div>
+                                            <p class="text-muted">30s ago</p>
+                                        </div>
 
 
 
-</div>
+                                        <div class="nft">
+                                            <div class="imgcontainer d-flex align-items-center gap-2">
+                                                <img src="./Assets/Image (3).png" alt="">
+                                                <div>
+                                                    <p class="fw-bold">Abstract Colors</p>
+                                                    <p class="text-muted">By Esthera Jackson</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-center gap-2 fw-bold"><img
+                                                    src="./Assets/Icon (1).png" alt="">0.91 ETH</div>
+                                            <p class="text-muted">58s ago</p>
+                                        </div>
+
+
+
+                                        <div class="nft">
+                                            <div class="imgcontainer d-flex align-items-center gap-2">
+
+                                                <img src="./Assets/Image (4).png" alt="">
+                                                <div>
+                                                    <p class="fw-bold">ETH AI Brain</p>
+                                                    <p class="text-muted">By Nick Wilson</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2 fw-bold"><img
+                                                    src="./Assets/Icon (1).png" alt="">2.82 ETH</div>
+                                            <p class="text-muted">1m ago</p>
+                                        </div>
+
+
+
+                                        <div class="nft">
+                                            <div class="imgcontainer d-flex align-items-center gap-2">
+
+                                                <img src="./Assets/Image (5).png" alt="">
+                                                <div>
+                                                    <p class="fw-bold">Swipe Circles</p>
+                                                    <p class="text-muted">By Peter Will</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2 fw-bold"><img
+                                                    src="./Assets/Icon (1).png" alt="">2.30 ETH</div>
+                                            <p class="text-muted">1m ago</p>
+                                        </div>
+
+
+
+                                        <div class="nft">
+                                            <div class="imgcontainer d-flex align-items-center gap-2">
+
+                                                <img src="./Assets/Image (6).png" alt="">
+                                                <div>
+                                                    <p class="fw-bold">Mesh Gradients</p>
+                                                    <p class="text-muted">By Will Smith</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2 fw-bold"><img
+                                                    src="./Assets/Icon (1).png" alt="">0.56 ETH</div>
+                                            <p class="text-muted">2m ago</p>
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
                 </div>
 
 
@@ -648,13 +1139,815 @@
                         <li>Blog</li>
                     </ul>
                 </footer>
-        </div></div>
+            </div>
+
+
+            <div class="Tables section">
+                <div class="sectionhead d-flex">
+                    <div>
+                        <p class="textgray" style="font-weight: 500;">page / Tables</p>
+                        <h4 class="fw-bold">Tables</h4>
+                    </div>
+                    <div class="searchcontainer">
+                        <div class="inputcontainer">
+                            <i class="bi bi-search"></i>
+                            <input type="text" placeholder="search" class="colormain">
+                        </div>
+                        <div class="balancecontainer">
+                            <img src="./Assets/Icon.png" alt=""> 1,924 ETH
+                        </div>
+                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-moon-fill"></i>
+                        <i class="bi bi-info-circle"></i>
+                        <img src="./Assets/Avatar 3.png" alt="" style="min-height: 35px; " class="profileicon">
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="row mt-4">
+
+                    <div class="col-6 mb-4">
+                        <div class="table">
+                            <div class="header">
+                                <h4>Development Table</h4>
+                                <i class="bi bi-three-dots"></i>
+                            </div>
+
+          
+
+<table class="sortable">
+    <thead><tr>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+    </tr></thead>
+    <tbody>
+        <tr>
+            <td>Marketplace</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-android2"></i><i class="bi bi-windows"></i></td>
+            <td>12.Jan.2021</td>
+            <td class="d-flex align-items-center gap-2"><p class="w-90">75.5%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 75.5%;"></div></div></td>
+        </tr>
+                <tr>
+            <td>Venus DB PRO</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i></td>
+            <td>21.Feb.2021</td>
+            <td class="d-flex align-items-center gap-2 w-100 align-items-center"><p class="w-90">35.4%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 34.5%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td>Venus DS</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-android2"></i><i class="bi bi-windows"></i></td>
+            <td>13.Mar.2021</td>
+            <td class="d-flex align-items-center gap-2"><p class="w-90">25%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 25%;"></div></div></td>
+        </tr>
+
+
+            <tr>
+            <td>Venus 3D Assets</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
+            <td>24.Jan.2021</td>
+            <td class="d-flex align-items-center gap-2"><p class="w-90">100%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 100%;"></div></div></td>
+        </tr>
+
+
+            <tr>
+            <td>Uranus</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
+            <td>21.Sep.2021</td>
+            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+
+            <tr>
+            <td>Uranus</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
+            <td>21.Sep.2021</td>
+            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td>Uranus</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
+            <td>21.Sep.2021</td>
+            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td>Uranus</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
+            <td>21.Sep.2021</td>
+            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td>Uranus</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
+            <td>21.Sep.2021</td>
+            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td>Uranus</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
+            <td>21.Sep.2021</td>
+            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td>Uranus</td>
+            <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
+            <td>21.Sep.2021</td>
+            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <div class="table checktablee">
+                            <div class="header">
+                                <h4>Check Table</h4>
+                                <i class="bi bi-three-dots"></i>
+                            </div>
+
+                  
+<table class="sortable">
+    <thead><tr>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+    </tr></thead>
+    <tbody>
+        <tr>
+            <td><input type="checkbox"> Marketplace</td>
+            <td>17.5%</td>
+<td>2458</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">75.5%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 75.5%;"></div></div></td>
+        </tr>
+                <tr>
+            <td><input type="checkbox"> Venus DB PRO</td>
+            <td>10.8%</td>
+<td>1485</td>            <td class="d-flex align-items-center gap-2 w-100 align-items-center"><p class="w-90">35.4%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 34.5%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td><input type="checkbox"> Venus DS</td>
+            <td>21.3%</td>
+<td>1024</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">25%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 25%;"></div></div></td>
+        </tr>
+
+
+            <tr>
+            <td><input type="checkbox"> Venus 3D Assets</td>
+            <td>31.5%</td>
+<td>858</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">100%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 100%;"></div></div></td>
+        </tr>
+
+
+            <tr>
+            <td><input type="checkbox"> Uranus</td>
+            <td >12.2%</td>
+<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+
+            <tr>
+            <td><input type="checkbox"> Uranus</td>
+            <td >12.2%</td>
+<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td><input type="checkbox"> Uranus</td>
+            <td >12.2%</td>
+<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td><input type="checkbox"> Uranus</td>
+            <td >12.2%</td>
+<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td><input type="checkbox"> Uranus</td>
+            <td >12.2%</td>
+<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td><input type="checkbox"> Uranus</td>
+            <td >12.2%</td>
+<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+
+            <tr>
+            <td><input type="checkbox"> Uranus</td>
+            <td >12.2%</td>
+<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+        </tr>
+    </tbody>
+</table>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-6">
+                        <div class="table checktablee">
+                            <div class="header">
+                                <h4>4-Column Table</h4>
+                                <i class="bi bi-three-dots"></i>
+                            </div>
+
+                           
+<table class="sortable">
+    <thead><tr>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+    </tr></thead>
+    <tbody>
+        <tr>
+            <td><input type="checkbox"> Marketplace</td>
+            <td>17.5%</td>
+<td>2458</td>       
+<td>24.Jan.2021</td> 
+       </tr>
+                <tr>
+            <td><input type="checkbox"> Venus DB PRO</td>
+            <td>10.8%</td>
+<td>1485</td>          
+<td>12.Jun.2021</td> 
+        </tr>
+
+            <tr>
+            <td><input type="checkbox"> Venus DS</td>
+            <td>21.3%</td>
+<td>1024</td>          
+<td>5.Jan.2021</td> 
+        </tr>
+
+
+            <tr>
+            <td><input type="checkbox"> Venus 3D Assets</td>
+            <td>31.5%</td>
+<td>858</td>        
+<td>7.Mar.2021</td> 
+        </tr>
+
+
+            <tr>
+            <td><input type="checkbox"> Uranus</td>
+            <td >12.2%</td>
+<td>258</td>           
+<td>17.Dec.2021</td> 
+        </tr>
+
+    </tbody>
+</table>
+                        </div>
+                    </div>
+
+                                  <div class="col-6">
+                        <div class="table checktablee ">
+                            <div class="header clickable">
+                                <h4>Complex Table</h4>
+                                <i class="bi bi-three-dots "></i>
+                            </div>
+
+
+                                  
+<table class="sortable">
+    <thead><tr>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+    </tr></thead>
+    <tbody>
+        <tr>
+            <td><input type="checkbox"> Marketplace</td>
+            <td class="d-flex align-items-center gap-2"><i class="bi bi-check2 statusicon" style="background-color: #00d09e;"></i>
+                                        Approved</td>
+<td>2458</td>       
+<td>24.Jan.2021</td> 
+       </tr>
+                <tr>
+            <td><input type="checkbox"> Venus Dashboard Builder</td>
+            <td class="d-flex align-items-center gap-2"><i class="bi bi-exclamation-lg statusicon"
+                                            style="background-color:#ffcc19 ;"></i> Error</td>
+<td>1485</td>          
+<td>12.Jun.2021</td> 
+        </tr>
+
+            <tr>
+            <td><input type="checkbox"> Venus Design System</td>
+            <td class="d-flex align-items-center gap-2"><i class="bi bi-x-lg statusicon" style="background-color: #ff5142;"></i>
+                                        Disable</td>
+<td>1024</td>          
+<td>5.Jan.2021</td> 
+        </tr>
+
+            <tr>
+            <td><input type="checkbox"> Uranus</td>
+            <td class="d-flex align-items-center gap-2" ><i class="bi bi-check2 statusicon" style="background-color: #00d09e;"></i>
+                                        Approved</td>
+<td>258</td>           
+<td>17.Dec.2021</td> 
+        </tr>
+
+    </tbody>
+</table>
+                        </div>
+                    </div>
+
+
+      
+                </div>
+
+
+
+
+                <footer>
+                    <p class="m-0">@ 2022 Horizon UI. All Rights Reserved. Made with love by Simmmple!</p>
+                    <ul>
+                        <li>Marketplace</li>
+                        <li>License</li>
+                        <li>Terms of Use</li>
+                        <li>Blog</li>
+                    </ul>
+                </footer>
+            </div>
+
+
+            <div class="Kanban section ">
+                <div class="sectionhead d-flex">
+                    <div>
+                        <p class="textgray" style="font-weight: 500;">page / Kanban</p>
+                        <h4 class="fw-bold">Kanban</h4>
+                    </div>
+                    <div class="searchcontainer">
+                        <div class="inputcontainer">
+                            <i class="bi bi-search"></i>
+                            <input type="text" placeholder="search" class="colormain">
+                        </div>
+
+                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-moon-fill"></i>
+                        <i class="bi bi-info-circle"></i>
+                        <img src="./Assets/Avatar 3.png" alt="" style="min-height: 35px; " class="profileicon">
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="row mt-4">
+                    <div class="col-4">
+                        <div class="logcontainer">
+                            <div class="header">
+                                <h5>Backlog</h5>
+                                <i class="bi bi-plus-lg"></i>
+                            </div>
+                            <div class="body">
+                                <div class="component">
+                                    <div class="head">
+                                        <h6>Option to "use local/server version" feature</h6><i
+                                            class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    <p>it usually displays this message wen you close an unsaved page when you do it on
+                                        purpose, and it's getting frusrated to see this every time.</p>
+                                    <div class="foot">
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""><img
+                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;">
+                                        </div>
+                                        <div class="status" style="background-color: #0567fe; color: white;">UPDATES
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component">
+                                    <div class="head">
+                                        <h6>Add/Modify your own CSS-Selector</h6><i class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    <img src="./Assets/Image (7).png" alt="">
+                                    <p>Website Design: The ability to add/modify your own CSS-Selectors like its done in
+                                        Venus.</p>
+                                    <div class="foot">
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""><img
+                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;"><img
+                                                src="./Assets/Avatar 3 (2).png" alt=""
+                                                style="margin-left: -15px;height: 32px;"></div>
+                                        <div class="status" style="background-color: #ffb13f; color: white;">PENDING
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component">
+                                    <div class="head">
+                                        <h6>Shortcode for templates to display correctly</h6><i
+                                            class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    <p>When you save some sections as a template and then paste a shortcode to a new
+                                        page, the layout is broken, some styles are missing - in the editor.</p>
+                                    <div class="foot">
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt="">
+                                        </div>
+                                        <div class="status" style="background-color: #fc0000; color: white;">ERRORS
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="logcontainer">
+                            <div class="header">
+                                <h5>In Progress</h5>
+                                <i class="bi bi-plus-lg"></i>
+                            </div>
+                            <div class="body">
+                                <div class="component">
+                                    <div class="head">
+                                        <h6>General ideas to improve 'Edit' workflow</h6><i
+                                            class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    <p>Currently, I have a few templates in the Local Library and when I want to add
+                                        them I'm always presented (by default).</p>
+                                    <div class="foot">
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""><img
+                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;"><img
+                                                src="./Assets/Avatar 3 (2).png" alt=""
+                                                style="margin-left: -15px;height: 32px;"></div>
+                                        <div class="status" style="background-color: #ffb13f; color: white;">PENDING
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component">
+                                    <div class="head">
+                                        <h6>Shortcode for templates to display correctly</h6><i
+                                            class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    <p>When you save some sections as a template and then paste a shortcode to a new
+                                        page, the layout is broken, some styles are missing - in the editor.</p>
+                                    <div class="foot">
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""></div>
+                                        <div class="status" style="background-color: #0567fe; color: white;">UPDATES
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component">
+                                    <div class="head">
+                                        <h6>[UX Design] - Set the default Library tab</h6><i
+                                            class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    <p>I want to be able to set the default Library tab (or a way to remember the last
+                                        active tab), especially when I already...</p>
+                                    <img src="./Assets/Image (8).png" alt="">
+                                    <div class="foot">
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""><img
+                                                src="./Assets/Avatar 3.png" alt="" style="margin-left: -15px;"></div>
+                                        <div class="status" style="background-color: #fc0000; color: white;">ERRORS
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="logcontainer">
+                            <div class="header">
+                                <h5>Done</h5>
+                                <i class="bi bi-plus-lg"></i>
+                            </div>
+                            <div class="body">
+                                <div class="component">
+                                    <div class="head">
+                                        <h6>Copy/Paste elements between pages</h6><i class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    <p>We can only copy/paste elements (or group of elements) in the same page, which is
+                                        quite limited.</p>
+                                    <div class="foot">
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""></div>
+                                        <div class="status" style="background-color: #00b87a; color: white;">DONE</div>
+                                    </div>
+                                </div>
+                                <div class="component">
+                                    <div class="head">
+                                        <h6>Remove Extra DIV for each container added</h6><i
+                                            class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    <p>I still hope there won't have an extra div for each container we added. It should
+                                        be something for better styling...</p>
+                                    <div class="foot">
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""><img
+                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;"><img
+                                                src="./Assets/Avatar 3 (2).png" alt=""
+                                                style="margin-left: -15px;height: 32px;"></div>
+                                        <div class="status" style="background-color: #00b87a; color: white;">DONE</div>
+
+
+                                    </div>
+                                </div>
+                                <div class="component">
+                                    <div class="head">
+                                        <h6>Add Figma files for the Library design blocks</h6><i
+                                            class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    <p>I want to present my clients the Figma files first, so it would be great if you
+                                        add those as well, more manual downloads...</p>
+                                    <div class="foot">
+
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""
+                                                style="margin-left: -15px;"><img src="./Assets/Avatar 3.png" alt=""
+                                                style="margin-left: -15px;"></div>
+                                        <div class="status" style="background-color: #00b87a; color: white;">DONE</div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="Profile section">
+                <div class="sectionhead d-flex">
+                    <div>
+                        <p class="textgray" style="font-weight: 500;">page / Profile</p>
+                        <h4 class="fw-bold">Profile</h4>
+                    </div>
+                    <div class="searchcontainer">
+                        <div class="inputcontainer">
+                            <i class="bi bi-search"></i>
+                            <input type="text" placeholder="search" class="colormain">
+                        </div>
+
+                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-moon-fill"></i>
+                        <i class="bi bi-info-circle"></i>
+                        <img src="./Assets/Avatar 3.png" alt="" style="min-height: 35px; " class="profileicon">
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="row mt-4">
+
+
+                    <div class="col-5">
+                        <div class="profilecomponent">
+                            <img src="./Assets/Background.png" alt="" class="w-100">
+                            <img src="./Assets/Avatar.png" alt="" style="margin-top: -50px;">
+                            <h4 class="mt-3 mb-0 fw-bold">Adela Parkson</h4>
+                            <p>Product Designer</p>
+                            <div class="d-flex align-items-center w-100 justify-content-center mt-3" style="gap: 60px;">
+                                <div class="d-flex align-items-center flex-column">
+                                    <h4>14</h4>
+                                    <p>Posts</p>
+                                </div>
+                                <div class="d-flex align-items-center flex-column">
+                                    <h4>9.7K</h4>
+                                    <p>Followers</p>
+                                </div>
+
+                                <div class="d-flex align-items-center flex-column">
+                                    <h4>274</h4>
+                                    <p>Followers</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="profilecomponent justify-content-between">
+                            <div class="d-flex justify-content-end w-100 head"><i class="bi bi-three-dots"></i></div>
+                            <div class="body d-flex flex-column align-items-center">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-cloud-check"></i>
+                                </div>
+                                <h4 class="mt-3 fw-bold">Your storage</h4>
+                                <p class="mt-2 text-center">Supervise your drive space <br />in the easiest way.</p>
+                            </div>
+                            <div class="foot d-flex flex-column w-100">
+                                <div class="d-flex justify-content-between"><p class="m-1">25.6 Gb</p><p class="m-1">50 Gb</p></div>
+                                <div class="rating w-100"><div class="indicator" style="width: 70%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="profilecomponent">
+                         <div class="row h-100">
+                            <div class="col-6 center">
+<div class="uploadimageinputcontainer">
+<input type="file" accept="image/*" hidden id="imginput">
+<label for="imginput"></label>
+  <i class="bi bi-upload"></i>
+  <h3 class="mt-4">Upload Files</h3>
+  <p class="text-center">PNG, JPG and GIF files are allowed</p>
+</div>
+</div>
+<div class="col-6">
+<div class="d-flex flex-column  justify-content-between h-100">
+    <div>
+    <h5 class="mt-4 fw-bold">Complete your profile</h5>
+    <p>Stay on the pulse distributed projects with an anine whiteboard to plan, coordinate and discuss</p>
+    </div>
+    <div>
+    <button class="status">Publish now</button>
+</div>
+</div>
+                   </div>
+                      </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+<div class="row mt-3 secondrow">
+    <div class="col-4">  
+                   <div class="profilecomponent ">
+                            <div class="d-flex w-100 head"><h4>All Projects</h4></div>
+                            <div class=" d-flex flex-column align-items-center w-100 gap-3 justify-content-between h-100">
+                               
+                                <p class="mt-2 w-100 fw-normal">Here you can find more details about your projects. Keep you user engaged by providing meaningful information.</p>
+                                <div class="d-flex flex-column gap-3 w-100">
+                                    <div class="project"><img src="./Assets/Image (9).png" alt="">
+                                    <div class="d-flex justify-content-between w-100">
+                                        <div class="d-flex flex-column body">
+                                            <h6>Technology behind the blockchain</h6>
+                                            <p>project #1 • <span>See Project details</span></p>
+                                        </div>
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    </div>
+     <div class="project"><img src="./Assets/Image (10).png" alt="">
+                                    <div class="d-flex justify-content-between w-100">
+                                        <div class="d-flex flex-column body">
+                                            <h6>Greatest way to a good Economy</h6>
+                                            <p>project #2 • <span>See Project details</span></p>
+                                        </div>
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    </div>
+     <div class="project"><img src="./Assets/Image (11).png" alt="">
+                                    <div class="d-flex justify-content-between w-100">
+                                        <div class="d-flex flex-column body">
+                                            <h6>Most essential tips for burnout</h6>
+                                            <p>project #3 • <span>See Project details</span></p>
+                                        </div>
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </div>
+                                    </div>
+                                                                </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+    <div class="col-5">   
+                <div class="profilecomponent ">
+                            <div class="d-flex w-100 head"><h4>General information</h4></div>
+                            <div class="body d-flex flex-column align-items-center justify-content-between">
+                             
+                                <p class="mt-2 w-100 fw-normal overflow-visible">As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...</p>
+                                <div class="row w-100  d-flex margintopneg h-100 center">
+                                    <div class="col-6">
+                                        <div class="info"><p>Education</p><h6>Stanford University</h6></div>
+                                        </div>
+                                    <div class="col-6">
+                                        <div class="info"><p>Languages</p><h6>English, Spanish, italian</h6></div>
+                                        </div>
+                                    <div class="col-6">
+                                        <div class="info"><p>Department</p><h6>Product Design</h6></div>
+                                        </div>
+                                    <div class="col-6">
+                                        <div class="info"><p>Work History</p><h6>Google, Facebook</h6></div>
+                                        </div>
+                                    <div class="col-6">
+                                        <div class="info"><p>Organization</p><h6>Simmmple Web LLC </h6></div>
+                                        </div>
+                                    <div class="col-6">
+                                        <div class="info"><p>Birthday</p><h6>20 July 1986</h6></div>
+                                        </div>
+                                </div>
+                            </div>
+                         
+                        </div>
+                    </div>
+
+    <div class="col-3">      
+              <div class="profilecomponent ">
+                            <div class="d-flex justify-content-between w-100 head"><h4>Notifications</h4><i class="bi bi-three-dots"></i></div>
+                            <div class="body d-flex flex-column align-items-center w-100 justify-content-between">
+                               <div class="notificationoption">
+                                     <div class="switch active"><div class="swtichindicator"></div></div>
+                                     <div>item update notifications</div>
+                               </div>
+
+                                 <div class="notificationoption">
+                                     <div class="switch "><div class="swtichindicator"></div></div>
+                                     <div>item comment notifications</div>
+                               </div>
+
+                                 <div class="notificationoption">
+                                     <div class="switch active"><div class="swtichindicator"></div></div>
+                                     <div>Buyer review notifications</div>
+                               </div>
+
+                                 <div class="notificationoption">
+                                     <div class="switch"><div class="swtichindicator"></div></div>
+                                     <div>Rating reminders notifications</div>
+                               </div>
+
+                                  <div class="notificationoption">
+                                     <div class="switch"><div class="swtichindicator"></div></div>
+                                     <div>meetups near you notifications</div>
+                               </div>
+
+                                  <div class="notificationoption">
+                                     <div class="switch active"><div class="swtichindicator"></div></div>
+                                     <div>Company news notifications</div>
+                               </div>
+
+                                  <div class="notificationoption">
+                                     <div class="switch active"><div class="swtichindicator"></div></div>
+                                     <div>new launches and projects</div>
+                               </div>
+
+                                   <div class="notificationoption">
+                                     <div class="switch"><div class="swtichindicator"></div></div>
+                                     <div>Monthly product changes </div>
+                               </div>
+
+                                   <div class="notificationoption">
+                                     <div class="switch"><div class="swtichindicator"></div></div>
+                                     <div>Subscribe to newsletter</div>
+                               </div>
+                                 <div class="notificationoption">
+                                     <div class="switch active"><div class="swtichindicator"></div></div>
+                                     <div>E-mail me when someone follows me</div>
+                               </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+</div>
+
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+  
+
+
 </body>
-<script>
 
-
-</script>
-<script src="./index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/color-calendar@3.0.0/dist/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
+
+<!-- ✅ Add this line -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+
+<script src="./index.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const list = document.getElementById('myList');
+  if (!list) return;
+
+  new Sortable(myList, {
+  handle: '.icon',
+  animation: 150,
+  forceFallback: true, // ✅ forces the native fallback mode
+  fallbackClass: 'hidden-ghost',
+});
+
+});
+</script>
 
 </html>
