@@ -1,5 +1,3 @@
-const xValues = ["SEPT","","OCT","","NOV","","DEC","","JAN","","FEB",""];
-const ctx = document.getElementById('Dashboard').getContext('2d');
 
 const shadowPlugin = {
   id: 'perDatasetShadow',
@@ -55,49 +53,52 @@ const highlightPlugin = {
     ctx.fill();
   }
 };
+const canvas = document.getElementById('Dashboard');
+if (canvas) {
+  const ctx = canvas.getContext('2d');
 
-new Chart(ctx, {
-  type: "line",
-  data: {
-    labels: xValues,
-    datasets: [
-      { 
-        data: [5000,5850,5650,5000,3500,5000,4500,2000,5000,4500,4000,4300],
-        borderColor: "#4017fd",
-        borderWidth: 3,
-        tension: 0.4,
-        pointRadius: 0,
-      },
-      { 
-        data: [3000,3650,3250,1500,1500,3000,2500,0,3000,2800,2900,3100],
-        borderColor: "#6ad2ff",
-        borderWidth: 3,
-        tension: 0.4,
-        pointRadius: 0,
-      },
-          { 
-        data: [8000,8000,8000,8000,8000,8000,8000,8000,8000,8000,8000,8000],
-        borderColor: "#6ad2ff02",
-        borderWidth: 3,
-        tension: 0.4,
-        pointRadius: 0,
-      }
-    ]
-  },
-  options: {
-    animation: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: { enabled: false },
+  new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["SEPT", "", "OCT", "", "NOV", "", "DEC", "", "JAN", "", "FEB", ""],
+      datasets: [
+        { 
+          data: [5000,5850,5650,5000,3500,5000,4500,2000,5000,4500,4000,4300],
+          borderColor: "#4017fd",
+          borderWidth: 3,
+          tension: 0.4,
+          pointRadius: 0,
+        },
+        { 
+          data: [3000,3650,3250,1500,1500,3000,2500,0,3000,2800,2900,3100],
+          borderColor: "#6ad2ff",
+          borderWidth: 3,
+          tension: 0.4,
+          pointRadius: 0,
+        },
+        { 
+          data: [8000,8000,8000,8000,8000,8000,8000,8000,8000,8000,8000,8000],
+          borderColor: "#6ad2ff02",
+          borderWidth: 3,
+          tension: 0.4,
+          pointRadius: 0,
+        }
+      ]
     },
-    scales: { 
-      x: { grid: { display: false }, border: { display: false } },
-      y: { grid: { display: false }, ticks: { display: false }, border: { display: false } }
+    options: {
+      animation: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: false },
+      },
+      scales: { 
+        x: { grid: { display: false }, border: { display: false } },
+        y: { grid: { display: false }, ticks: { display: false }, border: { display: false } }
+      },
     },
-  },
-  plugins: [highlightPlugin]
-});
-
+    plugins: [highlightPlugin]
+  });
+}
 const navitems = document.querySelectorAll(".navv li")
 let currentpage = "Dashboard"
 const sections = document.querySelectorAll(".section")
@@ -126,130 +127,115 @@ profileicons.forEach(icon => {
 });
 
 
-navitems.forEach(navitem => {
-    navitem.addEventListener("click", ()=>{
-        navitems.forEach(item => item.classList.remove("active"))
-        navitem.classList.add("active")
-        currentpage = navitem.textContent.replace(/\s+/g, '')
-        console.log("current item: ",navitem.textContent, ", current page: ",currentpage)
 
 
 
+const weeklyCanvas = document.getElementById('weeklyRevenue');
+if (weeklyCanvas) {
+  const ctxweekly = weeklyCanvas.getContext('2d');
 
-           sections.forEach(section => {
-            section.classList.remove("active")
-if(section.classList.contains(currentpage)){
-section.classList.add("active")
+  const weeklyRevenueChart = new Chart(ctxweekly, {
+    type: 'bar',
+    data: {
+      labels: ['17', '18', '19', '20', '21', '22', '23', '24', '25'],
+      datasets: [
+        {
+          label: 'Base',
+          data: [20, 25, 40, 15, 35, 31, 20, 20, 10],
+          backgroundColor: '#6D28D9',
+          borderRadius: 10,
+          barThickness: 15,
+          stack: 'Stack 0',
+        },
+        {
+          label: 'Middle',
+          data: [20, 25, 40, 15, 35, 30, 10, 20, 10],
+          backgroundColor: '#38BDF8',
+          borderRadius: 10,
+          barThickness: 15,
+          stack: 'Stack 0',
+        },
+        {
+          label: 'Top',
+          data: [20, 25, 40, 15, 35, 30, 5, 50, 30],
+          backgroundColor: 'rgba(56, 189, 248, 0.2)',
+          borderRadius: 10,
+          barThickness: 15,
+          stack: 'Stack 0',
+        },
+      ],
+    },
+    options: {
+      animation: false,
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { color: '#64748b' },
+          stacked: true,
+          border: { display: false },
+        },
+        y: {
+          grid: { display: false },
+          ticks: { display: false },
+          stacked: true,
+          border: { display: false },
+        },
+      },
+    },
+  });
 }
-    });
-    })
-})
 
+    const dailyCanvas = document.getElementById('Dailytraffic');
 
+if (dailyCanvas) {
+  const ctxdaily = dailyCanvas.getContext('2d');
 
+  const gradient = ctxdaily.createLinearGradient(0, 0, 0, 400);
+  gradient.addColorStop(0, '#4318ff'); 
+  gradient.addColorStop(1, '#cabeff0e');   
 
-  const ctxweekly = document.getElementById('weeklyRevenue').getContext('2d');
-
-    const weeklyRevenueChart = new Chart(ctxweekly, {
-      type: 'bar',
-      data: {
-        labels: ['17', '18', '19', '20', '21', '22', '23', '24', '25'],
-        datasets: [
-          {
-            label: 'Base',
-            data: [20, 25, 40, 15, 35, 31, 20, 20, 10],
-            backgroundColor: '#6D28D9',
-            borderRadius: 10,
-            barThickness: 15,
-            stack: 'Stack 0',
-          },
-          {
-            label: 'Middle',
-            data: [20, 25, 40, 15, 35, 30, 10, 20, 10],
-            backgroundColor: '#38BDF8',
-            borderRadius: 10,
-            barThickness: 15,
-            stack: 'Stack 0',
-          },
-          {
-            label: 'Top',
-            data: [20, 25, 40, 15, 35, 30, 5, 50, 30],
-            backgroundColor: 'rgba(56, 189, 248, 0.2)',
-            borderRadius: 10,
-            barThickness: 15,
-            stack: 'Stack 0',
-          },
-        ],
-      },
-      options: {
-        animation: false,
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-     
+  const Dailytrafficchart = new Chart(ctxdaily, {
+    type: 'bar',
+    data: {
+      labels: ['00', '04', '08', '12', '14', '16', '18'],
+      datasets: [
+        {
+          label: 'Base',
+          data: [20, 25, 40, 15, 35, 31, 20, 20, 10],
+          backgroundColor: gradient,
+          borderRadius: 10,
+          barThickness: 15,
+          stack: 'Stack 0',
         },
-        scales: {
-          x: {
-            grid: { display: false },
-            ticks: { color: '#64748b' },
-            stacked: true,
-            border : {display : false}
-          },
-          y: {
-            grid: { display: false },
-            ticks: { display: false },
-            stacked: true,
-            border : {display : false}
-          },
+      ],
+    },
+    options: {
+      animation: false,
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { color: '#64748b' },
+          stacked: true,
+          border: { display: false }
+        },
+        y: {
+          grid: { display: false },
+          ticks: { display: false },
+          stacked: true,
+          border: { display: false }
         },
       },
-    });
-
-
-    
-  const ctxdaily = document.getElementById('Dailytraffic').getContext('2d');
-const gradient = ctxdaily.createLinearGradient(0, 0, 0, 400);
-gradient.addColorStop(0, '#4318ff'); 
-gradient.addColorStop(1, '#cabeff0e');   
-
-    const Dailytrafficchart = new Chart(ctxdaily, {
-      type: 'bar',
-      data: {
-        labels: ['00', '04', '08', '12', '14', '16', '18'],
-        datasets: [
-          {
-            label: 'Base',
-            data: [20, 25, 40, 15, 35, 31, 20, 20, 10],
-            backgroundColor: gradient,
-            borderRadius: 10,
-            barThickness: 15,
-            stack: 'Stack 0',
-          },
-        ],
-      },
-      options: {
-        animation: false,
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-     
-        },
-        scales: {
-          x: {
-            grid: { display: false },
-            ticks: { color: '#64748b' },
-            stacked: true,
-            border: {display : false}
-          },
-          y: {
-            grid: { display: false },
-            ticks: { display: false },
-            stacked: true,
-            border: {display : false}
-          },
-        },
-      },
-    });
+    },
+  });
+}
 
 
 const piectx = document.getElementById('myPieChart');
@@ -358,7 +344,8 @@ document.querySelectorAll('.sortable').forEach(table => {
 const settingbuttons = document.querySelectorAll('.setting');
 
 settingbuttons.forEach(setting => {
-  setting.addEventListener('click', (e) => {
+  const settingbtn = setting.querySelector('i')
+  settingbtn.addEventListener('click', (e) => {
     e.stopPropagation(); 
 
     const existingMenu = setting.querySelector('.settingmenu');
@@ -391,25 +378,37 @@ document.addEventListener('click', () => {
 });
 
 
-const darkbuttons =  document.querySelectorAll('.darkbutton')
-const img = document.getElementById('logo');
-const avatar3 = document.querySelectorAll('.avatar3')
-const avatar2 = document.querySelectorAll('.avatar2')
-const avatar1 = document.querySelectorAll('.avatar1')
-const headereth = document.querySelectorAll('.headereth')
-const Eth = document.querySelectorAll('.ETH')
-darkbuttons.forEach(dark => {
-  dark.addEventListener('click', ()=> {
-    document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  console.log(savedTheme)
+  if (savedTheme) {
+document.documentElement.dataset.theme = savedTheme
+  console.log(savedTheme)
 
-    console.log(document.documentElement.dataset.theme)
-
-    if(document.documentElement.dataset.theme === 'dark'){
+  }
+  else{
+     document.documentElement.dataset.theme = 'light'
+  console.log(savedTheme)
+  }
+   if(savedTheme === 'dark'){
       darkbuttons.forEach(button => button.className = 'bi bi-brightness-high-fill darkbutton')
        img.src = './Assets/Logo (2).png';
 avatar3.forEach(av => {
   av.src = './Assets/Avatar 3 (3).png'
 })
+
+
+
+
+
+
+profilepageicon.forEach(av => {
+  av.src = './Assets/Avatar (1).png'
+})
+
+
+
+
 
 avatar2.forEach(av => {
   av.src = './Assets/Avatar 2.png'
@@ -417,6 +416,7 @@ avatar2.forEach(av => {
 
 avatar1.forEach(av => {
   av.className = 'avatar1'
+  av.src = './Assets/Avatar 3 (5).png'
 })
 
 headereth.forEach(av => {
@@ -434,6 +434,9 @@ Eth.forEach(Eth => {
 avatar3.forEach(av => {
   av.src = './Assets/Avatar 3.png'
 })
+profilepageicon.forEach(av => {
+  av.src = './Assets/Avatar.png'
+})
 
 
 avatar2.forEach(av => {
@@ -441,6 +444,89 @@ avatar2.forEach(av => {
 })
 avatar1.forEach(av => {
   av.className = 'avatar1'
+    av.src = './Assets/Avatar 3 (2).png'
+})
+headereth.forEach(av => {
+  av.src = './Assets/Icon.png'
+})
+
+Eth.forEach(Eth => {
+  Eth.src = './Assets/Icon (1).png'
+})
+    }
+});
+
+
+const darkbuttons =  document.querySelectorAll('.darkbutton')
+const img = document.getElementById('logo');
+const avatar3 = document.querySelectorAll('.avatar3')
+const avatar2 = document.querySelectorAll('.avatar2')
+const avatar1 = document.querySelectorAll('.avatar1')
+const headereth = document.querySelectorAll('.headereth')
+const Eth = document.querySelectorAll('.ETH')
+const profilepageicon = document.querySelectorAll('.profilepageicon')
+
+darkbuttons.forEach(dark => {
+  dark.addEventListener('click', ()=> {
+    document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'
+
+    console.log(document.documentElement.dataset.theme)
+localStorage.setItem('theme',document.documentElement.dataset.theme)
+    if(document.documentElement.dataset.theme === 'dark'){
+      darkbuttons.forEach(button => button.className = 'bi bi-brightness-high-fill darkbutton')
+       img.src = './Assets/Logo (2).png';
+avatar3.forEach(av => {
+  av.src = './Assets/Avatar 3 (3).png'
+})
+
+
+
+
+
+
+profilepageicon.forEach(av => {
+  av.src = './Assets/Avatar (1).png'
+})
+
+
+
+
+
+avatar2.forEach(av => {
+  av.src = './Assets/Avatar 2.png'
+})
+
+avatar1.forEach(av => {
+  av.className = 'avatar1'
+  av.src = './Assets/Avatar 3 (5).png'
+})
+
+headereth.forEach(av => {
+  av.src = './Assets/Icon (2).png'
+})
+
+Eth.forEach(Eth => {
+  Eth.src = './Assets/Icon (3).png'
+})
+    }
+    else{
+            darkbuttons.forEach(button => button.className = 'bi bi-moon-fill darkbutton')
+             img.src = './Assets/Logo.png';
+
+avatar3.forEach(av => {
+  av.src = './Assets/Avatar 3.png'
+})
+profilepageicon.forEach(av => {
+  av.src = './Assets/Avatar.png'
+})
+
+
+avatar2.forEach(av => {
+  av.src = './Assets/Avatar 2 (1).png'
+})
+avatar1.forEach(av => {
+  av.className = 'avatar1'
+    av.src = './Assets/Avatar 3 (2).png'
 })
 headereth.forEach(av => {
   av.src = './Assets/Icon.png'
@@ -452,4 +538,38 @@ Eth.forEach(Eth => {
     }
   })
 })
+  const sidebar = document.querySelector('.sidebar')
 
+const mobilemenutoggle = document.getElementById('mobilemenutoggle')
+mobilemenutoggle.addEventListener('click', ()=> {
+  sidebar.classList.toggle('active')
+  document.addEventListener('click', (e)=> {
+})
+})
+
+document.addEventListener('click',(e)=> {
+  if(!sidebar.contains(e.target)  && !mobilemenutoggle.contains(e.target)){
+      sidebar.classList.remove('active')
+  }
+ 
+})
+
+navitems.forEach(navitem => {
+    navitem.addEventListener("click", ()=>{
+        navitems.forEach(item => item.classList.remove("active"))
+        navitem.classList.add("active")
+        currentpage = navitem.textContent.replace(/\s+/g, '')
+        console.log("current item: ",navitem.textContent, ", current page: ",currentpage)
+
+      sidebar.classList.remove('active')
+
+
+
+           sections.forEach(section => {
+            section.classList.remove("active")
+if(section.classList.contains(currentpage)){
+section.classList.add("active")
+}
+    });
+    })
+})

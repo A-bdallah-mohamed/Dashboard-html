@@ -29,18 +29,21 @@
                         <li class="active"><i class="bi bi-bar-chart-fill"></i> Tables</li>
                         <li> <i class="bi bi-grid-1x2-fill"></i>Kanban</li>
                         <li ><i class="bi bi-person-fill"></i>Profile</li>
-                       <a href="./singin.html"> <li><i class="bi bi-lock-fill"></i>Sign in</li></a>
+                       <a href="./singin.html" id="signinpage"> <li><i class="bi bi-lock-fill"></i>Sign in</li></a>
                     </ul>
                 </div>
                 <div style="max-width: 100%; max-height: auto; padding: 5px;">
                     <img src="./Assets/ChatGPT Image Nov 4, 2025, 02_04_57 PM.png" alt="" class="getpro" id="getpro">
                 </div>
             </div>
+            <div class="mobilesidebbar">
+             <i class="bi bi-list" id="mobilemenutoggle"></i>  
+            </div>
         </div>
         <div id="content" class="colormain">
 
 
-            <div class="Dashboard section ">
+            <div class="Dashboard section active">
                 <div class="sectionhead d-flex">
                     <div>
                         <p class="textgray" style="font-weight: 500;">page / Dashboard</p>
@@ -64,7 +67,7 @@
 
 
                 <div class="row my-3">
-                    <div class="col-2">
+                    <div class="col-lg-2 col-4 mb-3 mb-lg-0">
                         <div class="stat-card">
 
                             <i class="bi bi-bar-chart-fill"></i>
@@ -74,7 +77,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-lg-2 col-4 mb-3 mb-lg-0">
                         <div class="stat-card">
 
                             <i class="bi bi-currency-dollar"></i>
@@ -84,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-lg-2 col-4 mb-3 mb-lg-0">
                         <div class="stat-card">
 
                             <div class="d-flex flex-column">
@@ -94,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-lg-2 col-4">
                         <div class="stat-card justify-content-between">
 
                             <div class="d-flex flex-column">
@@ -118,7 +121,7 @@
 
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-lg-2 col-4">
                         <div class="stat-card tasks">
 
                             <i class="bi bi-check2-circle"></i>
@@ -129,7 +132,7 @@
 
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-lg-2 col-4">
                         <div class="stat-card">
 
                             <i class="bi bi-file-earmark-text"></i>
@@ -145,7 +148,7 @@
 
 
                 <div class="row d-flex">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-12 mb-3 mb-lg-0">
                         <div class="graphcontainer">
                             <div class="d-flex justify-content-between header mb-3">
                                 <p><i class="bi bi-calendar"></i> this month</p>
@@ -172,10 +175,10 @@
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-lg-6 col-12">
                         <div class="Revenue">
                             <div class="d-flex justify-content-between header mb-3">
-                                <p class="fs-5 fw-bold">Weekly Revenue</p>
+                                <p class="fs-lg-5 fs-2 fw-bold">Weekly Revenue</p>
                                 <i class="bi bi-bar-chart-fill"></i>
                             </div>
                             <div class="d-flex align-items-start justify-content-between">
@@ -193,11 +196,11 @@
 
 
                 <div class="row my-3">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-12 mb-3 mb-lg-0">
 
                         <div class="checktable">
                             <div class="d-flex justify-content-between header mb-3">
-                                <p class="fs-5 fw-bold"> Check Table</p>
+                                <p class="fs-lg-5 fs-2 fw-bold"> Check Table</p>
                                 <i class="bi bi-three-dots"></i>
                             </div>
                             <div class="d-flex align-items-start h-100">
@@ -303,10 +306,10 @@
 
 
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-6">
                         <div class="dailytraffic">
                             <div class="d-flex justify-content-between header textgray">
-                                <p class="">Daily Traffic</p>
+                                <p >Daily Traffic</p>
                                 <span><i class="bi bi-caret-up-fill"></i> +2.45%</span>
                             </div>
                             <div class="d-flex align-items-start justify-content-between flex-column h-100">
@@ -319,7 +322,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-6">
                         <div class="piechart">
                             <div class="d-flex justify-content-between header">
                                 <p class="fw-bold" style="font-size: 14px;">Your pie chart</p>
@@ -355,11 +358,11 @@
 
 
                 <div class="row my-3">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-12 mb-3 mb-lg-0">
 
                         <div class="checktable">
                             <div class="d-flex justify-content-between header mb-3">
-                                <p class="fs-5 fw-bold"> Complex Table</p>
+                                <p class="fs-lg-5 fs-2 fw-bold"> Complex Table</p>
                                 <i class="bi bi-three-dots clickable"></i>
                             </div>
                             <div class="d-flex align-items-start">
@@ -402,7 +405,7 @@
                                             <p>12 Jul 2021</p>
 
                                         </div>
-                                        <div class="d-flex flex-column gap-4" style="width: 20%;">
+                                        <div class="d-flex flex-column gap-4 justify-content-between py-2" style="width: 20%;">
                                             <div class="rating">
                                                 <div class="indicator" style="width: 80%;"></div>
                                             </div>
@@ -426,7 +429,7 @@
 
 
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-6">
                <div class="taskscontainer" id="SimpleList">
   <div class="d-flex justify-content-between header textgray align-items-center">
     <div class="d-flex align-items-center gap-3 checkitem m-0">
@@ -469,7 +472,7 @@
 </div>
 
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-6">
                         <div class="piechart center">
 
 
@@ -490,7 +493,7 @@
 
                 <div class="row my-3">
 
-                    <div class="col-3">
+                    <div class="col-lg-3 col-6 mb-3 mb-lg-0">
                         <div class="lession d-flex flex-column justify-content-between">
                             <div class="d-flex header  align-items-center gap-3">
                                 <i class="bi bi-fire"></i>
@@ -503,7 +506,7 @@
 
                             <h4 class="px-4">What do you need to know to create better products?</h4>
 
-                            <div class="body gap-4 d-flex flex-column">
+                            <div class="body d-flex flex-column">
                                 <div class="d-flex gap-4">
                                     <div style="font-weight: 500;"><i class="bi bi-clock-history"
                                             style="color: #00b87a;"></i> 85 mins</div>
@@ -528,7 +531,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-6 mb-3 mb-lg-0">
                         <div class="teamembers center">
                             <!-- Header -->
                             <div class="d-flex justify-content-between align-items-center header w-100">
@@ -539,7 +542,7 @@
                             </div>
 
                             <!-- Members list -->
-                            <div class="d-flex flex-column members gap-3 w-100">
+                            <div class="d-flex flex-column members w-100">
                                 <!-- Member 1 -->
                                 <div class="d-flex justify-content-between align-items-center member">
                                     <div class="d-flex align-items-center gap-2">
@@ -580,15 +583,15 @@
                     </div>
 
 
-                    <div class="col-3">
+                    <div class="col-lg-3 col-6">
                         <div class="fingerprint">
                             <img src="./Assets/fingerprint.png" alt="">
-                            <h3>Coontrol card security in-app with a tap</h3>
-                            <p class="textgray">Discover our cards benefits, with one tap.</p>
+                            <h3 class="m-0">Coontrol card security in-app with a tap</h3>
+                            <p class="textgray m-0">Discover our cards benefits, with one tap.</p>
                             <button>Cards</button>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-6">
                         <div class="starbucks ">
                             <div class="imgcontainer">
                                 <img src="./Assets/Image Background.png" alt="">
@@ -646,9 +649,9 @@
 
                 </div>
                 <div class="row mt-3">
-                    <div class="col-8" style="min-height: 100%;">
+                    <div class="col-12 col-xl-8" style="min-height: 100%;">
                         <div class="row nftscontainer">
-                            <div class="col-12 position-relative p-0 d-flex">
+                            <div class="col-12 position-relative p-xl-0 pe-4 d-flex">
 
                                 <div
                                     style="background-image: url(./Assets/Products\ 2.png); height: 250px; width: 100%;background-size: cover; border-radius: 15px;">
@@ -927,10 +930,10 @@
                     </div>
 
 
-                    <div class="col-4">
+                    <div class="col-12 col-xl-4 mt-3 mt-xl-0">
 
                         <div class="row gap-4 h-100">
-                            <div class="col-12 d-flex">
+                            <div class="col-12 d-flex ps-0 p-xl-3">
                                 <div class="topcreators overflow-hidden">
                                     <div class="header">
                                         <div class="d-flex w-100 align-items-center justify-content-between">
@@ -1025,7 +1028,7 @@
 
 
 
-                            <div class="col-12 d-flex">
+                            <div class="col-12 d-flex ps-0 p-xl-3">
                                 <div class="History overflow-hidden">
                                     <div class="header">
                                         <div class="d-flex w-100 align-items-center justify-content-between">
@@ -1145,7 +1148,7 @@
             </div>
 
 
-            <div class="Tables section active">
+            <div class="Tables section ">
                 <div class="sectionhead d-flex">
                     <div>
                         <p class="textgray" style="font-weight: 500;">page / Tables</p>
@@ -1156,9 +1159,7 @@
                             <i class="bi bi-search"></i>
                             <input type="text" placeholder="search" class="colormain">
                         </div>
-                        <div class="balancecontainer">
-                            <img src="./Assets/Icon.png" alt=""> 1,924 ETH
-                        </div>
+                     
                         <i class="bi bi-bell"></i>
                         <i class="bi bi-moon-fill darkbutton"></i>
                         <i class="bi bi-info-circle"></i>
@@ -1172,7 +1173,7 @@
 
                 <div class="row mt-4">
 
-                    <div class="col-6 mb-4">
+                    <div class="col-xl-6 col-12 mb-4 ">
                         <div class="table">
                             <div class="header setting">
                                 <h4>Development Table</h4>
@@ -1274,7 +1275,7 @@
 
                         </div>
                     </div>
-                    <div class="col-6 mb-4">
+                    <div class="col-xl-6 col-12 mb-4">
                         <div class="table checktablee">
                             <div class="header setting">
                                 <h4>Check Table</h4>
@@ -1365,7 +1366,7 @@
                     </div>
 
 
-                    <div class="col-6">
+                    <div class="col-xl-6 col-12 mb-4">
                         <div class="table checktablee">
                             <div class="header setting">
                                 <h4>4-Column Table</h4>
@@ -1422,7 +1423,7 @@
                         </div>
                     </div>
 
-                                  <div class="col-6">
+                                  <div class="col-xl-6 col-12 mb-4">
                         <div class="table checktablee ">
                             <div class="header clickable setting">
                                 <h4>Complex Table</h4>
@@ -1444,14 +1445,14 @@
             <td class="d-flex align-items-center gap-2"><i class="bi bi-check2 statusicon" style="background-color: #00d09e;"></i>
                                         Approved</td>
 <td>2458</td>       
-<td>24.Jan.2021</td> 
+<td><div class="rating w-75"><div class="indicator" style="width: 20%;"></div></div></td> 
        </tr>
                 <tr>
             <td><input type="checkbox"> Venus Dashboard Builder</td>
             <td class="d-flex align-items-center gap-2"><i class="bi bi-exclamation-lg statusicon"
                                             style="background-color:#ffcc19 ;"></i> Error</td>
 <td>1485</td>          
-<td>12.Jun.2021</td> 
+<td><div class="rating w-75"><div class="indicator" style="width: 90%;"></div></div></td> 
         </tr>
 
             <tr>
@@ -1459,7 +1460,7 @@
             <td class="d-flex align-items-center gap-2"><i class="bi bi-x-lg statusicon" style="background-color: #ff5142;"></i>
                                         Disable</td>
 <td>1024</td>          
-<td>5.Jan.2021</td> 
+<td><div class="rating w-75"><div class="indicator" style="width: 40%;"></div></div></td> 
         </tr>
 
             <tr>
@@ -1467,7 +1468,7 @@
             <td class="d-flex align-items-center gap-2" ><i class="bi bi-check2 statusicon" style="background-color: #00d09e;"></i>
                                         Approved</td>
 <td>258</td>           
-<td>17.Dec.2021</td> 
+<td><div class="rating w-75"><div class="indicator" style="width: 70%;"></div></div></td> 
         </tr>
 
     </tbody>
@@ -1519,7 +1520,7 @@
 
 
                 <div class="row mt-4">
-                    <div class="col-4">
+                    <div class="col-lg-4 col-12 mb-3 mb-lg-0">
                         <div class="logcontainer">
                             <div class="header">
                                 <h5>Backlog</h5>
@@ -1534,8 +1535,8 @@
                                     <p>it usually displays this message wen you close an unsaved page when you do it on
                                         purpose, and it's getting frusrated to see this every time.</p>
                                     <div class="foot">
-                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""><img
-                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;">
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt="" class="avatar2"><img
+                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;" class="avatar2">
                                         </div>
                                         <div class="status" style="background-color: #0567fe; color: white;">UPDATES
                                         </div>
@@ -1549,10 +1550,10 @@
                                     <p>Website Design: The ability to add/modify your own CSS-Selectors like its done in
                                         Venus.</p>
                                     <div class="foot">
-                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""><img
-                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;"><img
-                                                src="./Assets/Avatar 3 (2).png" alt="" class=""
-                                                style="margin-left: -15px;height: 32px;"></div>
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt="" class="avatar2"><img
+                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;" class="avatar2"><img
+                                                src="./Assets/Avatar 3 (2).png" alt="" class="avatar1"
+                                                style="margin-left: -15px;height: 32px;" ></div>
                                         <div class="status" style="background-color: #ffb13f; color: white;">PENDING
                                         </div>
                                     </div>
@@ -1565,7 +1566,7 @@
                                     <p>When you save some sections as a template and then paste a shortcode to a new
                                         page, the layout is broken, some styles are missing - in the editor.</p>
                                     <div class="foot">
-                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt="">
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt="" class="avatar2">
                                         </div>
                                         <div class="status" style="background-color: #fc0000; color: white;">ERRORS
                                         </div>
@@ -1574,7 +1575,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4 col-12 mb-3 mb-lg-0">
                         <div class="logcontainer">
                             <div class="header">
                                 <h5>In Progress</h5>
@@ -1589,8 +1590,8 @@
                                     <p>Currently, I have a few templates in the Local Library and when I want to add
                                         them I'm always presented (by default).</p>
                                     <div class="foot">
-                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""><img
-                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;"><img
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt="" class="avatar2"><img  class="avatar2"
+                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;"><img class="avatar1"
                                                 src="./Assets/Avatar 3 (2).png" alt=""
                                                 style="margin-left: -15px;height: 32px;"></div>
                                         <div class="status" style="background-color: #ffb13f; color: white;">PENDING
@@ -1605,7 +1606,7 @@
                                     <p>When you save some sections as a template and then paste a shortcode to a new
                                         page, the layout is broken, some styles are missing - in the editor.</p>
                                     <div class="foot">
-                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""></div>
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt="" class="avatar2"></div>
                                         <div class="status" style="background-color: #0567fe; color: white;">UPDATES
                                         </div>
                                     </div>
@@ -1619,7 +1620,7 @@
                                         active tab), especially when I already...</p>
                                     <img src="./Assets/Image (8).png" alt="">
                                     <div class="foot">
-                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""><img
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" class="avatar2" alt=""><img class="avatar3"
                                                 src="./Assets/Avatar 3.png" alt="" style="margin-left: -15px;"></div>
                                         <div class="status" style="background-color: #fc0000; color: white;">ERRORS
                                         </div>
@@ -1628,7 +1629,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4 col-12">
                         <div class="logcontainer">
                             <div class="header">
                                 <h5>Done</h5>
@@ -1642,7 +1643,7 @@
                                     <p>We can only copy/paste elements (or group of elements) in the same page, which is
                                         quite limited.</p>
                                     <div class="foot">
-                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""></div>
+                                        <div class="horizontalavatars"><img class="avatar2" src="./Assets/Avatar 2 (1).png" alt=""></div>
                                         <div class="status" style="background-color: #00b87a; color: white;">DONE</div>
                                     </div>
                                 </div>
@@ -1654,8 +1655,8 @@
                                     <p>I still hope there won't have an extra div for each container we added. It should
                                         be something for better styling...</p>
                                     <div class="foot">
-                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""><img
-                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;"><img
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt="" class="avatar2"><img class="avatar2"
+                                                src="./Assets/Avatar 2 (1).png" alt="" style="margin-left: -15px;"><img class="avatar1"
                                                 src="./Assets/Avatar 3 (2).png" alt=""
                                                 style="margin-left: -15px;height: 32px;"></div>
                                         <div class="status" style="background-color: #00b87a; color: white;">DONE</div>
@@ -1672,8 +1673,8 @@
                                         add those as well, more manual downloads...</p>
                                     <div class="foot">
 
-                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt=""
-                                                style="margin-left: -15px;"><img src="./Assets/Avatar 3.png" alt=""
+                                        <div class="horizontalavatars"><img src="./Assets/Avatar 2 (1).png" alt="" class="avatar2"
+                                               ><img src="./Assets/Avatar 3.png" alt="" class="avatar3"
                                                 style="margin-left: -15px;"></div>
                                         <div class="status" style="background-color: #00b87a; color: white;">DONE</div>
 
@@ -1716,10 +1717,10 @@
                 <div class="row mt-4">
 
 
-                    <div class="col-5">
+                    <div class="col-lg-5 col-12 mb-3 mb-lg-0">
                         <div class="profilecomponent">
                             <img src="./Assets/Background.png" alt="" class="w-100">
-                            <img src="./Assets/Avatar.png" alt="" style="margin-top: -50px;">
+                            <img src="./Assets/Avatar.png" alt="" style="margin-top: -50px;" class="profilepageicon">
                             <h4 class="mt-3 mb-0 fw-bold">Adela Parkson</h4>
                             <p>Product Designer</p>
                             <div class="d-flex align-items-center w-100 justify-content-center mt-3" style="gap: 60px;">
@@ -1740,7 +1741,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-6 mb-3 mb-lg-0">
                         <div class="profilecomponent justify-content-between">
                             <div class="d-flex justify-content-end w-100 head"><i class="bi bi-three-dots"></i></div>
                             <div class="body d-flex flex-column align-items-center">
@@ -1756,7 +1757,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4 col-6 mb-3 mb-lg-0">
                         <div class="profilecomponent">
                          <div class="row h-100">
                             <div class="col-6 center">
@@ -1788,7 +1789,7 @@
 
 
 <div class="row mt-3 secondrow">
-    <div class="col-4">  
+    <div class="col-lg-4 col-12 mb-3 mb-lg-0">  
                    <div class="profilecomponent ">
                             <div class="d-flex w-100 head"><h4>All Projects</h4></div>
                             <div class=" d-flex flex-column align-items-center w-100 gap-3 justify-content-between h-100">
@@ -1827,7 +1828,7 @@
                     
                         </div>
                     </div>
-    <div class="col-5">   
+    <div class="col-lg-5 col-6">   
                 <div class="profilecomponent ">
                             <div class="d-flex w-100 head"><h4>General information</h4></div>
                             <div class="body d-flex flex-column align-items-center justify-content-between">
@@ -1858,7 +1859,7 @@
                         </div>
                     </div>
 
-    <div class="col-3">      
+    <div class="col-lg-3 col-6">      
               <div class="profilecomponent ">
                             <div class="d-flex justify-content-between w-100 head"><h4>Notifications</h4><i class="bi bi-three-dots"></i></div>
                             <div class="body d-flex flex-column align-items-center w-100 justify-content-between">
