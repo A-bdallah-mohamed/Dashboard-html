@@ -1,3 +1,54 @@
+
+:root {
+  --bg: #f3f7fe;
+  --text: black;
+  --bgcomponent:white;
+  --bid: #4017fd;
+  --gray: #93a1c1;
+    --maintext:#253774;
+    --sidebarbg: #ffffff;
+    --sidebarliopacity: 0.5;
+    --liactiveicon:#4318ff;
+    --liactiveborder: 3px solid #4017fd;
+    --indicatorcolor: #4017fd;
+    --horizontalborder: 3px solid white ;
+    --bidbuttonbg: #0b0479;
+    --buttonbg: #f2f6fd;
+    --rating:#edf4fb;
+    --staticon:#f3f7fe ;
+    --thismonthcolor: #a3aed0 ;
+--ptext: #2b3674;
+--darkpurple: #0b0479;
+--transparent: transparent;
+--secondarybg: #f9fcfe;
+--bs-table-bg:white;
+}
+
+[data-theme="dark"] {
+  --bg: #061437;
+  --text: #eee;
+  --bgcomponent:#0a1c44;
+  --bs-table-bg: #0a1c44;
+  --bid: white;
+  --gray:#9faed0;
+  --maintext:white;
+  --sidebarbg: #0a1c44;
+  --sidebarliopacity: 1;
+  --liactiveicon:white;
+  --liactiveborder: 3px solid #7850fd;
+  --horizontalborder: 3px solid #0a1c44 ;
+  --indicatorcolor: #7850fd;
+  --bidbuttonbg: #7850fd;
+  --buttonbg: #7850fd;
+  --rating:#223256;
+  --staticon: #16254b;
+  --thismonthcolor: white ;
+  --ptext: white;
+  --darkpurple:white ;
+  --transparent: #16254b;
+  --secondarybg: #16254b;
+}
+
 a,a:focus,a:visited{
     color: inherit;
     text-decoration: none;
@@ -28,8 +79,14 @@ border-radius: 50%;
     align-items: center;
     justify-content: center;
 }
+table{
+    background-color: var(--bgcomponent);
+}
+.table{
+    --bs---bs-table-bg: #0a1c44;
+}
 .graphcontainer,.Revenue,.piechart,.checktable,.taskscontainer,.teamembers,.fingerprint,.starbucks,.lession,.calendar,.dailytraffic {
-    background-color: white;
+    background-color: var(--bgcomponent);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -80,6 +137,12 @@ border-radius: 50%;
     font-size: 14px;
     font-weight: 500;
 }
+[data-calendar-theme=light] .vanilla-calendar-week__day,[data-calendar-theme=light] .vanilla-calendar-day__btn_prev, [data-calendar-theme=light] .vanilla-calendar-day__btn_next,[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend, [data-calendar-theme=light] .vanilla-calendar-day__btn_holiday,[data-calendar-theme=light] .vanilla-calendar-day__btn{
+    color: var(--text);
+}
+[data-calendar-theme=light].vanilla-calendar,[data-calendar-theme=light] .vanilla-calendar-day__btn{
+    background-color: var(--bgcomponent);
+}
 .switch{
     width: 33px;
     height: 18px;
@@ -125,6 +188,15 @@ padding: 20px;
     border-radius: 50%;
     font-size: 40px;
 }
+[data-calendar-theme=light] .vanilla-calendar-header__content, [data-calendar-theme=light] .vanilla-calendar-month, [data-calendar-theme=light] .vanilla-calendar-year{
+    color: var(--text);
+}
+[data-calendar-theme=light] .vanilla-calendar-arrow:before{
+display: none;
+}
+[data-calendar-theme=light].vanilla-calendar{
+    color: var(--text);
+}
 .uploadimageinputcontainer{
     position: relative;
     display: flex;
@@ -160,7 +232,7 @@ padding: 20px;
     font-size: 20px;
 }
 .table{
-    background-color: white;
+    background-color: var(--bgcomponent);
 }
 .lession{
     padding: 0;
@@ -187,7 +259,7 @@ padding: 20px;
     font-weight: bold;
 }
 .lession .body{
-    background-color: #f9fcfe;
+    background-color: var(--secondarybg);
     padding: 20px;
 }
 .starbucks{
@@ -270,8 +342,8 @@ font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#f4f7fe ;
-    color: #4318ff ;
+  color: var(--liactiveicon);
+background-color: var(--staticon);
     padding: 0 15px;
     height: 40px;
     width: 40px;
@@ -315,6 +387,7 @@ padding:  0px 20px ;
 }
 .sortable{
     height: 100%;
+    background-color: var(--bgcomponent);
 }
 .statusicon{
     color: white !important;
@@ -355,8 +428,8 @@ color: #dee5f2;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#f4f7fe ;
-    color: #a3aed0 !important;
+    background-color: var(--staticon) ;
+    color: var(--thismonthcolor) !important;
     padding: 10px 12px 10px 5px;
     height: 40px;
     border-radius: 15px;
@@ -364,8 +437,8 @@ color: #dee5f2;
     font-size: 14px;
 }
 .graphcontainer .header p i{
-    background-color:#f4f7fe ;
-    color: #a3aed0 ;
+    background-color: var(--staticon) ;
+    color: var(--thismonthcolor) ;
     padding: 0;
 }
 .titles{
@@ -388,7 +461,7 @@ color: #dee5f2;
     justify-content: space-between;
 }
 .checkitem{
-    color: #2b3674;
+    color: var(--ptext);
     display: flex;
     align-items: center;
     gap: 5px;
@@ -482,7 +555,7 @@ margin: 0;
  margin: 0;
 }
 .tasks p{
-    color: #0b0479;
+    color: var(--darkpurple);
     margin: 0;
 }
 .tasks div{
@@ -552,15 +625,59 @@ border-radius: 50px;
     height: 100%;
 }
 
-
+.setting{
+    position: relative;
+}
+.setting i{
+    cursor: pointer;
+}
+.settingmenu{
+    position: absolute;
+    right: 15px;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ top: 100%;
+user-select: none;
+z-index: 2;
+ opacity: 0;
+    transform: translateY(-15px);
+    transition: 0.3s ease all;
+}
+.settingmenu.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.settingmenu ul{ 
+          box-shadow: 0 4px 5px rgba(0, 0, 0, 0.168);
+    padding: 0;
+    margin: 0;
+    padding: 10px;
+z-index: 2;
+border-radius: 15px;
+border: 1px solid rgba(0, 0, 0, 0.409);
+overflow: hidden;
+}
+.settingmenu li{
+    opacity: 1;
+    color: rgba(0, 0, 0, 0.719);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 3px 10;
+    border-radius: 5px;
+}
+.settingmenu li:hover{
+  background-color: rgb(233, 233, 233);
+}
 .checkitem p {
   margin: 0;
   font-size: 15px;
 }
 
 .taskscontainer .checkitem input + p {
-  color: gray; 
-  opacity: 0.7; 
+    color: var(--ptext);
+  opacity: var(--sidebarliopacity); 
 }
 .taskscontainer .checkitem input:checked + p {
   color: #2b3674; 
@@ -586,11 +703,11 @@ font-weight: 500;
   text-overflow: ellipsis;    /* add the dots (…) */
 }
 body{
-    background-color: #f3f7fe;
+    background-color: var(--bg);
 }
 .sidebar{
     padding: 0 0 20px 0;
-    background-color: white;
+    background-color: var(--sidebarbg);
     height: 100%;
     align-items: center;
     display: flex;
@@ -632,7 +749,7 @@ li{
     display: flex;
     align-items: center;
     gap: 15px;
-    opacity: 0.5;
+    opacity: var(--sidebarliopacity);
     cursor: pointer;
 }
 .teamembers .members{
@@ -641,14 +758,14 @@ li{
 .sidebar ul .active{
 opacity: 1;
 font-weight: 600;
-border-right: 3px solid #4318ff;
+border-right: var(--liactiveborder);
 }
 .sidebar .active i{
 
-color: #4318ff;
+color: var(--liactiveicon);
 }
 .colormain{
-    color: #253774;
+    color: var(--maintext);
 }
 .section{
     display: none;
@@ -679,7 +796,7 @@ margin: 0;
     font-size: 13px;
 }
 .searchcontainer{
-    background-color: white;
+    background-color: var(--bgcomponent);
     padding: 8px 15px;
     border-radius: 50px;
     display: flex;
@@ -691,20 +808,20 @@ margin: 0;
 }
 .inputcontainer input{
     border: none;
-background-color: #f3f7fe;
+background-color: var(--bg);
 height: 25px;
 }
 .inputcontainer input:active,.inputcontainer input:focus{
     outline: none;
 }
 .inputcontainer{
-    background-color: #f3f7fe;
+    background-color: var(--bg);
 font-size: 12px;
     padding: 5px 15px;
     border-radius: 50px;
 }
 .balancecontainer{
-    background-color: #f3f7fe;
+    background-color: var(--bg);
     padding: 5px 10px;
     border-radius: 50px;
     display: flex;
@@ -751,17 +868,18 @@ padding: 13px 20px;
 }
 .filter{
     padding: 5px 15px;
-    color: #4d25fd;
-    font-weight: 600;
+    color: var(--bid);
+    font-weight: 400;
     cursor: pointer;
+    font-size: 15px;
 }
 .filter.active{
-    background-color: white;
+    background-color: var(--bgcomponent);
     border-radius: 50px;
     padding: 5px 15px;
 }
 .nftscontainer .nft{
-    background-color: white;
+    background-color: var(--bgcomponent);
     padding: 25px 15px;
     border-radius: 18px;
     height: 100%;
@@ -774,15 +892,19 @@ padding: 13px 20px;
     border-radius: 16px;
     min-width: 100%;
 }
+.nft .bid{
+color: var(--bid)!important;
+}
 .nftscontainer .nft p{
     margin: 0;
+    color: var(--text);
 }
 .nftscontainer{
     height: 100%;
 }
 .nftscontainer .nft button{
     border: none;
-    background-color: #0b0479;
+    background-color: var(--bidbuttonbg);
     color: white;
     padding: 5px 15px;
     font-weight: 500;
@@ -790,10 +912,10 @@ padding: 13px 20px;
     font-size: 13px;
 }
 .textgray{
-    color: #6b7fae9c !important;
+    color: var(--gray) !important;
 }
 .textgray div{
-        color: #6b7fae9c !important;
+    color: var(--ptext) !important;
 
 }
 .inputs h3{
@@ -852,8 +974,8 @@ transition: 0.3s ease all;
     border-bottom: 1px solid #dee5f2;
 }
 .button{
-    color: #4018fd;
-    background-color: #f2f6fd;
+    color: var(--bid);
+    background-color: var(--buttonbg);
     padding: 5px 10px;
     border-radius: 25px;
     font-weight: 500;
@@ -891,7 +1013,7 @@ transition: 0.3s ease all;
     cursor: pointer;
 }
 .topcreators{
-    background-color: white;
+    background-color: var(--bgcomponent);
 border-radius: 15px;
 flex-grow: 1;
 display: flex;
@@ -904,7 +1026,7 @@ flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
-      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.085);
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.193);
 
 }
 .topcreators .header p{
@@ -948,21 +1070,21 @@ margin-bottom: 5px;
 .creatorname{
     width: 50%;
     font-weight: 500;
-    color: #253774;
+    color: var(--maintext);
 }
 .rating{
     height: 10px;
     width: 20%;
     border-radius: 50px;
-    background-color: #edf4fb;
+    background-color: var(--rating);
 }
 .rating .indicator{
-    background-color: #4017fd;
+    background-color: var(--indicatorcolor);
     height: 100%;
         border-radius: 50px;
 }
 .History{
-background-color: white;
+background-color: var(--bgcomponent);
 border-radius: 15px;
 padding: 20px;
 flex-grow: 1;
@@ -1002,6 +1124,7 @@ margin: 0;
 padding: 15px;
 border-radius: 15px;
 width: 100%;
+background-color: var(--transparent);
 }
 .member p{
     font-weight: 500;
@@ -1050,6 +1173,7 @@ footer ul{
  justify-content: center;
  transition: 0.3s ease all;
  cursor: pointer;
+ color: #7850fd;
 }
 table tr,table td{
 border: 0;
@@ -1076,7 +1200,7 @@ tbody p{
     cursor: pointer;
 }
 tbody td{
-    color: #2b3674;
+    color: var(--text);
     font-weight: 500;
 }
 table{
@@ -1089,6 +1213,7 @@ table{
 }
 .fav.active{
      background-color: rgb(255, 104, 104);
+     color: white;
 
 }
 
@@ -1102,14 +1227,14 @@ table{
     border-radius: 100%;
     font-size: 10px;
     justify-content: center;
-    width: 35px;
-    height: 35px;
-    border: 3px solid white;
+    width: 32px;
+    height: 32px;
+    border: var(--horizontalborder);
     color: #4017fd;
     font-weight: bolder;
 }
 .stat-card{
-    background-color: white;
+    background-color: var(--bgcomponent);
     border-radius: 15px;
     padding: 15px;
     display: flex;
@@ -1132,8 +1257,8 @@ table{
   font-weight: 700;
 }
 .stat-card i{ 
-color: #4318ff;
-background-color: #f4f7fe;
+color: var(--liactiveicon);
+background-color: var(--staticon);
 padding: 15px;
 font-size: 25px;
 border-radius: 50px;
@@ -1708,43 +1833,4 @@ font-size: 20px;
 .teamembers img{
     max-width: 25%;
 }
-}
-
-.sectionhead{
-    p{
-        color: red !important;
-        box-align: center
-        9
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        ;
-    }
 }

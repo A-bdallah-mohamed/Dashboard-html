@@ -353,51 +353,103 @@ document.querySelectorAll('.sortable').forEach(table => {
 });
 
 
-const clickables = document.querySelectorAll('.clickable');
 
-clickables.forEach(clickable => {
-  clickable.addEventListener('click', (e) => {
-    const existing = document.querySelector('.floating-list');
-    if (existing) existing.remove();
 
-    const ul = document.createElement('ul');
-    ul.classList.add('floating-list');
+const settingbuttons = document.querySelectorAll('.setting');
 
-    const items = ['Option 1', 'Option 2', 'Option 3'];
-    items.forEach(text => {
-      const li = document.createElement('li');
-      li.textContent = text;
-      ul.appendChild(li);
-
-      li.addEventListener('click', () => {
-        alert(`Clicked: ${text}`);
-        ul.remove();
-      });
-    });
-
-    document.body.appendChild(ul);
-
-    ul.style.left = e.pageX + 'px';
-    ul.style.top = e.pageY + 'px';
-
-    const moveHandler = (ev) => {
-      ul.style.left = ev.pageX + 'px';
-      ul.style.top = ev.pageY + 'px';
-    };
-    document.addEventListener('mousemove', moveHandler);
-
-    const clickAway = (ev) => {
-      if (!ul.contains(ev.target) && !clickable.contains(ev.target)) {
-        ul.remove();
-        document.removeEventListener('mousemove', moveHandler);
-        document.removeEventListener('click', clickAway);
-      }
-    };
-
-    setTimeout(() => {
-      document.addEventListener('click', clickAway);
-    }, 0);
-
+settingbuttons.forEach(setting => {
+  setting.addEventListener('click', (e) => {
     e.stopPropagation(); 
+
+    const existingMenu = setting.querySelector('.settingmenu');
+    const isOpen = existingMenu && existingMenu.classList.contains('active');
+
+    document.querySelectorAll('.settingmenu').forEach(s => s.classList.remove('active'));
+
+    if (isOpen) return;
+
+    if (!existingMenu) {
+      setting.insertAdjacentHTML('beforeend', `
+        <div class="settingmenu">
+          <ul class="text-black">
+            <li>setting option</li>
+            <li>setting option</li>
+            <li>setting option</li>
+          </ul>
+        </div>
+      `);
+    }
+
+    requestAnimationFrame(() => {
+      setting.querySelector('.settingmenu').classList.add('active');
+    });
   });
 });
+
+document.addEventListener('click', () => {
+  document.querySelectorAll('.settingmenu').forEach(s => s.classList.remove('active'));
+});
+
+
+const darkbuttons =  document.querySelectorAll('.darkbutton')
+const img = document.getElementById('logo');
+const avatar3 = document.querySelectorAll('.avatar3')
+const avatar2 = document.querySelectorAll('.avatar2')
+const avatar1 = document.querySelectorAll('.avatar1')
+const headereth = document.querySelectorAll('.headereth')
+const Eth = document.querySelectorAll('.ETH')
+darkbuttons.forEach(dark => {
+  dark.addEventListener('click', ()=> {
+    document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'
+
+    console.log(document.documentElement.dataset.theme)
+
+    if(document.documentElement.dataset.theme === 'dark'){
+      darkbuttons.forEach(button => button.className = 'bi bi-brightness-high-fill darkbutton')
+       img.src = './Assets/Logo (2).png';
+avatar3.forEach(av => {
+  av.src = './Assets/Avatar 3 (3).png'
+})
+
+avatar2.forEach(av => {
+  av.src = './Assets/Avatar 2.png'
+})
+
+avatar1.forEach(av => {
+  av.className = 'avatar1'
+})
+
+headereth.forEach(av => {
+  av.src = './Assets/Icon (2).png'
+})
+
+Eth.forEach(Eth => {
+  Eth.src = './Assets/Icon (3).png'
+})
+    }
+    else{
+            darkbuttons.forEach(button => button.className = 'bi bi-moon-fill darkbutton')
+             img.src = './Assets/Logo.png';
+
+avatar3.forEach(av => {
+  av.src = './Assets/Avatar 3.png'
+})
+
+
+avatar2.forEach(av => {
+  av.src = './Assets/Avatar 2 (1).png'
+})
+avatar1.forEach(av => {
+  av.className = 'avatar1'
+})
+headereth.forEach(av => {
+  av.src = './Assets/Icon.png'
+})
+
+Eth.forEach(Eth => {
+  Eth.src = './Assets/Icon (1).png'
+})
+    }
+  })
+})
+
