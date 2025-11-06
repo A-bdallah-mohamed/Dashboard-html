@@ -1,6 +1,8 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
     <!-- calendar library cdn -->
@@ -16,6 +18,25 @@
 
 <body>
     <div class="d-flex">
+        <div class="notificationbarcontainer">
+            <div class="notificationbar">
+                <div class="head">
+          <p>Notification Center</p>
+<i class="bi bi-x-lg close"></i>
+                </div>
+
+                <div class="body">
+                    <div class="notification neutral" ><div><i class=" stat bi bi-info-lg" style="color: #585858;"></i>  <div> Info </div> </div>  <i class="bi bi-x-lg"></i>
+</div>
+                    <div class="notification successful"><div><i class=" stat bi bi-check2-all" style="color: #019b6f;"></i> <div> Successful </div> </div> <i class="bi bi-x-lg"></i>
+ </div>
+                    <div class="notification warning"><div><i class=" stat bi bi-exclamation-circle" style="color: #f89127;"></i> <div> Warning </div> </div> <i class="bi bi-x-lg"></i>
+</div>
+                    <div class="notification error"><div><i class=" stat bi bi-x-octagon" style="color: #d7503f;"></i> <div> Error </div> </div> <i class="bi bi-x-lg"></i>
+ </div>
+                </div>
+            </div>
+        </div>
         <div class="position-relative sidebarcontainer">
             <div class="sidebar colormain flex-grow-1">
                 <div class="d-flex flex-column align-items-center w-100">
@@ -32,7 +53,7 @@
                        <a href="./singin.html" id="signinpage"> <li><i class="bi bi-lock-fill"></i>Sign in</li></a>
                     </ul>
                 </div>
-                <div style="max-width: 100%; max-height: auto; padding: 5px;">
+                <div style="max-width: 100%; max-height: auto; padding: 5px;" class="center">
                     <img src="./Assets/ChatGPT Image Nov 4, 2025, 02_04_57 PM.png" alt="" class="getpro" id="getpro">
                 </div>
             </div>
@@ -45,7 +66,7 @@
 
             <div class="Dashboard section active">
                 <div class="sectionhead d-flex">
-                    <div>
+                    <div class="sectiontitle">
                         <p class="textgray" style="font-weight: 500;">page / Dashboard</p>
                         <h4 class="fw-bold">Dashboard</h4>
                     </div>
@@ -55,7 +76,7 @@
                             <input type="text" placeholder="search" class="colormain">
                         </div>
 
-                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-bell" id="notificationtoggle"></i>
                         <i class="bi bi-moon-fill darkbutton"></i>
                         <i class="bi bi-info-circle"></i>
                         <img src="./Assets/Avatar 3.png" alt="" style="min-height: 35px; " class="profileicon avatar3">
@@ -67,7 +88,7 @@
 
 
                 <div class="row my-3">
-                    <div class="col-lg-2 col-4 mb-3 mb-lg-0">
+                    <div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
                         <div class="stat-card">
 
                             <i class="bi bi-bar-chart-fill"></i>
@@ -77,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-4 mb-3 mb-lg-0">
+                    <div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
                         <div class="stat-card">
 
                             <i class="bi bi-currency-dollar"></i>
@@ -87,7 +108,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-4 mb-3 mb-lg-0">
+                    <div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
                         <div class="stat-card">
 
                             <div class="d-flex flex-column">
@@ -97,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-4">
+                    <div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
                         <div class="stat-card justify-content-between">
 
                             <div class="d-flex flex-column">
@@ -121,7 +142,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-2 col-4">
+                    <div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
                         <div class="stat-card tasks">
 
                             <i class="bi bi-check2-circle"></i>
@@ -132,7 +153,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-2 col-4">
+                    <div class="col-lg-2 col-md-4 col-12 mb-3 mb-lg-0">
                         <div class="stat-card">
 
                             <i class="bi bi-file-earmark-text"></i>
@@ -154,9 +175,9 @@
                                 <p><i class="bi bi-calendar"></i> this month</p>
                                 <i class="bi bi-bar-chart-fill"></i>
                             </div>
-                            <div class="d-flex align-items-start justify-content-between">
+                            <div class="d-flex align-items-start justify-content-between flex-md-row flex-column">
 
-                                <div class="d-flex flex-column justify-content-start h-100 body">
+                                <div class="d-flex flex-column justify-content-start h-100 body ">
                                     <h2 class="fw-bold">$37.5k</h2>
                                     <div class="d-flex align-items-center gap-2">
                                         <p>Total Spent</p>
@@ -178,7 +199,7 @@
                     <div class="col-lg-6 col-12">
                         <div class="Revenue">
                             <div class="d-flex justify-content-between header mb-3">
-                                <p class="fs-lg-5 fs-2 fw-bold">Weekly Revenue</p>
+                                <p class="fs-lg-5 fs-md-2 fs-5 fw-bold">Weekly Revenue</p>
                                 <i class="bi bi-bar-chart-fill"></i>
                             </div>
                             <div class="d-flex align-items-start justify-content-between">
@@ -200,13 +221,13 @@
 
                         <div class="checktable">
                             <div class="d-flex justify-content-between header mb-3">
-                                <p class="fs-lg-5 fs-2 fw-bold"> Check Table</p>
+                                <p class="fs-lg-5 fs-md-2 fs-5 fw-bold"> Check Table</p>
                                 <i class="bi bi-three-dots"></i>
                             </div>
-                            <div class="d-flex align-items-start h-100">
+                            <div class="d-flex align-items-start h-100 checktabledashoardcontainer">
 
                                 <div class="d-flex w-100 titles h-100">
-                                    <div class="d-flex flex-column justify-content-between" style="width: 35%;">
+                                    <div class="d-flex flex-column justify-content-between column" style="width: 35%;">
                                         <p>NAME</p>
                                         <div class="checkitem"><input type="checkbox">
                                             <p>Horizon UI PRO</p>
@@ -306,7 +327,7 @@
 
 
                     </div>
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-md-0">
                         <div class="dailytraffic">
                             <div class="d-flex justify-content-between header textgray">
                                 <p >Daily Traffic</p>
@@ -322,10 +343,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-6 col-12 ">
                         <div class="piechart">
                             <div class="d-flex justify-content-between header">
-                                <p class="fw-bold" style="font-size: 14px;">Your pie chart</p>
+                                <p class="fw-bold fs-lg-5 fs-md-3 fs-6" >Your pie chart</p>
                                 <p class="textgray">Monthly <i class="bi bi-caret-down-fill"></i></p>
                             </div>
                             <div class="d-flex align-items-start justify-content-between flex-column">
@@ -360,76 +381,64 @@
                 <div class="row my-3">
                     <div class="col-lg-6 col-12 mb-3 mb-lg-0">
 
-                        <div class="checktable">
-                            <div class="d-flex justify-content-between header mb-3">
-                                <p class="fs-lg-5 fs-2 fw-bold"> Complex Table</p>
-                                <i class="bi bi-three-dots clickable"></i>
+                         <div class="table checktablee ">
+                            <div class="header clickable setting">
+                                <h4>Complex Table</h4>
+                                <i class="bi bi-three-dots "></i>
                             </div>
-                            <div class="d-flex align-items-start">
-
-                                <div class="d-flex w-100 titles flex-column">
-
-                                    <div class="d-flex w-100 border-bottom border-1">
-                                        <P style="width: 35%;"> NAME</P>
-                                        <P style="width: 25%;"> STATUS</P>
-                                        <P style="width: 20%;"> DATE</P>
-                                        <P style="width: 20%;"> PROGRESS</P>
-
-                                    </div>
-                                    <div class="d-flex tasks mt-3">
-                                        <div class="d-flex flex-column gap-3" style="width: 35%;">
-                                            <p>Horizon UI Pro</p>
-                                            <p>Horizon UI Free</p>
-                                            <p>MarketPlace</p>
-                                            <p>Weekly Updates</p>
 
 
-                                        </div>
-                                        <div class="d-flex flex-column gap-3" style="width: 25%;">
-                                            <p class="status"><i class="bi bi-check-lg"
-                                                    style="background-color: #05cd99;"></i> Approved</p>
-                                            <p class="status"><i class="bi bi-x-lg"
-                                                    style="background-color: #ee5d50;"></i> Disabled</p>
+             <div class="table-responsive">
+                     
+<table class="sortable">
+    <thead><tr>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+        <td>Title <i class="bi bi-chevron-down rotate"></i></td>
+    </tr></thead>
+    <tbody>
+        <tr>
+            <td class="d-flex align-items-center"><input type="checkbox"> <p>Marketplace</p></td>
+            <td ><div class="d-flex align-items-center gap-2"><i class="bi bi-check2 statusicon" style="background-color: #00d09e;"></i>
+                                      <p>  Approved</p></div></td>
+<td>2458</td>       
+<td><div class="rating w-75"><div class="indicator" style="width: 20%;"></div></div></td> 
+       </tr>
+                <tr>
+            <td class="d-flex align-items-center"><input type="checkbox"><p> Venus Dashboard Builder</p></td>
+            <td ><div class="d-flex align-items-center gap-2"><i class="bi bi-exclamation-lg statusicon"
+                                            style="background-color:#ffcc19 ;"></i> Error</div></td>
+<td>1485</td>          
+<td><div class="rating w-75"><div class="indicator" style="width: 90%;"></div></div></td> 
+        </tr>
 
-                                            <p class="status"><i class="bi bi-exclamation-lg"
-                                                    style="background-color: #ffce20;"></i> Error</p>
+            <tr>
+            <td class="d-flex align-items-center"><input type="checkbox"> Venus Design System</td>
+            <td ><div class="d-flex align-items-center gap-2"><i class="bi bi-x-lg statusicon" style="background-color: #ff5142;"></i> Disable</div></td>
+                                           
 
-                                            <p class="status"><i class="bi bi-check-lg"
-                                                    style="background-color: #05cd99;"></i> Approved</p>
 
-                                        </div>
-                                        <div class="d-flex flex-column gap-3" style="width: 20%;">
-                                            <p>18 Apr 2021</p>
-                                            <p>18 Apr 2021</p>
-                                            <p>20 May 2021</p>
-                                            <p>12 Jul 2021</p>
+<td>1024</td>          
+<td><div class="rating w-75"><div class="indicator" style="width: 40%;"></div></div></td> 
+        </tr>
 
-                                        </div>
-                                        <div class="d-flex flex-column gap-4 justify-content-between py-2" style="width: 20%;">
-                                            <div class="rating">
-                                                <div class="indicator" style="width: 80%;"></div>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="indicator" style="width: 30%;"></div>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="indicator" style="width: 90%;"></div>
-                                            </div>
-                                            <div class="rating">
-                                                <div class="indicator" style="width: 50%;"></div>
-                                            </div>
+            <tr>
+            <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
+           <td ><div class="d-flex align-items-center gap-2"><i class="bi bi-check2 statusicon" style="background-color: #00d09e;"></i>
+                                      <p>  Approved</p></div></td>
+<td>258</td>           
+<td><div class="rating w-75"><div class="indicator" style="width: 70%;"></div></div></td> 
+        </tr>
 
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+    </tbody>
+</table>
+             </div>
+                    </div>
 
 
                     </div>
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-md-0">
                <div class="taskscontainer" id="SimpleList">
   <div class="d-flex justify-content-between header textgray align-items-center">
     <div class="d-flex align-items-center gap-3 checkitem m-0">
@@ -472,7 +481,7 @@
 </div>
 
                     </div>
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-6 col-12">
                         <div class="piechart center">
 
 
@@ -493,7 +502,7 @@
 
                 <div class="row my-3">
 
-                    <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg-0">
                         <div class="lession d-flex flex-column justify-content-between">
                             <div class="d-flex header  align-items-center gap-3">
                                 <i class="bi bi-fire"></i>
@@ -531,11 +540,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg-0">
                         <div class="teamembers center">
                             <!-- Header -->
                             <div class="d-flex justify-content-between align-items-center header w-100">
-                                <h5>
+                                <h5 class="fs-lg-5 fs-1">
                                     Team members
                                 </h5>
                                 <i class="bi bi-plus-circle-fill"></i>
@@ -583,7 +592,7 @@
                     </div>
 
 
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-mb-0">
                         <div class="fingerprint">
                             <img src="./Assets/fingerprint.png" alt="">
                             <h3 class="m-0">Coontrol card security in-app with a tap</h3>
@@ -591,7 +600,7 @@
                             <button>Cards</button>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-6 col-12">
                         <div class="starbucks ">
                             <div class="imgcontainer">
                                 <img src="./Assets/Image Background.png" alt="">
@@ -626,7 +635,7 @@
 
             <div class="NFTMarketplace section ">
                 <div class="sectionhead d-flex">
-                    <div>
+                    <div class="sectiontitle">
                         <p class="textgray" style="font-weight: 500;">page / NFT Marketplace</p>
                         <h4 class="fw-bold">NFT Marketplace</h4>
                     </div>
@@ -635,16 +644,18 @@
                             <i class="bi bi-search"></i>
                             <input type="text" placeholder="search" class="colormain">
                         </div>
+                        <div class="d-flex align-items-center gap-2">
                         <div class="balancecontainer">
                             <img src="./Assets/Icon.png" alt="" class="headereth"> 1,924 ETH
                         </div>
-                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-bell" id="notificationtoggle"></i>
                         <i class="bi bi-moon-fill darkbutton"></i>
 
                         <!-- <i class="bi bi-brightness-high"></i> -->
                          
                         <i class="bi bi-info-circle"></i>
                         <img src="./Assets/Avatar 3.png" alt="" style="min-height: 35px; " class="profileicon avatar3">
+                        </div>
                     </div>
 
                 </div>
@@ -657,7 +668,7 @@
                                     style="background-image: url(./Assets/Products\ 2.png); height: 250px; width: 100%;background-size: cover; border-radius: 15px;">
                                     <div class="nftmarketbannercontent">
                                         <h4>Discover, collect, and<br />sell extraordinary NFTs</h4>
-                                        <P>Enter in this creative world. Discover now the <br />latest NFTs or start
+                                        <P>Enter in this creative world. Discover now the latest NFTs or start
                                             creating your own!</P>
                                         <div class="buttoncontainer">
                                             <button class="text-black bg-white buttonwhitebg">Discover now</button>
@@ -673,7 +684,7 @@
 
                             <div class="col-12 mt-4">
 
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between flex-column flex-md-row gap-3">
                                     <h5>Trending NFTs</h5>
                                     <div class="d-flex gap-xl-5 gap-3">
                                         <div class="filter active">Arts</div>
@@ -687,7 +698,7 @@
 
                                 <div class="row mt-3">
 
-                                    <div class="col-4 ps-0">
+                                    <div class="col-lg-4 col-md-6 col-12 ps-0 mb-3 mb-lg-0">
                                         <div class="nft">
                                             <div class="position-relative">
                                                 <div class="fav">
@@ -722,7 +733,7 @@
 
 
 
-                                    <div class="col-4 ps-0">
+                                    <div class="col-lg-4 col-md-6 col-12 ps-0 mb-3 mb-lg-0">
                                         <div class="nft">
                                             <div class="position-relative">
                                                 <div class="fav">
@@ -754,7 +765,7 @@
                                     </div>
 
 
-                                    <div class="col-4 ps-0">
+                                    <div class="col-lg-4 col-md-6 col-12 ps-0 mb-3 mb-lg-0">
                                         <div class="nft">
                                             <div class="position-relative">
                                                 <div class="fav">
@@ -801,7 +812,7 @@
 
 
 
-                            <div class="col-12 mt-4 d-flex flex-column">
+                            <div class="col-12 mt-4">
 
                                 <div class="d-flex justify-content-between">
                                     <h5>Recently Added</h5>
@@ -812,7 +823,7 @@
 
                                 <div class="row mt-3 flex-grow-1">
 
-                                    <div class="col-4 ps-0">
+                                    <div class="col-lg-4 col-md-6 col-12 mb-3 mb-lg-0 ps-0">
                                         <div class="nft">
                                             <div class="position-relative">
                                                 <div class="fav">
@@ -845,7 +856,7 @@
 
 
 
-                                    <div class="col-4 ps-0">
+                                    <div class="col-md-6 col-12 col-lg-4 mb-3 mb-lg-0 ps-0">
                                         <div class="nft">
                                             <div class="position-relative">
                                                 <div class="fav">
@@ -875,7 +886,7 @@
                                     </div>
 
 
-                                    <div class="col-4 ps-0">
+                                    <div class="col-lg-4 col-md-6 col-12 mb-3 mb-lg-0 ps-0">
                                         <div class="nft">
                                             <div class="position-relative">
                                                 <div class="fav">
@@ -1049,9 +1060,12 @@
                                                 </div>
                                             </div>
 
-                                            <div class="d-flex align-items-center gap-2 fw-bold"><img
-                                                    src="./Assets/Icon (1).png" alt="">1.30 ETH</div>
-                                            <p class="textgray">30s ago</p>
+                                            <div class="d-flex align-items-center fw-bold flex-column">
+                                                
+                                             <div class="d-flex align-items-center">   <img src="./Assets/Icon (1).png" alt=""> <p>1.30 ETH</p> </div>
+                                                                                            <p class="textgray">30s ago</p>
+
+                                                </div>
                                         </div>
 
 
@@ -1065,9 +1079,12 @@
                                                 </div>
                                             </div>
 
-                                            <div class="d-flex align-items-center gap-2 fw-bold"><img
-                                                    src="./Assets/Icon (1).png" alt="">0.91 ETH</div>
-                                            <p class="textgray">58s ago</p>
+                                            <div class="d-flex align-items-center fw-bold flex-column">
+                                                
+                                             <div class="d-flex align-items-center">   <img src="./Assets/Icon (1).png" alt=""> <p>1.30 ETH</p> </div>
+                                                                                            <p class="textgray">30s ago</p>
+
+                                                </div>
                                         </div>
 
 
@@ -1081,9 +1098,12 @@
                                                     <p class="textgray">By Nick Wilson</p>
                                                 </div>
                                             </div>
-                                            <div class="d-flex align-items-center gap-2 fw-bold"><img
-                                                    src="./Assets/Icon (1).png" alt="">2.82 ETH</div>
-                                            <p class="textgray">1m ago</p>
+                                             <div class="d-flex align-items-center fw-bold flex-column">
+                                                
+                                             <div class="d-flex align-items-center">   <img src="./Assets/Icon (1).png" alt=""> <p>1.30 ETH</p> </div>
+                                                                                            <p class="textgray">30s ago</p>
+
+                                                </div>
                                         </div>
 
 
@@ -1097,9 +1117,12 @@
                                                     <p class="textgray">By Peter Will</p>
                                                 </div>
                                             </div>
-                                            <div class="d-flex align-items-center gap-2 fw-bold"><img
-                                                    src="./Assets/Icon (1).png" alt="">2.30 ETH</div>
-                                            <p class="textgray">1m ago</p>
+                                              <div class="d-flex align-items-center fw-bold flex-column">
+                                                
+                                             <div class="d-flex align-items-center">   <img src="./Assets/Icon (1).png" alt=""> <p>1.30 ETH</p> </div>
+                                                                                            <p class="textgray">30s ago</p>
+
+                                                </div>
                                         </div>
 
 
@@ -1113,9 +1136,12 @@
                                                     <p class="textgray">By Will Smith</p>
                                                 </div>
                                             </div>
-                                            <div class="d-flex align-items-center gap-2 fw-bold"><img
-                                                    src="./Assets/Icon (1).png" alt="">0.56 ETH</div>
-                                            <p class="textgray">2m ago</p>
+                                     <div class="d-flex align-items-center fw-bold flex-column">
+                                                
+                                             <div class="d-flex align-items-center">   <img src="./Assets/Icon (1).png" alt=""> <p>1.30 ETH</p> </div>
+                                                                                            <p class="textgray">30s ago</p>
+
+                                                </div>
                                         </div>
 
 
@@ -1150,7 +1176,7 @@
 
             <div class="Tables section ">
                 <div class="sectionhead d-flex">
-                    <div>
+                    <div class="sectiontitle">
                         <p class="textgray" style="font-weight: 500;">page / Tables</p>
                         <h4 class="fw-bold">Tables</h4>
                     </div>
@@ -1160,7 +1186,7 @@
                             <input type="text" placeholder="search" class="colormain">
                         </div>
                      
-                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-bell" id="notificationtoggle"></i>
                         <i class="bi bi-moon-fill darkbutton"></i>
                         <i class="bi bi-info-circle"></i>
                         <img src="./Assets/Avatar 3.png" alt="" style="min-height: 35px; " class="profileicon avatar3">
@@ -1180,8 +1206,7 @@
                                 <i class="bi bi-three-dots"></i>
                             </div>
 
-          
-
+          <div class="table-responsive">
 <table class="sortable">
     <thead><tr>
         <td>Title <i class="bi bi-chevron-down rotate"></i></td>
@@ -1194,20 +1219,20 @@
             <td>Marketplace</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-android2"></i><i class="bi bi-windows"></i></td>
             <td>12.Jan.2021</td>
-            <td class="d-flex align-items-center gap-2"><p class="w-90">75.5%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 75.5%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">75.5%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 75.5%;"></div></div></td>
         </tr>
                 <tr>
             <td>Venus DB PRO</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i></td>
             <td>21.Feb.2021</td>
-            <td class="d-flex align-items-center gap-2 w-100 align-items-center"><p class="w-90">35.4%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 34.5%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row w-100 align-items-center"><p class="w-90">35.4%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 34.5%;"></div></div></td>
         </tr>
 
             <tr>
             <td>Venus DS</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-android2"></i><i class="bi bi-windows"></i></td>
             <td>13.Mar.2021</td>
-            <td class="d-flex align-items-center gap-2"><p class="w-90">25%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 25%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">25%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 25%;"></div></div></td>
         </tr>
 
 
@@ -1215,7 +1240,7 @@
             <td>Venus 3D Assets</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
             <td>24.Jan.2021</td>
-            <td class="d-flex align-items-center gap-2"><p class="w-90">100%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 100%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">100%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 100%;"></div></div></td>
         </tr>
 
 
@@ -1223,7 +1248,7 @@
             <td>Uranus</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
             <td>21.Sep.2021</td>
-            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
 
@@ -1231,48 +1256,47 @@
             <td>Uranus</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
             <td>21.Sep.2021</td>
-            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
             <tr>
             <td>Uranus</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
             <td>21.Sep.2021</td>
-            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
             <tr>
             <td>Uranus</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
             <td>21.Sep.2021</td>
-            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
             <tr>
             <td>Uranus</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
             <td>21.Sep.2021</td>
-            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
             <tr>
             <td>Uranus</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
             <td>21.Sep.2021</td>
-            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
             <tr>
             <td>Uranus</td>
             <td class="gap-1 d-flex textgray"><i class="bi bi-apple"></i><i class="bi bi-windows"></i></td>
             <td>21.Sep.2021</td>
-            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
     </tbody>
 </table>
 
-
-
+</div>
                         </div>
                     </div>
                     <div class="col-xl-6 col-12 mb-4">
@@ -1282,7 +1306,8 @@
                                 <i class="bi bi-three-dots"></i>
                             </div>
 
-                  
+          <div class="table-responsive">
+        
 <table class="sortable">
     <thead><tr>
         <td>Title <i class="bi bi-chevron-down rotate"></i></td>
@@ -1292,75 +1317,75 @@
     </tr></thead>
     <tbody>
         <tr>
-            <td><input type="checkbox"> Marketplace</td>
+            <td class="d-flex align-items-center"><input type="checkbox"><p> Marketplace</p></td>
             <td>17.5%</td>
-<td>2458</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">75.5%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 75.5%;"></div></div></td>
+<td>2458</td>            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">75.5%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 75.5%;"></div></div></td>
         </tr>
                 <tr>
-            <td><input type="checkbox"> Venus DB PRO</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Venus DB PRO</td>
             <td>10.8%</td>
-<td>1485</td>            <td class="d-flex align-items-center gap-2 w-100 align-items-center"><p class="w-90">35.4%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 34.5%;"></div></div></td>
+<td>1485</td>            <td class="d-flex align-items-center gap-2 w-100 align-items-center flex-column flex-md-row"><p class="w-90">35.4%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 34.5%;"></div></div></td>
         </tr>
 
             <tr>
-            <td><input type="checkbox"> Venus DS</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Venus DS</td>
             <td>21.3%</td>
-<td>1024</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">25%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 25%;"></div></div></td>
+<td>1024</td>            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">25%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 25%;"></div></div></td>
         </tr>
 
 
             <tr>
-            <td><input type="checkbox"> Venus 3D Assets</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Venus 3D Assets</td>
             <td>31.5%</td>
-<td>858</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">100%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 100%;"></div></div></td>
+<td>858</td>            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">100%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 100%;"></div></div></td>
         </tr>
 
 
             <tr>
-            <td><input type="checkbox"> Uranus</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
             <td >12.2%</td>
-<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+<td>258</td>            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
 
             <tr>
-            <td><input type="checkbox"> Uranus</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
             <td >12.2%</td>
-<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+<td>258</td>            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
             <tr>
-            <td><input type="checkbox"> Uranus</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
             <td >12.2%</td>
-<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+<td>258</td>            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
             <tr>
-            <td><input type="checkbox"> Uranus</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
             <td >12.2%</td>
-<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+<td>258</td>            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
             <tr>
-            <td><input type="checkbox"> Uranus</td>
-            <td >12.2%</td>
-<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
+            <td >12.2%</td> 
+<td>258</td>            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
             <tr>
-            <td><input type="checkbox"> Uranus</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
             <td >12.2%</td>
-<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+<td>258</td>            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2%</p> <div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
 
             <tr>
-            <td><input type="checkbox"> Uranus</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
             <td >12.2%</td>
-<td>258</td>            <td class="d-flex align-items-center gap-2"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
+<td>258</td>            <td class="d-flex align-items-center gap-2 flex-column flex-md-row"><p class="w-90">12.2% </p><div class="rating" style="width: 50%;"><div class="indicator" style="width: 12.2%;"></div></div></td>
         </tr>
     </tbody>
 </table>
-
+          </div>
 
                         </div>
                     </div>
@@ -1373,7 +1398,8 @@
                                 <i class="bi bi-three-dots"></i>
                             </div>
 
-                           
+        <div class="table-responsive">
+                   
 <table class="sortable" id="4columntable">
     <thead><tr>
         <td>Title <i class="bi bi-chevron-down rotate"></i></td>
@@ -1383,20 +1409,20 @@
     </tr></thead>
     <tbody>
         <tr>
-            <td><input type="checkbox"> Marketplace</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Marketplace</td>
             <td>17.5%</td>
 <td>2458</td>       
 <td>24.Jan.2021</td> 
        </tr>
                 <tr>
-            <td><input type="checkbox"> Venus DB PRO</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Venus DB PRO</td>
             <td>10.8%</td>
 <td>1485</td>          
 <td>12.Jun.2021</td> 
         </tr>
 
             <tr>
-            <td><input type="checkbox"> Venus DS</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Venus DS</td>
             <td>21.3%</td>
 <td>1024</td>          
 <td>5.Jan.2021</td> 
@@ -1404,7 +1430,7 @@
 
 
             <tr>
-            <td><input type="checkbox"> Venus 3D Assets</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Venus 3D Assets</td>
             <td>31.5%</td>
 <td>858</td>        
 <td>7.Mar.2021</td> 
@@ -1412,7 +1438,7 @@
 
 
             <tr>
-            <td><input type="checkbox"> Uranus</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
             <td >12.2%</td>
 <td>258</td>           
 <td>17.Dec.2021</td> 
@@ -1420,7 +1446,8 @@
 
     </tbody>
 </table>
-                        </div>
+        </div>          
+</div>
                     </div>
 
                                   <div class="col-xl-6 col-12 mb-4">
@@ -1431,7 +1458,8 @@
                             </div>
 
 
-                                  
+             <div class="table-responsive">
+                     
 <table class="sortable">
     <thead><tr>
         <td>Title <i class="bi bi-chevron-down rotate"></i></td>
@@ -1441,39 +1469,39 @@
     </tr></thead>
     <tbody>
         <tr>
-            <td><input type="checkbox"> Marketplace</td>
-            <td class="d-flex align-items-center gap-2"><i class="bi bi-check2 statusicon" style="background-color: #00d09e;"></i>
-                                        Approved</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> <p>Marketplace</p></td>
+            <td ><div class="d-flex align-items-center gap-2"><i class="bi bi-check2 statusicon" style="background-color: #00d09e;"></i>
+                                      <p>  Approved</p></div></td>
 <td>2458</td>       
 <td><div class="rating w-75"><div class="indicator" style="width: 20%;"></div></div></td> 
        </tr>
                 <tr>
-            <td><input type="checkbox"> Venus Dashboard Builder</td>
-            <td class="d-flex align-items-center gap-2"><i class="bi bi-exclamation-lg statusicon"
-                                            style="background-color:#ffcc19 ;"></i> Error</td>
+            <td class="d-flex align-items-center"><input type="checkbox"><p> Venus Dashboard Builder</p></td>
+            <td ><div class="d-flex align-items-center gap-2"><i class="bi bi-exclamation-lg statusicon"
+                                            style="background-color:#ffcc19 ;"></i> Error</div></td>
 <td>1485</td>          
 <td><div class="rating w-75"><div class="indicator" style="width: 90%;"></div></div></td> 
         </tr>
 
             <tr>
-            <td><input type="checkbox"> Venus Design System</td>
-            <td class="d-flex align-items-center gap-2"><i class="bi bi-x-lg statusicon" style="background-color: #ff5142;"></i>
-                                        Disable</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Venus Design System</td>
+            <td><div class="d-flex align-items-center gap-2"><i class="bi bi-x-lg statusicon" style="background-color: #ff5142;"></i>
+                                        Disable</div></td>
 <td>1024</td>          
 <td><div class="rating w-75"><div class="indicator" style="width: 40%;"></div></div></td> 
         </tr>
 
             <tr>
-            <td><input type="checkbox"> Uranus</td>
-            <td class="d-flex align-items-center gap-2" ><i class="bi bi-check2 statusicon" style="background-color: #00d09e;"></i>
-                                        Approved</td>
+            <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
+            <td ><div class="d-flex align-items-center gap-2"><i class="bi bi-check2 statusicon" style="background-color: #00d09e;"></i>
+                                        Approved</div></td>
 <td>258</td>           
 <td><div class="rating w-75"><div class="indicator" style="width: 70%;"></div></div></td> 
         </tr>
 
     </tbody>
 </table>
-
+             </div>
                     </div>
                     </div>
 
@@ -1498,7 +1526,7 @@
 
             <div class="Kanban section ">
                 <div class="sectionhead d-flex">
-                    <div>
+                    <div class="sectiontitle">
                         <p class="textgray" style="font-weight: 500;">page / Kanban</p>
                         <h4 class="fw-bold">Kanban</h4>
                     </div>
@@ -1508,7 +1536,7 @@
                             <input type="text" placeholder="search" class="colormain">
                         </div>
 
-                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-bell" id="notificationtoggle"></i>
                         <i class="bi bi-moon-fill darkbutton"></i>
                         <i class="bi bi-info-circle"></i>
                         <img src="./Assets/Avatar 3.png" alt="" style="min-height: 35px; " class="profileicon avatar3">
@@ -1693,7 +1721,7 @@
 
             <div class="Profile section">
                 <div class="sectionhead d-flex">
-                    <div>
+                    <div class="sectiontitle">
                         <p class="textgray" style="font-weight: 500;">page / Profile</p>
                         <h4 class="fw-bold">Profile</h4>
                     </div>
@@ -1703,7 +1731,7 @@
                             <input type="text" placeholder="search" class="colormain">
                         </div>
 
-                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-bell" id="notificationtoggle"></i>
                         <i class="bi bi-moon-fill darkbutton"></i>
                         <i class="bi bi-info-circle"></i>
                         <img src="./Assets/Avatar 3.png" alt="" style="min-height: 35px; " class="profileicon avatar3">
@@ -1714,7 +1742,7 @@
 
 
 
-                <div class="row mt-4">
+                <div class="row mt-md-4 m-0">
 
 
                     <div class="col-lg-5 col-12 mb-3 mb-lg-0">
@@ -1741,7 +1769,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg-0">
                         <div class="profilecomponent justify-content-between">
                             <div class="d-flex justify-content-end w-100 head"><i class="bi bi-three-dots"></i></div>
                             <div class="body d-flex flex-column align-items-center">
@@ -1757,10 +1785,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-6 mb-3 mb-lg-0">
+                    <div class="col-lg-4 col-md-6 col-12 mb-3 mb-lg-0">
                         <div class="profilecomponent">
                          <div class="row h-100">
-                            <div class="col-6 center">
+                            <div class="col-lg-6 col-12 center">
 <div class="uploadimageinputcontainer">
 <input type="file" accept="image/*" hidden id="imginput">
 <label for="imginput"></label>
@@ -1769,8 +1797,8 @@
   <p class="text-center">PNG, JPG and GIF files are allowed</p>
 </div>
 </div>
-<div class="col-6">
-<div class="d-flex flex-column  justify-content-between h-100">
+<div class="col-lg-6 col-12">
+<div class="d-flex flex-column  justify-content-between h-lg-100 h-100 gap-3 gap-lg-0">
     <div>
     <h5 class="mt-4 fw-bold">Complete your profile</h5>
     <p>Stay on the pulse distributed projects with an anine whiteboard to plan, coordinate and discuss</p>
@@ -1828,29 +1856,29 @@
                     
                         </div>
                     </div>
-    <div class="col-lg-5 col-6">   
+    <div class="col-lg-5 col-md-6 col-12 mb-3 mb-md-0">   
                 <div class="profilecomponent ">
                             <div class="d-flex w-100 head"><h4>General information</h4></div>
                             <div class="body d-flex flex-column align-items-center justify-content-between">
                              
                                 <p class="mt-2 w-100 fw-normal overflow-visible">As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...</p>
                                 <div class="row w-100  d-flex margintopneg h-100 center">
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="info"><p>Education</p><h6>Stanford University</h6></div>
                                         </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="info"><p>Languages</p><h6>English, Spanish, italian</h6></div>
                                         </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="info"><p>Department</p><h6>Product Design</h6></div>
                                         </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="info"><p>Work History</p><h6>Google, Facebook</h6></div>
                                         </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="info"><p>Organization</p><h6>Simmmple Web LLC </h6></div>
                                         </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-12">
                                         <div class="info"><p>Birthday</p><h6>20 July 1986</h6></div>
                                         </div>
                                 </div>
@@ -1859,7 +1887,7 @@
                         </div>
                     </div>
 
-    <div class="col-lg-3 col-6">      
+    <div class="col-lg-3 col-md-6 col-12">      
               <div class="profilecomponent ">
                             <div class="d-flex justify-content-between w-100 head"><h4>Notifications</h4><i class="bi bi-three-dots"></i></div>
                             <div class="body d-flex flex-column align-items-center w-100 justify-content-between">

@@ -28,6 +28,10 @@
 --secondary-hover:#f1f9fe;
 --switchbg: #dee5f2;
 --create: white;
+--neutral-notification: #e5e5e5;
+--error-notification:#e1f8f2 ;
+--warning-notification: #fff3e7;
+--successful-notification: #ffedeb;
 }
 
 [data-theme="dark"] {
@@ -59,6 +63,10 @@
   --secondary-hover:#111e40;
   --switchbg: #16254b;
   --create:#dee5f2;
+  --neutral-notification:#253357 ;
+  --error-notification:#253357 ;
+  --warning-notification: #253357;
+  --successful-notification:#253357 ;
 }
 
 a,a:focus,a:visited{
@@ -459,6 +467,21 @@ color: #dee5f2;
     font-weight: 500;
     font-size: 14px;
 }
+.table-responsive{
+    width: 100%;
+    height: 100%;
+    height: auto;
+    overflow: inherit;
+}
+tbody{
+    border: none;
+}
+table{
+    width: 100%;
+}
+.table{
+    overflow: hidden;
+}
 .logcontainer{
     display: flex;
     flex-direction: column;
@@ -766,11 +789,7 @@ margin: 0;
 font-weight: 500;
 }
 
-.p ,p{
-  white-space: nowrap;        /* keep text on one line */
-  overflow: hidden;           /* hide overflowing text */
-  text-overflow: ellipsis;    /* add the dots (…) */
-}
+
 body{
     background-color: var(--bg);
 }
@@ -817,6 +836,86 @@ height: auto;
 .lession .body {
     gap: 10px;
 }
+.notificationbarcontainer{ 
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.075);
+
+    position: fixed;
+    z-index: 50;
+    right: 0;
+    width: 500px;
+    height: 100vh;
+    border-radius: 30px 0 0 30px;
+    transform: translateX(110%);
+    background-color: var(--secondarybg);
+    padding: 50px 70px;
+    transition: 0.5s ease all;
+    border: var(--thead-border-bottom);
+}
+.notificationbarcontainer.active{
+    transform: translateX(0);
+}
+.notificationbar .body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.notificationbar .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        color: var(--text);
+
+}
+.notificationbar .head p{
+ font-weight: 500;
+ font-size: 20px;
+}
+.notification{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-radius: 10px;
+      transition: all 0.3s ease;
+       opacity: 1;
+  transform: translateY(0);
+  height: auto;
+color: var(--text);
+}
+.notification.neutral{
+    background-color: var(--neutral-notification);
+}
+.notification.error{
+    background-color: var(--error-notification);
+}
+.notification.successful{
+    background-color: var(--successful-notification);
+}
+.notification.warning{
+    background-color: var(--warning-notification);
+}
+.notification.hiding {
+  opacity: 0;
+  transform: translateY(-20px);
+
+  overflow: hidden;
+}
+
+.notification .stat{
+    background-color: var(--bgcomponent);
+    padding: 5px;
+    border-radius: 10px;
+}
+.notification .bi-x-lg,.notificationbarcontainer .close{
+cursor: pointer;
+}
+.notification div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 li{
     display: flex;
     align-items: center;
@@ -857,7 +956,6 @@ color: var(--liactiveicon);
 }
 .section .sectionhead{
     width: 100%;
-display: flex;
 justify-content: space-between;
 align-items: center;
 }
@@ -895,6 +993,8 @@ height: 25px;
 font-size: 12px;
     padding: 5px 15px;
     border-radius: 50px;
+    display: flex;
+    align-items: center;
 }
 .balancecontainer{
     background-color: var(--bg);
@@ -1707,9 +1807,7 @@ font-size: 8px;
 
 
 @media (max-width : 1060px) {
-    .nftscontainer .nft p{
-font-size: 7px;
-    }
+
  .nftscontainer .nft button{
     font-size: 6px;
  }
@@ -1983,6 +2081,59 @@ font-size: 20px;
 }
 }
 @media (max-width : 992px) {
+    .notificationbarcontainer{ 
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.075);
+
+    position: fixed;
+    z-index: 50;
+    right: 0;
+    width: 100vw;
+    height: 90vh;
+    bottom: 0;
+    border-radius: 30px 30px 0 0px;
+    transform: translateX(0) translateY(100%);
+    padding: 40;
+    transition: 0.5s ease all;
+}
+.notificationbarcontainer.active{
+    transform: translateX(0) translateY(0);
+}
+
+    .h-lg-100{
+        max-height: 50%;
+    }
+    .uploadimageinputcontainer{
+        width: 100%;
+        max-height: 100%;
+        padding: 20px;
+    }
+    .rating{
+        height: 8px;
+    }
+    .w-25{
+        font-size: 15px;
+    }
+    .History .nft{
+        font-size: 15px;
+    }
+    .nft .avatarscontainer img{
+        max-width: 35px;
+        max-height: 35px;
+        height: 35px;
+        width: 35px;
+    }
+        .nftscontainer .nft p{
+font-size: 16px;
+    }
+   .nftscontainer .nft p.textgray{
+font-size: 13px;
+    }
+      .nftscontainer .nft p.bid{
+font-size: 13px;
+    }
+    .nftscontainer .nft button{
+        font-size: 13px;
+    }
 #myPieChart{
     max-height: 200px;
 }
@@ -2028,7 +2179,7 @@ font-size: 15px ;
     font-size: 25px;
 }
 .stat-card p{
-    font-size: 15px;
+    font-size: 12px;
 }
 .stat-card h5{
     font-size: 20px;
@@ -2039,26 +2190,55 @@ font-size: 15px ;
 .graphcontainer .header i,.checktable .header i,.taskscontainer .header i,.teamembers .header i,.Revenue .header i{
 font-size: 25px;
 }
-.searchcontainer img{
-    max-height: 70px;
-    height: 70px;
+.searchcontainer{
+    width: 100%;
+    justify-content: space-between;
 }
-.searchcontainer i{
+.searchcontainer img{
+    max-height: 40px;
+    height: 40px;
+}
+.nftscontainer h5{
+    font-weight: 500;
     font-size: 20px;
+}
+.filter{
+    font-size: 15px;
+    font-weight: 500;
+}
+ .searchcontainer i{
+    font-size: 20px;
+}
+.sectiontitle{
+    width: 100%;
+}
+.NFTMarketplace .searchcontainer i{
+    font-size: 15px;
+}
+.balancecontainer {
+    font-size: 13px;
 }
 .inputcontainer{
     font-size: 15px;
     padding: 10px;
+    flex-grow: 1;
 }
 .inputcontainer input{
     font-size: 15px;
+      flex-grow: 1;
 }
 .sectionhead  h4{
     font-size: 30px;
 }
+
 .balancecontainer img{
     max-width: 35px;
     height: auto;
+}
+.section .sectionhead{
+    flex-direction: column; 
+    gap: 20px;
+margin-bottom: 20px;
 }
 .section .sectionhead p{
     font-size: 15px;
@@ -2073,8 +2253,8 @@ font-size: 25px;
 .graphcontainer h2, .Revenue p{
     font-size: 35px;
 }
-.piechart .header .fw-bold,.starbucks .logocontainer h5{
-    font-size: 35px !important;
+.starbucks .logocontainer h5{
+    font-size: 25px !important;
 }
 .piechart .gap-5 div,.lession h5{
     font-size: 20px;
@@ -2092,7 +2272,7 @@ font-size: 25px;
     font-size: 18px;
 }
 .taskscontainer .header{
-    font-size: 35px;
+    font-size: 25px;
 }
 .checkitem p,.lession p,.lession h4{
     font-size: 18px !important;
@@ -2107,12 +2287,22 @@ font-size: 25px;
 .lession,.member p,.sidebar ul{
     gap: 20px !important;
 }
-.teamembers .header h5{
-    font-size: 35px !important;
-}
 .teamembers .member h5,.sidebar ul{
-    font-size: 20px !important;
+    font-size: 15px !important;
     white-space: nowrap;
+}
+.profilecomponent .info{
+    padding: 15px 10px;
+flex-grow: 1;
+}
+.profilecomponent .project .body h6{
+    font-size: 16px;
+}
+.profilecomponent p{
+    font-size: 12px;
+}
+.profilecomponent h4{
+    font-size: 25px;
 }
 .teamembers img{
     max-width: 50%;
@@ -2128,7 +2318,210 @@ padding: 15px !important;
     font-size: 20px !important;
 }
 .sidebar{
-    width: 300px !important;
-    transform: translateX(-320px);
+    width: 50vw !important;
+    transform: translateX(-110%);
+}
+.getpro{
+    max-width: 60%;
+}
+.sidebar ul{
+padding: 30px 0 0px 80px;}
+.teamembers h5{
+  font-size:   calc(1.375rem + 0.5vw) !important;
 }
 }
+                                      /* mobile screens                                              */
+
+                                      
+@media (max-width: 576px) {
+
+    table{
+        overflow-x: scroll;
+        max-width: 100%;
+    }
+    .titles .checkitem{
+        font-size: 10px !important;
+        gap: 2px;
+    }
+    .checkitem p{
+        font-size: 10px !important;
+    }
+.titles p{
+    font-size: 8px;
+}
+    .graphcontainer h2, .Revenue p{
+    font-size: 25px;
+}
+
+.sidebar{
+    width: 80vw !important;
+    transform: translateX(-110%);
+}
+.getpro{
+    max-width: 70%;
+}
+.sidebarcontainer{
+    width: 40px !important;
+}
+.mobilesidebbar{
+    width: 50px;
+    font-size: 30px;
+}
+.inputcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputcontainer input{
+    display: none;
+}
+.graphcontainer .body{
+    width: 100%;
+}
+#Dashboard{
+    width: 100%;
+    max-width: 100%;
+}
+.table-responsive{
+ 
+    overflow: scroll;
+}
+table tr{
+    align-items: center;
+}
+
+.rating{
+    width: 100% !important;
+}
+tbody p{
+    width: 100%;
+}
+.checktabledashoardcontainer{
+    overflow-x: scroll;
+}
+.checktabledashoardcontainer .w-100{
+    width: inherit !important;
+}
+.checktabledashoardcontainer .column{
+  width: 100% !important;
+}
+.checktabledashoardcontainer .column p{
+white-space: pre;
+width: 100%;
+overflow: inherit;
+text-overflow: inherit;
+}
+.checktabledashoardcontainer .body{
+    width: 100% !important;
+}
+.titles{
+    gap: 10px;
+}
+.titles p{
+    text-overflow: inherit;
+}
+sub{
+    bottom: 12px !important;
+    font-size: 12px;
+}
+.piechart .header .textgray{
+    font-size: 10px !important;
+}.piechart .gap-5 div{
+    font-size: 10px;
+}
+.member p{
+    font-size: 10px;
+}
+.fingerprint p{
+    font-size: 12px;
+}
+.fingerprint{
+gap: 12px !important;
+}
+.lession .body{
+    font-size: 13px;
+}
+.lession h5{
+    font-size: 14px !important;
+}
+.lession p{
+    font-size: 12px !important;
+}
+.moreavatars{
+    width: 30px;
+    height: 30px;
+}
+table td{
+    padding: 10px 50px 5px 10px;
+    font-size: 15px;
+    white-space: pre;
+}
+.nftmarketbannercontent{
+    padding: 20px;
+}
+.balancecontainer{
+    font-size: 10px;
+}
+.nftmarketbannercontent p{
+    font-size: 13px;
+    display: flex;
+    text-align: left;
+    max-width: 100%;
+}
+.buttoncontainer{
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+.filter{
+    font-size: 10px;
+}
+.topcreators .w-50,.topcreators .w-25{
+    font-size: 12px;
+}
+.creator{
+    gap: 20px;
+}
+.creatorname{
+    display: flex;
+    width: 50%;
+    min-width: 50%;
+    gap: 5px;
+}
+.History .nft{
+    font-size: 12px;
+}
+.History .nft .imgcontainer{
+  width: 100% !important;
+}
+.History .nft p{
+    white-space: pre;
+}
+footer{
+    flex-direction: column;
+    gap: 10px;
+}
+footer ul{
+justify-content: space-between;
+width: 100%;
+}
+.History .nft{
+    padding: 15px 15px 15px 5px;
+}
+.profilecomponent h4{
+    font-size: 15px;
+}
+.profilepageicon{
+    max-width: 20%;
+    margin-top: -25px !important;
+}
+.profilecomponent{
+    padding: 20px;
+}
+.teamembers img{
+    max-width: 40px;
+    max-height: 40px;
+}
+}
+
+

@@ -15,44 +15,67 @@ const shadowPlugin = {
   afterDatasetDraw(chart, args) {
     chart.ctx.restore();
   }
-};
-const highlightPlugin = {
+};const highlightPlugin = {
   id: 'highlightPoint',
-  afterDatasetsDraw(chart, args, options) {
+  afterDatasetsDraw(chart) {
+    // 👇 Skip drawing if screen width ≤ 576px (Bootstrap "sm" and below)
+    if (window.innerWidth <= 576) return;
+
     const { ctx, scales: { x, y } } = chart;
     const datasetIndex = 0; 
-    const pointIndex = 5;    
+    const pointIndex = 5;
 
     const dataset = chart.data.datasets[datasetIndex];
+    if (!dataset) return;
+
     const value = dataset.data[pointIndex];
-    const xPos = x.getPixelForValue(pointIndex);
+    const xPos = x.getPixelForTick(pointIndex);
     const yPos = y.getPixelForValue(value);
 
-    const text = "$108.00";  
+    const text = "$108.00";
     const paddingX = 10;
     const paddingY = 5;
 
+    ctx.save();
     ctx.font = 'bold 12px Poppins, sans-serif';
     const textWidth = ctx.measureText(text).width;
     const boxWidth = textWidth + paddingX * 2;
     const boxHeight = 24;
 
+    // Rounded box
     ctx.fillStyle = '#4017fd';
     ctx.beginPath();
-    ctx.roundRect(xPos - boxWidth / 2, yPos - 40, boxWidth, boxHeight, 6); 
+    const radius = 6;
+    const xBox = xPos - boxWidth / 2;
+    const yBox = yPos - 40;
+    ctx.moveTo(xBox + radius, yBox);
+    ctx.lineTo(xBox + boxWidth - radius, yBox);
+    ctx.quadraticCurveTo(xBox + boxWidth, yBox, xBox + boxWidth, yBox + radius);
+    ctx.lineTo(xBox + boxWidth, yBox + boxHeight - radius);
+    ctx.quadraticCurveTo(xBox + boxWidth, yBox + boxHeight, xBox + boxWidth - radius, yBox + boxHeight);
+    ctx.lineTo(xBox + radius, yBox + boxHeight);
+    ctx.quadraticCurveTo(xBox, yBox + boxHeight, xBox, yBox + boxHeight - radius);
+    ctx.lineTo(xBox, yBox + radius);
+    ctx.quadraticCurveTo(xBox, yBox, xBox + radius, yBox);
+    ctx.closePath();
     ctx.fill();
 
+    // Text
     ctx.fillStyle = '#ffffff';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(text, xPos, yPos - 40 + boxHeight / 2);
+    ctx.fillText(text, xPos, yBox + boxHeight / 2);
 
+    // Dot
     ctx.beginPath();
-    ctx.arc(xPos, yPos, 6, 0, 2 * Math.PI);
+    ctx.arc(xPos, yPos, 4, 0, 2 * Math.PI);
     ctx.fillStyle = '#4017fd';
     ctx.fill();
+
+    ctx.restore();
   }
 };
+
 const canvas = document.getElementById('Dashboard');
 if (canvas) {
   const ctx = canvas.getContext('2d');
@@ -543,16 +566,9 @@ Eth.forEach(Eth => {
 const mobilemenutoggle = document.getElementById('mobilemenutoggle')
 mobilemenutoggle.addEventListener('click', ()=> {
   sidebar.classList.toggle('active')
-  document.addEventListener('click', (e)=> {
-})
+
 })
 
-document.addEventListener('click',(e)=> {
-  if(!sidebar.contains(e.target)  && !mobilemenutoggle.contains(e.target)){
-      sidebar.classList.remove('active')
-  }
- 
-})
 
 navitems.forEach(navitem => {
     navitem.addEventListener("click", ()=>{
@@ -573,3 +589,41 @@ section.classList.add("active")
     });
     })
 })
+
+
+const notificationtoggles = document.querySelectorAll('#notificationtoggle')
+const notificationbarcontainer = document.querySelector('.notificationbarcontainer')
+const closenotificationsidebar = document.querySelector('.close')
+notificationtoggles.forEach(button => {
+  button.addEventListener('click', ()=>{
+    notificationbarcontainer.classList.add('active')
+  })
+})
+
+document.addEventListener('click',(e)=> {
+  if(!sidebar.contains(e.target)  && !mobilemenutoggle.contains(e.target)){
+      sidebar.classList.remove('active')
+  }
+
+   const clickedInsideToggle = Array.from(notificationtoggles).some(toggle =>
+    toggle.contains(e.target)
+  );
+
+ if(!notificationbarcontainer.contains(e.target) && !clickedInsideToggle || closenotificationsidebar.contains(e.target)){
+      notificationbarcontainer.classList.remove('active')
+
+ }
+})
+
+const notifications = document.querySelectorAll('.notification');
+
+notifications.forEach(notification => {
+  const closebtn = notification.querySelector('.bi-x-lg');
+  if (!closebtn) return;
+  closebtn.addEventListener('click', () => {
+    notification.classList.add('hiding');
+    setTimeout(() => {
+      notification.classList.add('d-none');
+    }, 300); 
+  });
+});
