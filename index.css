@@ -1,7 +1,7 @@
 
 :root {
   --bg: #f3f7fe;
-  --text: black;
+  --text: #253774;
   --bgcomponent:white;
   --bid: #4017fd;
   --gray: #93a1c1;
@@ -29,9 +29,12 @@
 --switchbg: #dee5f2;
 --create: white;
 --neutral-notification: #e5e5e5;
---error-notification:#e1f8f2 ;
+--error-notification: #ffedeb;
 --warning-notification: #fff3e7;
---successful-notification: #ffedeb;
+--successful-notification:  #e1f8f2;
+--inputs-border: 1px solid #0000002f;
+--inputs-title: #0000002f;
+
 }
 
 [data-theme="dark"] {
@@ -67,8 +70,42 @@
   --error-notification:#253357 ;
   --warning-notification: #253357;
   --successful-notification:#253357 ;
+--inputs-border: 1px solid #1f2b4b;
+--inputs-title: #9faed0;
+}
+ul{
+    list-style: none;
 }
 
+/* Remove Edge/Chrome built-in reveal icon */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge Chromium) */
+input[type="password"]::-webkit-password-toggle-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-clear-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+
+
+.password{
+    position: relative;
+}
+.password i{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--inputs-title);
+}
+div.dt-container.dt-empty-footer tbody > tr:last-child > *{
+    border-bottom: none;
+}
 a,a:focus,a:visited{
     color: inherit;
     text-decoration: none;
@@ -87,7 +124,7 @@ a,a:focus,a:visited{
 }
 #calendar{
     width: 100%;
-    padding: 0;
+    padding: 10px 20px !important;
 }
 .piechart .label{
 width: 10px;
@@ -158,12 +195,7 @@ table{
     font-size: 14px;
     font-weight: 500;
 }
-[data-calendar-theme=light] .vanilla-calendar-week__day,[data-calendar-theme=light] .vanilla-calendar-day__btn_prev, [data-calendar-theme=light] .vanilla-calendar-day__btn_next,[data-calendar-theme=light] .vanilla-calendar-day__btn_weekend, [data-calendar-theme=light] .vanilla-calendar-day__btn_holiday,[data-calendar-theme=light] .vanilla-calendar-day__btn{
-    color: var(--text);
-}
-[data-calendar-theme=light].vanilla-calendar,[data-calendar-theme=light] .vanilla-calendar-day__btn{
-    background-color: var(--bgcomponent);
-}
+
 .switch{
     width: 33px;
     height: 18px;
@@ -209,15 +241,7 @@ padding: 20px;
     border-radius: 50%;
     font-size: 40px;
 }
-[data-calendar-theme=light] .vanilla-calendar-header__content, [data-calendar-theme=light] .vanilla-calendar-month, [data-calendar-theme=light] .vanilla-calendar-year{
-    color: var(--text);
-}
-[data-calendar-theme=light] .vanilla-calendar-arrow:before{
-display: none;
-}
-[data-calendar-theme=light].vanilla-calendar{
-    color: var(--text);
-}
+
 .uploadimageinputcontainer{
     position: relative;
     display: flex;
@@ -359,7 +383,10 @@ font-weight: 500;
 .piechart i{
 font-size: 10px;
 }
-.graphcontainer .header i,.checktable .header i,.taskscontainer .header i,.teamembers .header i,.Revenue .header i{
+.dailytraffic .d-flex .textgray{
+    bottom: 1rem;
+}
+.headericon{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -387,10 +414,39 @@ background-color: var(--staticon);
     flex-direction: column;
 }
 .table .header{
-    padding: 15px 15px 0 15px;
+    padding: 20px 15px 0 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+span.dt-column-order{
+    display: none;
+}
+table.dataTable thead > tr > th.dt-orderable-asc:hover, table.dataTable thead > tr > th.dt-orderable-desc:hover, table.dataTable thead > tr > td.dt-orderable-asc:hover, table.dataTable thead > tr > td.dt-orderable-desc:hover{
+    outline: none;
+}
+.dt-orderable-desc i{
+    transition: 0.2s ease all;
+opacity: 0.1;
+}
+.dt-ordering-asc i{
+    opacity: 1;
+}
+.dt-ordering-desc i{
+    opacity: 1;
+    transform: rotate(180deg);
+}
+.dt-column-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+tbody tr td{
+padding-left: 20px;
+
 }
 .table .body{
     display: flex;
@@ -420,47 +476,41 @@ padding:  0px 20px ;
     align-items: center;
     justify-content: center;
 }
-.tablerow div{
-    margin: 0;
-    align-items: center;
-    width: 25%;
-    display: flex;
-    gap: 10px;
-    font-weight: 500;
-    padding: 0px !important;
-    font-size: 12px;
-    color: #253774;
-}
 .tablerow div p{
 width: 20%;
 margin: 0;
 }
-.checktablee div p{
-    width: 100%;
-    padding: 0;
-}
+
 .tablerow .rating{
 width: 60%;
 }
 .tablerow i{
 color: #dee5f2;
 }
-.graphcontainer .header p{
+#monthselector{
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--staticon) ;
     color: var(--thismonthcolor) !important;
-    padding: 10px 12px 10px 5px;
+    padding: 10px 12px 10px 15px;
     height: 40px;
     border-radius: 15px;
     margin: 0;
     font-size: 14px;
+    gap: 10px;
+    border: 0;
 }
 .graphcontainer .header p i{
     background-color: var(--staticon) ;
     color: var(--thismonthcolor) ;
     padding: 0;
+}
+#monthcalendar{
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    border: 1px solid rgba(0, 0, 0, 0.116);
 }
 .titles{
     color:#a3aed0 ;
@@ -469,9 +519,11 @@ color: #dee5f2;
 }
 .table-responsive{
     width: 100%;
-    height: 100%;
-    height: auto;
+    height: 100% ;
     overflow: inherit;
+}
+#complextable_wrapper,#complextable{
+    height: 100%;
 }
 tbody{
     border: none;
@@ -495,6 +547,10 @@ table{
     align-items: center;
     width: 100%;
     justify-content: space-between;
+}
+.table .header h4{
+    font-weight: 700;
+    color: var(--text);
 }
 .checkitem{
     color: var(--ptext);
@@ -714,8 +770,27 @@ table input[type="checkbox"]:hover,table input[type="checkbox"]:focus {
 .setting{
     position: relative;
 }
-.setting i{
+.setting i,#notificationtoggle{
+    position: relative;
     cursor: pointer;
+}
+#notificationtoggle,.notificationtoggle{
+    position: relative;
+}
+.notificationcount{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    padding: 2px;
+    background-color: red;
+    font-size: 10px;
+    aspect-ratio: 1/1;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
 }
 .settingmenu{
     position: absolute;
@@ -829,9 +904,11 @@ height: auto;
     font-weight: 500;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     font-size: 13px;
     width: 100%;
+}
+.sidebar ul li{
+    padding: 10px 0;
 }
 .lession .body {
     gap: 10px;
@@ -860,11 +937,37 @@ height: auto;
     gap: 20px;
     
 }
+thead tr td:first-child,tbody tr td:first-child{
+padding: 6px 0 0 30px !important;
+}
+.Dashboard .checktablee tbody tr td:first-child{
+    white-space: pre;
+}
 .notificationbar .head{
     display: flex;
     align-items: center;
     justify-content: space-between;
         color: var(--text);
+}
+.searchcontainer ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+align-items: center;
+}
+.searchcontainer ul li{
+opacity: 1;
+}
+.searchcontainer ul li a{
+    padding: 8px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease all;
+}
+.searchcontainer ul li a:hover{
+        background-color: var(--bg);
 
 }
 .notificationbar .head p{
@@ -916,7 +1019,10 @@ cursor: pointer;
     align-items: center;
     gap: 20px;
 }
-li{
+.sidebar li{
+    cursor: pointer;
+}
+.sidebar li a{
     display: flex;
     align-items: center;
     gap: 15px;
@@ -930,7 +1036,7 @@ li{
    align-items: center;
    justify-content: space-between;
 }
-.sidebar ul .active{
+.sidebar ul .active a{
 opacity: 1;
 font-weight: 600;
 border-right: var(--liactiveborder);
@@ -959,6 +1065,18 @@ color: var(--liactiveicon);
 justify-content: space-between;
 align-items: center;
 }
+table.dataTable thead > tr > td div.dt-column-header span.dt-column-title{
+    flex-grow: inherit;
+}
+.sectiontitle h4{
+    font-size: 30px;
+}
+table.dataTable td.dt-type-numeric div.dt-column-header{
+    flex-direction: row !important;
+}
+table.dataTable td.dt-type-numeric{
+    text-align: left;
+}
 .getpro{
     cursor: pointer;
     max-width: 100%;
@@ -971,7 +1089,7 @@ margin: 0;
 }
 .searchcontainer{
     background-color: var(--bgcomponent);
-    padding: 8px 15px;
+    padding: 0 15px;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -1080,6 +1198,7 @@ color: var(--bid)!important;
 }
 .nftscontainer{
     height: 100%;
+gap: 20px;
 }
 .nftscontainer .nft button{
     border: none;
@@ -1089,6 +1208,9 @@ color: var(--bid)!important;
     font-weight: 500;
     border-radius: 50px;
     font-size: 13px;
+}
+.History .nft p{
+    font-size: 12px;
 }
 .textgray{
     color: var(--gray) !important;
@@ -1122,12 +1244,13 @@ top: 1px;
 .inputs input{
     padding: 10px 30px;
     border-radius: 10px;
-    border: 1px solid #dee5f242;
+    border: var(--inputs-border);
     background-color: var(--bgcomponent);
+    color: var(--text);
 }
 .inputs input::placeholder{
   
-   color:  #dee5f26c;
+   color:  var(--inputs-title);
 }
 .back a{
 gap: 15px;
@@ -1199,6 +1322,7 @@ transition: 0.3s ease all;
 border-radius: 15px;
 flex-grow: 1;
 display: flex;
+max-height: 550px;
 flex-direction: column;
 }
 .topcreators .header{
@@ -1208,8 +1332,11 @@ flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
-      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.193);
-
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.079);
+}
+.disabled{
+    cursor: not-allowed;
+    background-color: red;
 }
 .topcreators .header p{
 margin-bottom: 5px;
@@ -1221,6 +1348,7 @@ margin-bottom: 5px;
     gap: 20px;
     justify-content: space-between;
     height: 100%;
+    overflow-y: scroll;
 }
 /* stationary element */
 
@@ -1272,7 +1400,8 @@ padding: 20px;
 flex-grow: 1;
 display: flex;
 flex-direction: column;
-gap: 20px;
+gap: 10px;
+height: 100%;
 }
 .History .body{
     height: 100%;
@@ -1291,11 +1420,16 @@ gap: 20px;
 
 .History .nft p{
 margin: 0;
+white-space: pre;
 }
 .history .nft .imgcontainer{
     width: 50%;
 }
+.history .nft .imgcontainer img{
+    min-width: 60px;
+        max-width: 60px;
 
+}
 .History .nft:hover{
       box-shadow: 0 4px 40px rgba(0, 0, 0, 0.085);
       border-radius: 15px;
@@ -1357,10 +1491,7 @@ footer ul{
  cursor: pointer;
  color: #7850fd;
 }
-table tr,table td{
-border: 0;
- padding:   15px 15px 5px 15px;
-}
+
 
 .rotate::before{
 transform: rotate(180deg);
@@ -1368,13 +1499,22 @@ transform: rotate(180deg);
 thead{
     border-bottom: var(--thead-border-bottom);
 }
+tbody tr:first-child td:first-child {
+padding: 20px 10px 0 30px !important;
+}
+tbody tr:first-child td {
+padding: 20px 10px 0 10px !important;
+}
 
 thead td{
     color:#a3aed0 ;
 font-weight: 500;
 cursor: pointer;
 }
-tbody p{
+.Dashboard tbody p{
+    margin: 0;
+}
+.Tables tbody p{
     margin: 0;
     width: 40%;
 }
@@ -1524,6 +1664,10 @@ background: linear-gradient(to right,#cccaff,#d5ccff34);
         font-size: 11px;
     }
 @media (max-width: 1600px) {
+       .google img{
+        width: 20px;
+    }
+
     .logcontainer .component{
         padding: 25px 25px 15px 25px;
     }
@@ -1539,9 +1683,7 @@ background: linear-gradient(to right,#cccaff,#d5ccff34);
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: #4017fd;
     font-weight: bold;
-    background-color: #f9fcfe;
     border: dashed 1px  #e1e8f4;
     padding: 10px;
     border-radius: 15px;
@@ -1556,10 +1698,10 @@ font-size: 12px;
 }
 @media (max-width: 1500px) {
     table td{
-        padding: 10px 10px 5px 10px;
+        padding: 5px 10px 5px 10px;
     }
   .table h4{
-    font-size: 16px;
+    font-size: 20px;
   }
     tbody td,thead td{
         font-size: 12px;
@@ -1632,31 +1774,6 @@ font-size: 12px;
     }
 }
 
-@media (max-width: 1400px) {
-    .filter{
-        font-size: 12px;
-    }
-.nftscontainer .nft{
-    padding: 15px 10px;
-}
-.nftscontainer .nft p {
-font-size: 11px;
-}
-.nftscontainer .nft button{
-    font-size: 10px;
-}
-
-.History .header{
-    font-size: 12px;
-}
-   .History .imgcontainer img{
-        width: 60px;
-    }
-
- 
-
-
-}
 
 @media (max-width: 1300px) {
     
@@ -1720,7 +1837,6 @@ font-size: 9px;
 }
       .fingerprint{
     padding: 20px;
-    gap: 0px !important;
   }
     .members{
         gap: 10px;
@@ -1815,14 +1931,33 @@ font-size: 8px;
         max-width: 50px !important;
     }
 }
-@media (max-width : 1600px){
-    .google img{
-        width: 20px;
+
+@media (max-width : 1366px){
+    .topcreators{
+        max-height: 400px;
+    }
+      .filter{
+        font-size: 12px;
+    }
+.nftscontainer .nft{
+    padding: 15px 10px;
+}
+.nftscontainer .nft p {
+font-size: 11px;
+}
+.nftscontainer .nft button{
+    font-size: 10px;
+}
+
+.History .header{
+    font-size: 12px;
+}
+   .History .imgcontainer img{
+        width: 60px;
     }
 
-  
-}
-@media (max-width : 1366px){
+ 
+
     .profilecomponent p{
         font-size: 8px;
     }
@@ -1834,7 +1969,6 @@ font-size: 8px;
     }
  .sidebar ul{
     font-size: 10px;
-    gap: 15px;
  }
     .forgot,.create{
         font-size: 12px;
@@ -2187,7 +2321,7 @@ font-size: 15px ;
 .graphcontainer .header p,.fingerprint p,.starbucks .logocontainer p{
     font-size: 15px;
 }
-.graphcontainer .header i,.checktable .header i,.taskscontainer .header i,.teamembers .header i,.Revenue .header i{
+.headericon,.checktable .header i,.taskscontainer .header i,.teamembers .header i,.Revenue .header i{
 font-size: 25px;
 }
 .searchcontainer{
@@ -2284,7 +2418,7 @@ margin-bottom: 20px;
     font-size: 18px;
     gap: 20px;
 }
-.lession,.member p,.sidebar ul{
+.lession,.member p{
     gap: 20px !important;
 }
 .teamembers .member h5,.sidebar ul{
@@ -2305,7 +2439,7 @@ flex-grow: 1;
     font-size: 25px;
 }
 .teamembers img{
-    max-width: 50%;
+    max-width: 50PX;
     width: 40%;
 }
 .member p{
@@ -2334,7 +2468,33 @@ padding: 30px 0 0px 80px;}
 
                                       
 @media (max-width: 576px) {
+    .google img{
+        width: 15px;
+    }
+    .forgot, .create, .inputs p{
+        font-size: 10px;
+    }
+    .signincontainer .footer{
+        font-size: 10px;
+        text-align: center;
+    }
+    .inputs input{
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    .google, .inputs label, .signinbutton, .signincontainer .back{
+        font-size: 15px;
+    }
+    .inputs h3{
+        font-size: 30px;
+    }
 
+.signincontainer{
+    max-width: 250px;
+}
+.or{
+    font-size: 12px;
+}
     table{
         overflow-x: scroll;
         max-width: 100%;
@@ -2524,4 +2684,11 @@ width: 100%;
 }
 }
 
-
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    display: none !important;
+    margin: 0;
+    padding: 0;
+}
