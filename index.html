@@ -24,38 +24,32 @@
     <div class="d-flex">
         <div class="notificationbarcontainer">
             <div class="notificationbar">
+
+            <div class="notificationlist">
                 <div class="head">
                     <p>Notification Center</p>
                     <i class="bi bi-x-lg close"></i>
                 </div>
-
                 <div class="body">
                     <div class="notification neutral">
-                        <div><i class=" stat bi bi-info-lg" style="color: #585858;"></i>
-                            <div> Info </div>
-                        </div> <i class="bi bi-x-lg"></i>
+                        <div class="notificationhead">
+                        <div class="headcontent">
+<img src="./Assets/braver-blank-pfp.jpg" alt="">       
+<div class="d-flex flex-column gap-1"> 
+<h6>Temitope</h6>    
+<div class="d-flex align-items-center gap-1"><p>2 Hours ago</p><p>●</p><p>Design Dpt</p><p>●</p><p>Team Lead</p></div>
+</div>
+                        </div> 
+                        <div class="notificationview">View</div>
                     </div>
-                    <div class="notification successful">
-                        <div><i class=" stat bi bi-check2-all" style="color: #019b6f;"></i>
-                            <div> Successful </div>
-                        </div> <i class="bi bi-x-lg"></i>
-                    </div>
-                    <div class="notification warning">
-                        <div><i class=" stat bi bi-exclamation-circle" style="color: #f89127;"></i>
-                            <div> Warning </div>
-                        </div> <i class="bi bi-x-lg"></i>
-                    </div>
-                    <div class="notification error">
-                        <div><i class=" stat bi bi-x-octagon" style="color: #d7503f;"></i>
-                            <div> Error </div>
-                        </div> <i class="bi bi-x-lg"></i>
-                    </div>
+</div>
                 </div>
+            </div>
             </div>
         </div>
         <div class="position-relative sidebarcontainer">
             <div class="sidebar colormain flex-grow-1">
-                <div class="d-flex flex-column align-items-center w-100">
+                <div class="d-flex flex-column align-items-center">
                     <div class="imgcontainer">
                         <img src="./Assets/Logo.png" class="logo" alt="logo" id="logo">
                     </div>
@@ -445,7 +439,7 @@
 
 
 
-                <div class="row my-3">
+                <div class="row">
                     <div class="col-lg-6 col-12 mb-3 mb-lg-0">
 
                             <div class="table checktablee ">
@@ -617,12 +611,11 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="calendar center p-0 center">
-<div class="d-flex gap-4">
+<div class="d-flex">
 
 
 <form id="aform">
   <select id="aselectElement" name="select">
-        <option value="10"></option>
     <option value="0">January</option>
     <option value="1">February</option>
     <option value="2">March</option>
@@ -1928,10 +1921,10 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-6 col-12 mb-4">
-                        <div class="table checktablee ">
-                            <div class="header clickable setting">
-                                <h4>Complex Table</h4>
+        <div class="col-xl-6 col-12 mb-4">
+                        <div class="table checktablee">
+                            <div class="header setting">
+                                <h4>4-Column Table</h4>
 <div class="dropdown">
     <button
       class=" text-dark p-0 border-0"
@@ -1949,10 +1942,9 @@
     </ul>
   </div>                               </div>
 
-
                             <div class="table-responsive">
 
-                                <table id="complextable">
+                                <table class="sortable" id="complex-table">
                                     <thead>
                                         <tr>
                                             <td>Title <i class="bi bi-chevron-down"></i></td>
@@ -1963,74 +1955,42 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="d-flex align-items-center"><input type="checkbox">
-                                                <p>Marketplace</p>
+                                            <td class="d-flex align-items-center"><input type="checkbox"> Marketplace
                                             </td>
-                                            <td>
-                                                <div class="d-flex align-items-center gap-2"><i
-                                                        class="bi bi-check2 statusicon"
-                                                        style="background-color: #00d09e;"></i>
-                                                    <p> Approved</p>
-                                                </div>
-                                            </td>
+                                            <td>17.5%</td>
                                             <td>2458</td>
-                                            <td>
-                                                <div class="rating w-75">
-                                                    <div class="indicator" style="width: 20%;"></div>
-                                                </div>
-                                            </td>
+                                            <td>24.Jan.2021</td>
                                         </tr>
                                         <tr>
-                                            <td class="d-flex align-items-center"><input type="checkbox">
-                                                <p> Venus Dashboard Builder</p>
+                                            <td class="d-flex align-items-center"><input type="checkbox"> Venus DB PRO
                                             </td>
-                                            <td>
-                                                <div class="d-flex align-items-center gap-2"><i
-                                                        class="bi bi-exclamation-lg statusicon"
-                                                        style="background-color:#ffcc19 ;"></i> Error</div>
-                                            </td>
+                                            <td>10.8%</td>
                                             <td>1485</td>
-                                            <td>
-                                                <div class="rating w-75">
-                                                    <div class="indicator" style="width: 90%;"></div>
-                                                </div>
-                                            </td>
+                                            <td>12.Jun.2021</td>
                                         </tr>
 
                                         <tr>
-                                            <td class="d-flex align-items-center"><input type="checkbox">
-                                                <p> Venus Design System </p></td>
-
-                                            <td>
-                                                <div class="d-flex align-items-center gap-2"><i
-                                                        class="bi bi-x-lg statusicon"
-                                                        style="background-color: #ff5142;"></i>
-                                                    <p> Disable</p>
-                                                </div>
-                                            </td>
+                                            <td class="d-flex align-items-center"><input type="checkbox"> Venus DS</td>
+                                            <td>21.3%</td>
                                             <td>1024</td>
-                                            <td>
-                                                <div class="rating w-75">
-                                                    <div class="indicator" style="width: 40%;"></div>
-                                                </div>
-                                            </td>
+                                            <td>5.Jan.2021</td>
                                         </tr>
+
+
+                                        <tr>
+                                            <td class="d-flex align-items-center"><input type="checkbox"> Venus 3D
+                                                Assets</td>
+                                            <td>31.5%</td>
+                                            <td>858</td>
+                                            <td>7.Mar.2021</td>
+                                        </tr>
+
 
                                         <tr>
                                             <td class="d-flex align-items-center"><input type="checkbox"> Uranus</td>
-                                            <td>
-                                                <div class="d-flex align-items-center gap-2"><i
-                                                        class="bi bi-check2 statusicon"
-                                                        style="background-color: #00d09e;"></i>
-                                                    <p> Approved</p>
-                                                </div>
-                                            </td>
+                                            <td>12.2%</td>
                                             <td>258</td>
-                                            <td>
-                                                <div class="rating w-75">
-                                                    <div class="indicator" style="width: 70%;"></div>
-                                                </div>
-                                            </td>
+                                            <td>17.Dec.2021</td>
                                         </tr>
 
                                     </tbody>

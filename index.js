@@ -591,6 +591,7 @@ navitems.forEach(navitem => {
 const notificationtoggles = document.querySelectorAll('#notificationtoggle')
 const notificationbarcontainer = document.querySelector('.notificationbarcontainer')
 const closenotificationsidebar = document.querySelector('.close')
+const notificationbar = document.querySelector('.notificationbar')
 notificationtoggles.forEach(button => {
   button.addEventListener('click', () => {
     notificationbarcontainer.classList.add('active')
@@ -606,7 +607,7 @@ document.addEventListener('click', (e) => {
     toggle.contains(e.target)
   );
 
-  if (!notificationbarcontainer.contains(e.target) && !clickedInsideToggle || closenotificationsidebar.contains(e.target)) {
+  if (!notificationbar.contains(e.target) && !clickedInsideToggle || closenotificationsidebar.contains(e.target)) {
     notificationbarcontainer.classList.remove('active')
 
   }
@@ -690,9 +691,6 @@ $('#calendar').on('changeDate', function () {
                   cell.classList.add('end')
 
         } else {
-          cell.style.backgroundColor = '#d7e3ff'; // in-between
-          cell.style.borderRadius = '0';
-          cell.style.color= '#4318ff'
           cell.classList.add('inbetween')
         }
 
@@ -733,26 +731,49 @@ monthCalendar.init();
 
 
 
-
+let zyearBtn
 const now = new Date();
 const nowyear = now.getFullYear()
 const nowmonth = now.getMonth();
 
 
 monthButton.addEventListener('click', (e) => {
+     zyearBtn = monthDiv.querySelector('.vanilla-calendar-year');
+
+  if  (parseInt(zyearBtn.textContent,10) === nowyear){
+  const allmonths = Array.from(monthDiv.querySelectorAll('.vanilla-calendar-months__month'))
+  allmonths.forEach((monthdiv,index) => {
+console.log('current month ',nowmonth, ' this month' , index)
+if(nowmonth < index){
+    monthdiv.style.pointerEvents = 'none';
+      monthdiv.style.opacity = '0.5';}
+  })
+ 
+}
+    console.log(zyearBtn)
+
+zyearBtn.addEventListener('click',()=>{
+     console.log('clicked')
+  console.log(monthDiv.querySelectorAll('.vanilla-calendar-years__year'))
+
+
+
+})
+
+
+
+
+
   e.stopPropagation();
   monthDiv.style.display = monthDiv.style.display === 'none' ? 'block' : 'none';
-  const allmonths = monthDiv.querySelectorAll('.vanilla-calendar-months__month')
-  allmonths.forEach((month, index) => {
-    console.log(month.textContent, index)
-    if (index > nowmonth) {
-      month.style.pointerEvents = 'none';
-      month.style.opacity = '0.5';
-    }
-  })
+      console.log(parseInt(zyearBtn.textContent,10) === nowyear)
+console.log(parseInt(zyearBtn.textContent,10) === nowyear)
+
 });
 
 monthDiv.addEventListener('click', (e) => {
+       zyearBtn = monthDiv.querySelector('.vanilla-calendar-year');
+
   unclickablebuttons = monthDiv.querySelectorAll('.vanilla-calendar-header__content button')
   const btn = e.target.closest('.vanilla-calendar-months__month');
 
@@ -769,13 +790,10 @@ monthDiv.addEventListener('click', (e) => {
       yearEl.style.opacity = '0.5';
     }
   });
-  const zyearBtn = monthDiv.querySelector('.vanilla-calendar-year');
   // const allmonths = monthDiv.querySelectorAll('.vanilla-calendar-months__month')
-  console.log(zyearBtn.textContent)
   if (parseInt(zyearBtn.textContent, 10) === 2025) {
     const allmonths = monthDiv.querySelectorAll('.vanilla-calendar-months__month')
     allmonths.forEach((month, index) => {
-      console.log(month.textContent, index)
       if (index > nowmonth) {
         month.style.pointerEvents = 'none';
         month.style.opacity = '0.5';
