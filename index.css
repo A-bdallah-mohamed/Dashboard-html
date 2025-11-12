@@ -122,14 +122,157 @@ a,a:focus,a:visited{
 #myPieChart{
     max-height: 180px;
 }
+.calendar.center{
+        padding: 20px !important;
+}
+.calendar select{
+        font-weight: bold;
+ border: 0;
+    -webkit-appearance: none; /* Safari/Chrome */
+  -moz-appearance: none;    /* Firefox */
+  appearance: none;
+    color: #2b3674;
+    border: none;
+
+}
+.ss-main .ss-single-selected .ss-arrow span{
+    border: solid #66666671;
+    border-width: 0 2px 2px 0;
+}
+.ss-main .ss-single-selected{
+        border-radius: 50px;
+color: black;
+    border: none;
+    padding: 20px 20px ;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.ss-main .ss-single-selected.ss-open-below{
+    background-color: #f4f7fe;
+    border-radius: 50px;
+    color: #4318ff !important;
+}
+.ss-main .ss-single-selected.ss-open-below .placeholder{
+color:  #4318ff;
+}
+.ss-main .ss-single-selected.ss-open-below .ss-arrow span{
+border: solid #4318ff;
+border-width: 0 2px 2px 0;
+}
+.ss-content {
+    border-radius: 15px;
+ overflow: hidden;
+}
+.ss-list{
+     overflow: auto; /* or scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.calendar .selectwrapper{
+       border: 0;
+    padding: 10px;
+    border-radius: 50px;
+}
+.calendar select:focus{
+    background-color: inherit;
+    outline: none;
+    border: none;
+}
+.calendar option,.calendar select:focus option{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+}
 #calendar{
     width: 100%;
-    padding: 10px 20px !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.yearform-select-lg{
+    padding: 0 10px;
+    font-size: 12px;
+}
+.monthform-select-lg{
+    padding: 0 35px 0 10px;
+    font-size: 12px;
+}
+.datepicker table tr td.new, .datepicker table tr td.old{
+color: #a3aed0;
+}
+#calendar thead > :nth-child(-n+2){
+    display: none;
+}
+#calendar table{
+        color: #2b3674;
+
+}
+td.active {
+  position: relative;
+  z-index: 2; /* above ::before */
+  background-image: none !important;
+  border-radius: 100%  !important;
+  background-color:#4318ff !important ;
+}
+td.active.start{
+      border-radius: 100% 0px 0 100%  !important;
+background-color: #d7e3ff !important;
+
+}
+td.active.end{
+      border-radius: 0 100% 100% 0  !important;
+background-color: #d7e3ff !important;
+
+}
+.day p{
+    margin: 0 0 0 0;
+}
+.datepicker tbody td{
+    font-weight: 400;
+}
+.datepicker table tr td.today {
+    background-image: none !important;
+    background-color: #f4f7fe ;
+}
+.datepicker table tr td.today:hover {
+    background-color: #f4f7fe !important;
+}
+.datepicker table tr td.today.inbetween:hover {
+    background-color: #d7e3ff !important ;
+}
+td.active p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    border-radius: 100%;
+   height: 100%;
+   width: auto;
+   background-color: #4318ff;
+   font-weight: 400;
+}
+#calendar .datepicker{
+    width: 100%;
+    max-width: 300px;
+aspect-ratio: 1/1;
+}
+.datepicker-days,.table-condensed{
+    height: 100%;
+}
+
 .piechart .label{
 width: 10px;
 height: 10px;
 border-radius: 50%;
+}
+.datepicker th{
+ aspect-ratio: 1/1;
+ width: 30px;
 }
 .center{
     display: flex;
@@ -142,6 +285,9 @@ table{
 .table{
     --bs---bs-table-bg: #0a1c44;
 }
+.calendar form{
+    margin: 0;
+}
 .graphcontainer,.Revenue,.piechart,.checktable,.taskscontainer,.teamembers,.fingerprint,.starbucks,.lession,.calendar,.dailytraffic {
     background-color: var(--bgcomponent);
     padding: 20px;
@@ -149,7 +295,6 @@ table{
     flex-direction: column;
     border-radius: 15px;
     height: 100%;
-    overflow: hidden;
 }
 .profilecomponent{
     background-color: var(--bgcomponent);
@@ -366,6 +511,7 @@ font-weight: 500;
     flex-direction: column;
     justify-content: space-between;
 }
+  
 .Revenue p{
     font-size: 12px;
     margin: 0;
@@ -444,7 +590,7 @@ opacity: 0.1;
     width: 100%;
 }
 
-tbody tr td{
+.tables tbody tr td{
 padding-left: 20px;
 
 }
@@ -522,12 +668,30 @@ color: #dee5f2;
     height: 100% ;
     overflow: inherit;
 }
-#complextable_wrapper,#complextable{
+#complextable_wrapper{
     height: 100%;
+}
+.dashboard tbody{
+    margin-top: 20px;
+}
+.ss-content .ss-list .ss-option{
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.Dashboard .checktablee tbody tr:first-child td{
+    padding-top:30px;
+}
+.dashboard tbody,.dashboard  td,.dashboard  tfoot,.dashboard  th,.dashboard  thead,.dashboard tr{
+    margin-bottom: 15px;
+}
+
+.dashboard tbody{
+    margin-top: 15px;
 }
 tbody{
     border: none;
 }
+
 table{
     width: 100%;
 }
@@ -557,7 +721,10 @@ table{
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-bottom: 15px;
+}
+#myList{
+    height: 100%;
+gap: 20px;
 }
 .logcontainer .body{
     display: flex;
@@ -677,7 +844,6 @@ border-radius: 50px;
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 15px;
   cursor: pointer;
   font-weight: 600;
 }
@@ -937,11 +1103,12 @@ height: auto;
     gap: 20px;
     
 }
-thead tr td:first-child,tbody tr td:first-child{
+thead tr td:first-child,.tables tbody tr td:first-child{
 padding: 6px 0 0 30px !important;
 }
 .Dashboard .checktablee tbody tr td:first-child{
     white-space: pre;
+    padding-left: 30px;
 }
 .notificationbar .head{
     display: flex;
@@ -1496,13 +1663,14 @@ footer ul{
 .rotate::before{
 transform: rotate(180deg);
 }
-thead{
+.table thead{
     border-bottom: var(--thead-border-bottom);
 }
-tbody tr:first-child td:first-child {
+.tables tbody tr:first-child td:first-child {
 padding: 20px 10px 0 30px !important;
 }
-tbody tr:first-child td {
+
+.tables tbody tr:first-child td {
 padding: 20px 10px 0 10px !important;
 }
 
@@ -1511,7 +1679,7 @@ thead td{
 font-weight: 500;
 cursor: pointer;
 }
-.Dashboard tbody p{
+#complextable tbody p{
     margin: 0;
 }
 .Tables tbody p{
@@ -1524,6 +1692,9 @@ cursor: pointer;
 tbody td{
     color: var(--text);
     font-weight: 500;
+}
+.datepicker tbody td{
+    padding: 0 !important;
 }
 table{
     margin-bottom: 15px;
@@ -1697,7 +1868,7 @@ font-size: 12px;
 
 }
 @media (max-width: 1500px) {
-    table td{
+    .tables table td{
         padding: 5px 10px 5px 10px;
     }
   .table h4{
@@ -2130,18 +2301,14 @@ max-width: 25px;
     font-size: 12px;
     margin: 0;
   }
-  .checkitem{
-    margin-bottom: 8px;
-  }
+  
   #myPieChart{
     max-height: 130px;
   }
   .piechart{
     justify-content: space-between;
   }
-  #calendar{
-    padding: 0px 35px;
-  }
+ 
   .calendar {
     padding:  10px 25px;
   }
@@ -2691,4 +2858,105 @@ width: 100%;
     display: none !important;
     margin: 0;
     padding: 0;
+}
+
+  .range-day {
+    background-color: #28a745 !important;  /* green */
+    color: white !important;
+    border-radius: 50% !important;
+  }
+
+span.msg,
+span.choose {
+  color: #555;
+  padding: 5px 0 10px;
+  display: inherit
+}
+.datecontainer {
+  text-align: center
+}
+.placeholder{
+    background-color: inherit;
+    color: #2b3674;
+    opacity: 1;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.arrow-down{
+color:#b9f600 !important;
+
+}
+
+
+/*Styling Selectbox*/
+.datedropdown {
+  width: 100px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgb(204, 204, 204);
+  transition: all .5s ease;
+  position: relative;
+  font-size: 14px;
+  color: #474747;
+  height: 100%;
+  text-align: left
+}
+.datedropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 10px
+}
+.datedropdown .select > i {
+    font-size: 13px;
+    color: #888;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+}
+.datedropdown:hover {
+    box-shadow: 0 0 4px rgb(204, 204, 204)
+}
+.datedropdown:active {
+    background-color: #f8f8f8
+}
+.datedropdown.active:hover,
+.datedropdown.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 2px 2px 0 0;
+    background-color: #f8f8f8
+}
+.datedropdown.active .select > i {
+    transform: rotate(-90deg)
+}
+.datedropdown .datedropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 0 1px 2px 2px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9
+}
+.datedropdown .datedropdown-menu li {
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer
+} 
+.datedropdown .datedropdown-menu {
+    padding: 0;
+    list-style: none
+}
+.datedropdown .datedropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+.datedropdown .datedropdown-menu li:active {
+    background-color: #e2e2e2
 }

@@ -626,19 +626,83 @@ notifications.forEach(notification => {
 });
 
 
-const options = {
-  selection: {
-    day: 'multiple'
-  }, // multiple day selection
-  selected: ['2022-01-09:2022-01-13', '2022-01-22'], // selected dates
-  month: 0, // January (0-indexed)
-  year: 2022 // year to display
-};
 
-const calendar = new VanillaCalendar('#calendar', options);
-calendar.init();
+// JS
+$('#calendar').datepicker({
+  format: 'mm/dd/yyyy',
+  todayHighlight: true,
+  autoclose: false,
+  multidate: true
+});
 
+$('#calendar').on('changeDate', function () {
+  let dates = $('#calendar').datepicker('getDates');
 
+  // Only keep max 2 dates
+  if (dates.length > 2) {
+    dates = dates.slice(-2);
+    $('#calendar').datepicker('setDates', dates);
+  }
+
+  // Wait a moment to ensure datepicker DOM has rendered
+  setTimeout(() => {
+    const cells = Array.from(document.querySelectorAll('.datepicker-days td.day'));
+
+    // Only visible cells (ignore old/new)
+    const visibleCells = cells.filter(cell =>
+      !cell.classList.contains('old') &&
+      !cell.classList.contains('new')
+    );
+
+    // Find active cells (the selected dates)
+    const activeCells = visibleCells.filter(cell => cell.classList.contains('active'));
+
+    if (activeCells.length >= 1) {
+      console.log('Start date DOM element:', activeCells[0]);
+    }
+
+    if (activeCells.length === 2) {
+      const startIndex = visibleCells.indexOf(activeCells[0]);
+      const endIndex = visibleCells.indexOf(activeCells[1]);
+
+      const [from, to] = startIndex < endIndex ? [startIndex, endIndex] : [endIndex, startIndex];
+
+      const rangeCells = visibleCells.slice(from, to + 1);
+      console.log('Cells between active dates:', rangeCells);
+
+      // Highlight range and insert <p> inside each cell
+      rangeCells.forEach((cell, index) => {
+        const dayNumber = cell.textContent.trim(); // save number first
+
+        // Clear previous content
+        cell.innerHTML = '';
+
+        // Create <p> with day number
+        const p = document.createElement('p');
+        p.textContent = dayNumber;
+        p.style.textAlign = 'center';
+        cell.appendChild(p);
+
+        // Highlight colors
+        if (index === 0) {
+          cell.classList.add('start')
+        } else if (index === rangeCells.length - 1) {
+                  cell.classList.add('end')
+
+        } else {
+          cell.style.backgroundColor = '#d7e3ff'; // in-between
+          cell.style.borderRadius = '0';
+          cell.style.color= '#4318ff'
+          cell.classList.add('inbetween')
+        }
+
+      
+        cell.style.position = 'relative';
+        cell.style.zIndex = '2';
+      });
+    }
+  }, 10);
+});
 
 const monthButton = document.getElementById('monthselector');
 const monthDiv = document.getElementById('monthcalendar');
@@ -722,8 +786,6 @@ monthDiv.addEventListener('click', (e) => {
   // const selectedyear = parseInt(e.target.closest('.vanilla-calendar-years__year').textContent,10)
   // console.log(selectedyear)
 
-
-
   if (!btn) return;
 
   const monthName = btn.textContent;
@@ -750,3 +812,72 @@ document.addEventListener('click', (e) => {
     monthDiv.style.display = 'none';
   }
 });
+
+
+
+/*Dropdown Menu*/
+$('.datedropdown').click(function () {
+        $(this).attr('tabindex', 1).focus();
+        $(this).toggleClass('active');
+        $(this).find('.datedropdown-menu').slideToggle(300);
+    });
+    $('.datedropdown').focusout(function () {
+        $(this).removeClass('active');
+        $(this).find('.datedropdown-menu').slideUp(300);
+    });
+    $('.datedropdown .datedropdown-menu li').click(function () {
+        $(this).parents('.datedropdown').find('span').text($(this).text());
+        $(this).parents('.datedropdown').find('input').attr('value', $(this).attr('id'));
+    });
+
+
+$('.datedropdown-menu li').click(function () {
+  var input = '<strong>' + $(this).parents('.datedropdown').find('input').val() + '</strong>',
+      msg = '<span class="msg">Hidden input value: ';
+  $('.msg').html(msg + input + '</span>');
+}); 
+
+var aSelect = new SlimSelect({
+  select: '#aselectElement',
+  showSearch: false
+})
+
+document.querySelector('#aform').addEventListener('reset', (e) => {
+  aSelect.setSelected(
+    Array.from(e.target.elements.select.selectedOptions).map((option) => option.value),
+    false
+  )
+})
+
+var bSelect = new SlimSelect({
+  select: '#bselectElement',
+  showSearch: false 
+})
+
+document.querySelector('#bform').addEventListener('reset', (e) => {
+  bSelect.setSelected(
+    Array.from(e.target.elements.select.selectedOptions).map((option) => option.value),
+    false
+  )
+})
+
+
+
+$('#aselectElement').on('change' ,function () {
+const month = this.value
+const year = $('#bselectElement').val()
+const newdate = new Date(year,month,1)
+console.log(newdate)
+  $('#calendar').datepicker('update', newdate);
+
+})
+
+
+$('#bselectElement').on('change' ,function () {
+const year = this.value
+const month = $('#aselectElement').val()
+const newdate = new Date(year,month,1)
+console.log(newdate)
+  $('#calendar').datepicker('update', newdate);
+
+})
