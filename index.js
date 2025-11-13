@@ -826,9 +826,7 @@ monthDiv.addEventListener('click', (e) => {
 
 document.addEventListener('click', (e) => {
 
-  if (!monthDiv.contains(e.target) && !monthButton.contains(e.target) && !unclickablebuttons.contains(e.target)) {
-    monthDiv.style.display = 'none';
-  }
+
 });
 
 
@@ -898,4 +896,77 @@ const newdate = new Date(year,month,1)
 console.log(newdate)
   $('#calendar').datepicker('update', newdate);
 
+})
+
+$('.notification').each(function () {
+  $(this).find('.notificationview').on('click', function () {
+    const body = $(this).closest('.notification').find('.notificationbody');
+    const notification = $(this).closest('.notification');
+
+    // Toggle the "open" class
+    body.toggleClass('open');
+notification.toggleClass('open')
+    // If it's open, add content; if it's closed, remove it
+    if (body.hasClass('open')) {
+      body.prepend('<p class="mb-2">Dear, team</p>');
+    } else {
+      body.find('.mb-2, .mt-2').remove();
+    }
+  });
+});
+$('.notificationtabs ul li').each(function () {
+  $(this).on('click' , function() {
+    $('.notificationtabs ul li').removeClass('active')
+  $(this).toggleClass('active')
+if(this.textContent === "All Notifications"){
+
+
+
+
+$('.notification').each(function () {
+
+
+  if($(this).hasClass('reminder')){
+$(this).addClass('d-none')
+console.log('is reminder',this) 
+
+ }
+
+  else if($(this).hasClass('all')){
+$(this).removeClass('d-none')
+console.log('is all',this) 
+
+ }
+
+
+
+  });
+}
+else if (this.textContent === "Reminders"){
+
+
+  
+$('.notification').each(function () {
+
+
+  if($(this).hasClass('all')){
+$(this).addClass('d-none')
+console.log('is reminder',this) 
+
+ }
+
+  else if($(this).hasClass('reminder')){
+$(this).removeClass('d-none')
+console.log('is all',this) 
+
+ }
+
+
+
+  });
+
+
+
+}
+  })
 })
