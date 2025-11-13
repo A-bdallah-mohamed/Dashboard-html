@@ -919,54 +919,40 @@ $('.notificationtabs ul li').each(function () {
     $('.notificationtabs ul li').removeClass('active')
   $(this).toggleClass('active')
 if(this.textContent === "All Notifications"){
-
-
-
-
 $('.notification').each(function () {
-
-
-  if($(this).hasClass('reminder')){
-$(this).addClass('d-none')
-console.log('is reminder',this) 
-
- }
-
-  else if($(this).hasClass('all')){
 $(this).removeClass('d-none')
-console.log('is all',this) 
-
- }
-
-
-
   });
 }
+
+
 else if (this.textContent === "Reminders"){
-
-
-  
 $('.notification').each(function () {
-
-
   if($(this).hasClass('all')){
 $(this).addClass('d-none')
 console.log('is reminder',this) 
-
  }
-
   else if($(this).hasClass('reminder')){
 $(this).removeClass('d-none')
 console.log('is all',this) 
-
  }
-
-
-
   });
-
-
-
 }
+
+
+
+else if (this.textContent === "Updates"){
+$('.notification').each(function () {
+  if($(this).hasClass('reminder')){
+$(this).addClass('d-none')
+console.log('is reminder',this) 
+ }
+  else if($(this).hasClass('all')){
+$(this).removeClass('d-none')
+console.log('is all',this) 
+ }
+  });
+}
+
+
   })
 })
