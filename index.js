@@ -956,3 +956,61 @@ console.log('is all',this)
 
   })
 })
+
+
+const target = document.querySelector('.profile');
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+           
+const timers = document.querySelectorAll('.timer');
+
+timers.forEach(timer => {
+    const fullText = timer.textContent.trim();
+
+    const letter = fullText.replace(/[\d.,\s]/g, '');
+    const numberStr = fullText.replace(/[^\d.,]/g, '')
+    const number = parseFloat(numberStr);
+
+    const isDecimal = numberStr.includes('.') 
+
+    const duration = 1000; 
+    const steps = 100;      
+    const stepTime = duration / steps;
+    const increment = number / steps;
+
+    let current = 0;
+    const interval = setInterval(() => {
+        current += increment;
+
+        if (current >= number) {
+            timer.textContent = (isDecimal ? number.toFixed(1) : Math.round(number)) + letter;
+            clearInterval(interval);
+        } else {
+            timer.textContent = (isDecimal ? current.toFixed(1) : Math.round(current)) + letter;
+        }
+    }, stepTime);
+});
+            observer.unobserve(entry.target);
+
+        }
+    });
+}, { threshold: 0.1 }); 
+observer.observe(target);
+
+const inputcontainer = document.querySelectorAll('.inputcontainer')
+inputcontainer.forEach(input  => {
+input.addEventListener('click',()=> {
+const searchcontainer = document.querySelector('.searchmobilecontainer')
+searchcontainer.classList.add('active')
+searchcontainer.addEventListener('click', (e) => {
+  const searchcomponent = searchcontainer.querySelector('.searchmobile')
+  if(!searchcomponent.contains(e.target)){
+searchcontainer.classList.remove('active')
+  }
+})
+})
+})
+
+

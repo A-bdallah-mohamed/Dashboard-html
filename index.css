@@ -156,7 +156,12 @@ a:visited {
 #weeklyRevenue {
     max-height: 150px;
 }
-
+.tables td p{
+display: flex;
+align-items: end;
+height: 100%;
+white-space: nowrap;
+}
 #myPieChart {
     max-height: 180px;
 }
@@ -939,7 +944,9 @@ table {
     border-radius: 15px;
     gap: 40px;
 }
-
+  .notificationview i{
+        display: none;
+    }
 .logcontainer .header {
     display: flex;
     align-items: center;
@@ -962,6 +969,7 @@ table {
 #myList {
     height: 100%;
     gap: 20px;
+    justify-content: space-between;
 }
 
 .logcontainer .body {
@@ -1231,7 +1239,10 @@ table input[type="checkbox"]:focus {
     justify-content: center;
     border-radius: 50px;
 }
-
+.dropdown-menu.dropdown-menu-end.show{
+color: var(--maintext);
+background-color: var(--secondarybg);
+}
 .settingmenu {
     position: absolute;
     right: 15px;
@@ -1290,8 +1301,8 @@ table input[type="checkbox"]:focus {
     opacity: var(--sidebarliopacity);
 }
 
-.taskscontainer .checkitem input:checked+p {
-    color: #2b3674;
+.taskscontainer .checkitem input:checked+p { 
+    color: var(--ptext);
     opacity: 1;
     font-weight: bold;
 }
@@ -1327,7 +1338,7 @@ body {
 }
 
 .sidebarcontainer {
-    width: 270px;
+    min-width: 250px;
 }
 
 .grayline {
@@ -1443,6 +1454,11 @@ body {
 
 .searchcontainer ul li {
     opacity: 1;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .searchcontainer ul li a {
@@ -1570,7 +1586,7 @@ overflow: hidden;
 .notificationhead h6{
     font-weight: bold !important;
 }
-.notificationhead img,.notificationhead i{
+.notificationhead img,.headcontent i{
     width: 30px;
     height: 30px;
     border-radius: 50px;
@@ -1658,18 +1674,21 @@ font-size: 10px;
 .section {
     display: none;
 }
-
+#content{
+    width: 100%;
+}
 .section.active {
     display: flex;
     flex-direction: column;
 }
 
-#content {
-    padding: 20px 20px 20px 50px;
+.section {
+    padding: 20px;
     width: 100%;
-    overflow-y: auto;
 }
+.Chats {
 
+}
 .section .sectionhead {
     width: 100%;
     justify-content: space-between;
@@ -1708,7 +1727,7 @@ table.dataTable td.dt-type-numeric {
 
 .searchcontainer {
     background-color: var(--bgcomponent);
-    padding: 0 15px;
+    padding: 5px 15px;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -1719,12 +1738,14 @@ table.dataTable td.dt-type-numeric {
     max-height: 25px;
 }
 
-.inputcontainer input {
+.sectionhead .inputcontainer input {
     border: none;
     background-color: var(--bg);
     height: 25px;
 }
-
+.searchmobilecontainer{
+    display: none;
+}
 .inputcontainer input:active,
 .inputcontainer input:focus {
     outline: none;
@@ -2183,9 +2204,6 @@ footer ul {
     border-bottom: var(--thead-border-bottom);
 }
 
-.tables table tr:first-child td {
-    padding-top: 20px;
-}
 
 .tables table tr td:first-child {
     padding-left: 30px;
@@ -2351,15 +2369,20 @@ table {
     color: white;
     background: linear-gradient(to right, #a3a0ff, #d5ccff00);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    padding: 15px;
     border-radius: 50px;
     position: absolute;
     bottom: 40px;
     right: 40px;
     cursor: pointer;
     transition: 0.2s ease all;
+aspect-ratio: 1/1;
+display: flex;
+align-items: center;
+justify-content: center;
 }
-
+.signin .dark .darkbutton{
+padding: 20px;
+}
 .signin .dark:hover {
     background: linear-gradient(to right, #cccaff, #d5ccff34);
 }
@@ -2379,6 +2402,76 @@ table {
 
 .signincontainer .footer {
     font-size: 11px;
+}
+.section.Chats{
+    padding: 0;
+}
+.Chats .component{
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.205);
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px 20px 20px;
+}
+.chats-searchcontainer{
+background-color: var(--bgcomponent);
+padding: 0 0 0 15px;
+border-radius: 5px;
+display: flex;
+align-items: center;
+}
+.chats-searchcontainer input{
+padding: 0;
+border: none;
+padding: 20px 10px 20px 10px;
+flex-grow: 1;
+}
+.chats-searchcontainer input:visited,.chats-searchcontainer input:focus,.chats-searchcontainer input:active{
+outline: none;
+}
+.chats-searchcontainer input::placeholder{
+color: rgb(203, 203, 203);
+}
+.chats-searchcontainer .filtercontainer{
+cursor: pointer;
+padding: 15px 0 15px 0;
+color: rgb(203, 203, 203);
+}
+.chats-searchcontainer .filtercontainer i{
+border-left: 1px solid rgb(203, 203, 203);
+padding: 0 15px 0 15px;
+width: 100%;
+}
+.chats-searchcontainer i{
+    color: rgb(203, 203, 203);
+}
+.chats .onlinecontainer .online img{
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.chats .onlinecontainer .online{
+    position: relative;
+}
+.onlineicon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: green;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border: 2px solid white;
+}
+.hide-scrollbar {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE & Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari */
 }
 
 @media (max-width: 1600px) {
@@ -2439,9 +2532,7 @@ table {
         padding: 20px;
     }
 
-    .signin img {
-        width: 50%;
-    }
+ 
 
     .fingerprint button {
         padding: 5px;
@@ -2676,10 +2767,15 @@ table {
     .imgcontainer p {
         font-size: 12px;
     }
+    .sidebar ul li{
+    padding: 5px 0 5px 5px;
+}
+.navv{
+    gap: 5px;
+}
 }
 
 @media (max-width : 1100px) {
-
 
     .History .nft {
         font-size: 7px;
@@ -3063,22 +3159,21 @@ table {
 @media (max-width : 992px) {
     .notificationbarcontainer {
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.075);
-
+opacity: 0;
         position: fixed;
         z-index: 50;
         right: 0;
         width: 100vw;
-        height: 90vh;
+        height: 100vh;
         bottom: 0;
-        border-radius: 30px 30px 0 0px;
-        transform: translateX(0) translateY(100%);
-        padding: 40;
+        border-radius: 0;
+        padding: 0;
         transition: 0.5s ease all;
     }
 
     .notificationbarcontainer.active {
-        transform: translateX(0) translateY(0);
-    }
+opacity: 1;   
+ }
 
     .h-lg-100 {
         max-height: 50%;
@@ -3376,17 +3471,13 @@ table {
     }
 
     .sidebar {
-        width: 50vw !important;
         transform: translateX(-110%);
     }
 
     .getpro {
-        max-width: 60%;
+        max-width: 90%;
     }
 
-    .sidebar ul {
-        padding: 30px 0 0px 80px;
-    }
 
     .teamembers h5 {
         font-size: calc(1.375rem + 0.5vw) !important;
@@ -3397,6 +3488,83 @@ table {
 
 
 @media (max-width: 576px) {
+.searchmobilecontainer{
+    display: flex;
+width: 100vw;
+height: 100vh;
+z-index: 15;
+background-color: rgba(4, 4, 4, 0.13);
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease all;
+    pointer-events: none;
+}
+.searchmobilecontainer.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.searchmobile{
+    z-index: 15;
+    width: 100%;
+    height: 150px;
+    border-radius: 0 0 10px 10px ;
+    background-color: var(--bg);
+    transform: translateY(-210px);
+    transition: 0.3s ease all ;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.105);
+
+}
+.searchmobile .searchcontainer{
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.105);
+}
+.searchmobilecontainer.active .searchmobile{
+    transform: translateY(0);
+}
+    .tables td {
+align-items: end;
+height: 100%;
+}
+
+
+
+    .tables table tr:first-child td {
+    padding-top: 0px;
+}
+.Tables tbody p {
+    margin: 0;
+    width: 100%;
+}
+
+    .notificationtabs ul li{
+        font-size: 13px;
+    }
+    .notificationview{
+        padding: 10px;
+    }
+    .notificationview i{
+        display: flex;
+    }
+    .notificationview p{
+        display: none;
+    }
+  .notificationlist .body{
+    padding: 0 15px 10px 15px;
+  }
+    .notificationbarcontainer {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .notificationbar{
+        width: 95vw;
+        height: 90vh;
+        bottom: 2vh;
+        transform: translateX(0) translateY(100%);
+    }
     .google img {
         width: 15px;
     }
@@ -3483,10 +3651,19 @@ table {
         justify-content: center;
     }
 
-    .inputcontainer input {
+    .sectionhead .inputcontainer input {
         display: none;
     }
-
+    .searchmobile .inputcontainer{
+        padding: 0;
+    }
+.searchmobile input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: var(--bgcomponent);
+    padding: 15px;
+}
     .graphcontainer .body {
         width: 100%;
     }
@@ -3588,8 +3765,7 @@ table {
 
     table td {
         padding: 10px 50px 5px 10px;
-        font-size: 15px;
-        white-space: pre;
+        white-space: nowrap;
     }
 
     .nftmarketbannercontent {
@@ -3707,7 +3883,7 @@ span.choose {
 
 .placeholder {
     background-color: inherit;
-    color: var(--blackwhitetext);
+    color: var(--ptext);
     opacity: 1;
     cursor: pointer;
     font-weight: 700;
@@ -3718,8 +3894,19 @@ span.choose {
 
 }
 
+ .notificationbarcontainer .close{
+    padding: 5px;
+    transition: 0.3s ease all;
+    border-radius: 50px;
+    color: var(--ptext);
+}
 
-/*Styling Selectbox*/
+ .notificationbarcontainer .close:hover{
+background-color: #ecedfe;
+    color: black;
+
+}
+
 .datedropdown {
     width: 100px;
     display: inline-block;
