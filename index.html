@@ -3247,54 +3247,215 @@
 <div class="Chats section active h-100">
               
 <div class="row" style="margin: 0;">
-    <div class="col-4 p-0">
+    <div class="col-4 p-0 hide-scrollbar scrollable chatcolborder">
         <div class="chatheads component">
-<div class="chats-searchcontainer">
+            <div class="p-4 sticky-top" >
+<div class="chats-searchcontainer ">
                                 <i class="bi bi-search"></i>
                                 <input type="text" placeholder="Search people on message">
                              
-                          <div class="filtercontainer">      <i class="bi bi-filter-square"></i>   </div>
+                          <button class="filtercontainer">      <i class="bi bi-filter-square"></i>   </button>
 </div>
-<div class="onlinecontainer py-4">
-    <h4>Online</h4>
-    <div class="d-flex w-100 overflow-auto mt-3 gap-3 hide-scrollbar ">
-<div class="online">
+</div>
+<div class="onlinecontainer px-4 py-3">
+    <h4 class="fw-bold">Online</h4>
+    <div class="d-flex w-100 overflow-auto mt-3 gap-3 hide-scrollbar" id="onlinecontainer">
+<button class="online">
     <img src="./Assets/ChatGPT Image Nov 17, 2025, 09_58_57 AM.png" alt="">
     <div class="onlineicon"></div>
-</div>
-<div class="online">
+</button>
+<button class="online">
     <img src="./Assets/young-bearded-man-with-striped-shirt_273609-5677.avif" alt="">
     <div class="onlineicon"></div>
-</div>
+</button>
 
-<div class="online">
+<button class="online">
     <img src="./Assets/istockphoto-661799106-612x612.jpg" alt="">
     <div class="onlineicon"></div>
-</div>
-<div class="online">
+</button>
+<button class="online">
     <img src="./Assets/istockphoto-874234668-612x612.jpg" alt="">
     <div class="onlineicon"></div>
-</div>
-<div class="online">
+</button>
+<button class="online">
+    <img src="./Assets/premium_photo-1690407617542-2f210cf20d7e.jpg" alt="">
+    <div class="onlineicon"></div>
+</button>
+<button class="online">
     <img src="./Assets/istockphoto-1478328151-612x612.jpg" alt="">
     <div class="onlineicon"></div>
+</button>
+<button class="online">
+    <img src="./Assets/istockphoto-2148449503-612x612.jpg" alt="">
+    <div class="onlineicon"></div>
+</button>
+    </div>
 </div>
+      
+<div class="chatscontainer py-3">
+    <h4 class="px-4 pb-3 m-0 fw-bold">Messages</h4>
+   <div class="d-flex flex-column" id="chatscontainer">
+
+
+    <div class="chat px-4 py-3 d-flex">
 <div class="online">
     <img src="./Assets/istockphoto-2148449503-612x612.jpg" alt="">
     <div class="onlineicon"></div>
 </div>
-    </div>
+<div class="w-100 d-flex flex-column py-2">
+<div class="w-100 d-flex justify-content-between py-1 px-3 head">
+    <h6 class="m-0">Bankaii</h6>
+    <p class="m-0">10:42 AM</p>
 </div>
-        </div>
+<div class="w-100 d-flex justify-content-between py-1 px-3 body">
+    <h6 class="m-0 textgray"><i class="bi bi-check2-all"></i> image sent</h6>
+</div>
+</div>
+<div>
+</div>
     </div>
-    <div class="col-5 p-0">
-  <div class="chatheads component">
-2
+
+
+
+    <div class="chat px-4 py-3 d-flex">
+<div class="online">
+    <img src="./Assets/istockphoto-1478328151-612x612.jpg" alt="">
+    <div class="onlineicon"></div>
+</div>
+<div class="w-100 d-flex flex-column py-2">
+<div class="w-100 d-flex justify-content-between py-1 px-3 head">
+    <h6 class="m-0">Bankaii</h6>
+    <p class="m-0">10:42 AM</p>
+</div>
+<div class="w-100 d-flex justify-content-between py-1 px-3 body">
+    <h6 class="m-0 textgray"><i class="bi bi-check2-all"></i> image sent</h6>
+</div>
+</div>
+<div>
+</div>
+    </div>
+
+
+
+    <div class="chat px-4 py-3 d-flex">
+<div class="online">
+    <img src="./Assets/premium_photo-1690407617542-2f210cf20d7e.jpg" alt="">
+    <div class="onlineicon"></div>
+</div>
+<div class="w-100 d-flex flex-column py-2">
+<div class="w-100 d-flex justify-content-between py-1 px-3 head">
+    <h6 class="m-0">Bankaii</h6>
+    <p class="m-0">10:42 AM</p>
+</div>
+<div class="w-100 d-flex justify-content-between py-1 px-3 body">
+    <h6 class="m-0 textgray"><i class="bi bi-check2-all"></i> image sent</h6>
+</div>
+</div>
+<div>
+</div>
+    </div>
+
+
+
+    <div class="chat px-4 py-3 d-flex">
+<div class="online">
+    <img src="./Assets/istockphoto-874234668-612x612.jpg" alt="">
+    <div class="onlineicon"></div>
+</div>
+<div class="w-100 d-flex flex-column py-2">
+<div class="w-100 d-flex justify-content-between py-1 px-3 head">
+    <h6 class="m-0">Bankaii</h6>
+    <p class="m-0">10:42 AM</p>
+</div>
+<div class="w-100 d-flex justify-content-between py-1 px-3 body">
+    <h6 class="m-0 textgray"><i class="bi bi-check2-all"></i> image sent</h6>
+</div>
+</div>
+<div>
+</div>
+    </div>
+
+
+
+    <div class="chat px-4 py-3 d-flex">
+<div class="online">
+    <img src="./Assets/istockphoto-661799106-612x612.jpg" alt="">
+    <div class="onlineicon"></div>
+</div>
+<div class="w-100 d-flex flex-column py-2">
+<div class="w-100 d-flex justify-content-between py-1 px-3 head">
+    <h6 class="m-0">Bankaii</h6>
+    <p class="m-0">10:42 AM</p>
+</div>
+<div class="w-100 d-flex justify-content-between py-1 px-3 body">
+    <h6 class="m-0 textgray"><i class="bi bi-check2-all"></i> image sent</h6>
+</div>
+</div>
+<div>
+</div>
+    </div>
+
+
+
+    <div class="chat px-4 py-3 d-flex">
+<div class="online">
+    <img src="./Assets/young-bearded-man-with-striped-shirt_273609-5677.avif" alt="">
+    <div class="onlineicon"></div>
+</div>
+<div class="w-100 d-flex flex-column py-2">
+<div class="w-100 d-flex justify-content-between py-1 px-3 head">
+    <h6 class="m-0">Bankaii</h6>
+    <p class="m-0">10:42 AM</p>
+</div>
+<div class="w-100 d-flex justify-content-between py-1 px-3 body">
+    <h6 class="m-0 textgray"><i class="bi bi-check2-all"></i> image sent</h6>
+</div>
+</div>
+<div>
+</div>
+    </div>
+
+
+
+    
+    <div class="chat px-4 py-3 d-flex">
+<div class="online">
+    <img src="./Assets/ChatGPT Image Nov 17, 2025, 09_58_57 AM.png" alt="">
+    <div class="onlineicon"></div>
+</div>
+<div class="w-100 d-flex flex-column py-2">
+<div class="w-100 d-flex justify-content-between py-1 px-3 head">
+    <h6 class="m-0">Bankaii</h6>
+    <p class="m-0">10:42 AM</p>
+</div>
+<div class="w-100 d-flex justify-content-between py-1 px-3 body">
+    <h6 class="m-0 textgray"><i class="bi bi-check2-all"></i> image sent</h6>
+</div>
+</div>
+<div>
+</div>
+    </div>
+
+
+
+
+   </div>
+</div>
+
+
+</div>
+    </div>
+    <div class="col-5 p-0 chatcolborder">
+  <div class="ExpandedChat component" id="ExpandedChat">
+<div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center fs-1 textgray fw-bold">
+    <i class="bi bi-chat-dots"></i>
+    <p>Start Chating !</p>
+</div>
         </div>  
       </div>
-    <div class="col-3 p-0">
-  <div class="chatheads component">
-1
+    <div class="col-3 p-0 chatcolborder hide-scrollbar scrollable">
+  <div class="chatmedia component" id="chatmedia">
+    
         </div> 
        </div>
 </div>

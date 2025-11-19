@@ -688,13 +688,13 @@ $('#calendar').on('changeDate', function () {
         if (index === 0) {
           cell.classList.add('start')
         } else if (index === rangeCells.length - 1) {
-                  cell.classList.add('end')
+          cell.classList.add('end')
 
         } else {
           cell.classList.add('inbetween')
         }
 
-      
+
         cell.style.position = 'relative';
         cell.style.zIndex = '2';
       });
@@ -738,27 +738,28 @@ const nowmonth = now.getMonth();
 
 
 monthButton.addEventListener('click', (e) => {
-     zyearBtn = monthDiv.querySelector('.vanilla-calendar-year');
+  zyearBtn = monthDiv.querySelector('.vanilla-calendar-year');
 
-  if  (parseInt(zyearBtn.textContent,10) === nowyear){
-  const allmonths = Array.from(monthDiv.querySelectorAll('.vanilla-calendar-months__month'))
-  allmonths.forEach((monthdiv,index) => {
-console.log('current month ',nowmonth, ' this month' , index)
-if(nowmonth < index){
-    monthdiv.style.pointerEvents = 'none';
-      monthdiv.style.opacity = '0.5';}
+  if (parseInt(zyearBtn.textContent, 10) === nowyear) {
+    const allmonths = Array.from(monthDiv.querySelectorAll('.vanilla-calendar-months__month'))
+    allmonths.forEach((monthdiv, index) => {
+      console.log('current month ', nowmonth, ' this month', index)
+      if (nowmonth < index) {
+        monthdiv.style.pointerEvents = 'none';
+        monthdiv.style.opacity = '0.5';
+      }
+    })
+
+  }
+  console.log(zyearBtn)
+
+  zyearBtn.addEventListener('click', () => {
+    console.log('clicked')
+    console.log(monthDiv.querySelectorAll('.vanilla-calendar-years__year'))
+
+
+
   })
- 
-}
-    console.log(zyearBtn)
-
-zyearBtn.addEventListener('click',()=>{
-     console.log('clicked')
-  console.log(monthDiv.querySelectorAll('.vanilla-calendar-years__year'))
-
-
-
-})
 
 
 
@@ -766,13 +767,13 @@ zyearBtn.addEventListener('click',()=>{
 
   e.stopPropagation();
   monthDiv.style.display = monthDiv.style.display === 'none' ? 'block' : 'none';
-      console.log(parseInt(zyearBtn.textContent,10) === nowyear)
-console.log(parseInt(zyearBtn.textContent,10) === nowyear)
+  console.log(parseInt(zyearBtn.textContent, 10) === nowyear)
+  console.log(parseInt(zyearBtn.textContent, 10) === nowyear)
 
 });
 
 monthDiv.addEventListener('click', (e) => {
-       zyearBtn = monthDiv.querySelector('.vanilla-calendar-year');
+  zyearBtn = monthDiv.querySelector('.vanilla-calendar-year');
 
   unclickablebuttons = monthDiv.querySelectorAll('.vanilla-calendar-header__content button')
   const btn = e.target.closest('.vanilla-calendar-months__month');
@@ -833,25 +834,25 @@ document.addEventListener('click', (e) => {
 
 /*Dropdown Menu*/
 $('.datedropdown').click(function () {
-        $(this).attr('tabindex', 1).focus();
-        $(this).toggleClass('active');
-        $(this).find('.datedropdown-menu').slideToggle(300);
-    });
-    $('.datedropdown').focusout(function () {
-        $(this).removeClass('active');
-        $(this).find('.datedropdown-menu').slideUp(300);
-    });
-    $('.datedropdown .datedropdown-menu li').click(function () {
-        $(this).parents('.datedropdown').find('span').text($(this).text());
-        $(this).parents('.datedropdown').find('input').attr('value', $(this).attr('id'));
-    });
+  $(this).attr('tabindex', 1).focus();
+  $(this).toggleClass('active');
+  $(this).find('.datedropdown-menu').slideToggle(300);
+});
+$('.datedropdown').focusout(function () {
+  $(this).removeClass('active');
+  $(this).find('.datedropdown-menu').slideUp(300);
+});
+$('.datedropdown .datedropdown-menu li').click(function () {
+  $(this).parents('.datedropdown').find('span').text($(this).text());
+  $(this).parents('.datedropdown').find('input').attr('value', $(this).attr('id'));
+});
 
 
 $('.datedropdown-menu li').click(function () {
   var input = '<strong>' + $(this).parents('.datedropdown').find('input').val() + '</strong>',
-      msg = '<span class="msg">Hidden input value: ';
+    msg = '<span class="msg">Hidden input value: ';
   $('.msg').html(msg + input + '</span>');
-}); 
+});
 
 var aSelect = new SlimSelect({
   select: '#aselectElement',
@@ -867,7 +868,7 @@ document.querySelector('#aform').addEventListener('reset', (e) => {
 
 var bSelect = new SlimSelect({
   select: '#bselectElement',
-  showSearch: false 
+  showSearch: false
 })
 
 document.querySelector('#bform').addEventListener('reset', (e) => {
@@ -879,21 +880,21 @@ document.querySelector('#bform').addEventListener('reset', (e) => {
 
 
 
-$('#aselectElement').on('change' ,function () {
-const month = this.value
-const year = $('#bselectElement').val()
-const newdate = new Date(year,month,1)
-console.log(newdate)
+$('#aselectElement').on('change', function () {
+  const month = this.value
+  const year = $('#bselectElement').val()
+  const newdate = new Date(year, month, 1)
+  console.log(newdate)
   $('#calendar').datepicker('update', newdate);
 
 })
 
 
-$('#bselectElement').on('change' ,function () {
-const year = this.value
-const month = $('#aselectElement').val()
-const newdate = new Date(year,month,1)
-console.log(newdate)
+$('#bselectElement').on('change', function () {
+  const year = this.value
+  const month = $('#aselectElement').val()
+  const newdate = new Date(year, month, 1)
+  console.log(newdate)
   $('#calendar').datepicker('update', newdate);
 
 })
@@ -905,7 +906,7 @@ $('.notification').each(function () {
 
     // Toggle the "open" class
     body.toggleClass('open');
-notification.toggleClass('open')
+    notification.toggleClass('open')
     // If it's open, add content; if it's closed, remove it
     if (body.hasClass('open')) {
       body.prepend('<p class="mb-2">Dear, team</p>');
@@ -915,43 +916,34 @@ notification.toggleClass('open')
   });
 });
 $('.notificationtabs ul li').each(function () {
-  $(this).on('click' , function() {
+  $(this).on('click', function () {
     $('.notificationtabs ul li').removeClass('active')
-  $(this).toggleClass('active')
-if(this.textContent === "All Notifications"){
-$('.notification').each(function () {
-$(this).removeClass('d-none')
-  });
-}
-
-
-else if (this.textContent === "Reminders"){
-$('.notification').each(function () {
-  if($(this).hasClass('all')){
-$(this).addClass('d-none')
-console.log('is reminder',this) 
- }
-  else if($(this).hasClass('reminder')){
-$(this).removeClass('d-none')
-console.log('is all',this) 
- }
-  });
-}
-
-
-
-else if (this.textContent === "Updates"){
-$('.notification').each(function () {
-  if($(this).hasClass('reminder')){
-$(this).addClass('d-none')
-console.log('is reminder',this) 
- }
-  else if($(this).hasClass('all')){
-$(this).removeClass('d-none')
-console.log('is all',this) 
- }
-  });
-}
+    $(this).toggleClass('active')
+    if (this.textContent === "All Notifications") {
+      $('.notification').each(function () {
+        $(this).removeClass('d-none')
+      });
+    } else if (this.textContent === "Reminders") {
+      $('.notification').each(function () {
+        if ($(this).hasClass('all')) {
+          $(this).addClass('d-none')
+          console.log('is reminder', this)
+        } else if ($(this).hasClass('reminder')) {
+          $(this).removeClass('d-none')
+          console.log('is all', this)
+        }
+      });
+    } else if (this.textContent === "Updates") {
+      $('.notification').each(function () {
+        if ($(this).hasClass('reminder')) {
+          $(this).addClass('d-none')
+          console.log('is reminder', this)
+        } else if ($(this).hasClass('all')) {
+          $(this).removeClass('d-none')
+          console.log('is all', this)
+        }
+      });
+    }
 
 
   })
@@ -961,56 +953,299 @@ console.log('is all',this)
 const target = document.querySelector('.profile');
 
 const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-           
-const timers = document.querySelectorAll('.timer');
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
 
-timers.forEach(timer => {
-    const fullText = timer.textContent.trim();
+      const timers = document.querySelectorAll('.timer');
 
-    const letter = fullText.replace(/[\d.,\s]/g, '');
-    const numberStr = fullText.replace(/[^\d.,]/g, '')
-    const number = parseFloat(numberStr);
+      timers.forEach(timer => {
+        const fullText = timer.textContent.trim();
 
-    const isDecimal = numberStr.includes('.') 
+        const letter = fullText.replace(/[\d.,\s]/g, '');
+        const numberStr = fullText.replace(/[^\d.,]/g, '')
+        const number = parseFloat(numberStr);
 
-    const duration = 1000; 
-    const steps = 100;      
-    const stepTime = duration / steps;
-    const increment = number / steps;
+        const isDecimal = numberStr.includes('.')
 
-    let current = 0;
-    const interval = setInterval(() => {
-        current += increment;
+        const duration = 1000;
+        const steps = 100;
+        const stepTime = duration / steps;
+        const increment = number / steps;
 
-        if (current >= number) {
+        let current = 0;
+        const interval = setInterval(() => {
+          current += increment;
+
+          if (current >= number) {
             timer.textContent = (isDecimal ? number.toFixed(1) : Math.round(number)) + letter;
             clearInterval(interval);
-        } else {
+          } else {
             timer.textContent = (isDecimal ? current.toFixed(1) : Math.round(current)) + letter;
-        }
-    }, stepTime);
-});
-            observer.unobserve(entry.target);
+          }
+        }, stepTime);
+      });
+      observer.unobserve(entry.target);
 
-        }
-    });
-}, { threshold: 0.1 }); 
+    }
+  });
+}, {
+  threshold: 0.1
+});
 observer.observe(target);
 
 const inputcontainer = document.querySelectorAll('.inputcontainer')
-inputcontainer.forEach(input  => {
-input.addEventListener('click',()=> {
-const searchcontainer = document.querySelector('.searchmobilecontainer')
-searchcontainer.classList.add('active')
-searchcontainer.addEventListener('click', (e) => {
-  const searchcomponent = searchcontainer.querySelector('.searchmobile')
-  if(!searchcomponent.contains(e.target)){
-searchcontainer.classList.remove('active')
+inputcontainer.forEach(input => {
+  input.addEventListener('click', () => {
+    const searchcontainer = document.querySelector('.searchmobilecontainer')
+    searchcontainer.classList.add('active')
+    searchcontainer.addEventListener('click', (e) => {
+      const searchcomponent = searchcontainer.querySelector('.searchmobile')
+      if (!searchcomponent.contains(e.target)) {
+        searchcontainer.classList.remove('active')
+      }
+    })
+  })
+})
+
+
+
+const onlinecontainer = document.getElementById("onlinecontainer");
+const chatscontainer = document.getElementById("chatscontainer");
+const activechathead = document.getElementById("activechathead")
+const ExpandedChat = document.getElementById("ExpandedChat")
+const chatmedia = document.getElementById("chatmedia")
+const chattextcontainer = document.getElementById("textcontainer")
+
+let activechat
+
+let chats = [];
+
+function render() {
+  let onlinepeople = "";
+  let chatheads = "";
+
+
+  if (activechat) {
+
+    chatmedia.innerHTML =
+      `
+<div class="d-flex flex-column gap-1 align-items-center w-100 profilehead ">
+        <img src="${activechat.img}" alt="">
+<h3 class="m-0">Bankaii</h3>
+${activechat.online ? '<p class="m-0">Online</p>' : '<p class="m-0">Offline</p>'}
+
+    </div>
+
+
+
+
+    <div class="w-100 d-flex flex-column gap-3">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+            <h4 class="m-0 d-flex align-items-center ">Media <p class="textgray m-0">${activechat.media.length}</p></h4>
+            <p class="m-0 textgray">View All <i class="bi bi-chevron-right"></i></p>
+        </div>
+        <div class=" mediacontainer images">
+     <div class="col"> <button ><img src="${activechat.media[0].src}" alt=""></button></div>
+                <div class="col"> <button ><img src="${activechat.media[1].src}" alt=""></button></div>
+                <div class="col"><button class="lastimg"><img src="${activechat.media[2].src}" alt="">   <p>${activechat.media.length - 2}+</p></button></div>
+
+            
+         
+        </div>
+    </div>
+
+
+        <div class="w-100 d-flex flex-column gap-3">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+            <h4 class="m-0 d-flex align-items-center ">Links <p class="textgray m-0">14</p></h4>
+            <p class="m-0 textgray">View All <i class="bi bi-chevron-right"></i></p>
+        </div>
+        <div class="row mediacontainer">
+            <div class="col-12 link">
+                <div class="d-flex gap-3 head">
+                <img src="./Assets/Background 5.4.png" alt="" class="img-fluid">
+                <p class="m-0">http://127.0.0.1:5501/Assets/Background%205.4.png</p>
+            </div>
+            <button class="foot">
+                <p class="m-0">View messages</p>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+        </div>
+    </div>
+
+        <div class="w-100 d-flex flex-column gap-3">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+            <h4 class="m-0 d-flex align-items-center ">Files <p class="textgray m-0">10</p></h4>
+            <p class="m-0 textgray">View All <i class="bi bi-chevron-right"></i></p>
+        </div>
+        <div class="row mediacontainer">
+            <div class="col-12 p-0">
+                <div class="d-flex gap-3">
+<i class="bi bi-file-earmark-text doc"></i>
+<div class="d-flex flex-column">
+    <p class="fw-bold fs-5 m-0">Schedile VCT ApAC.pdf</p>
+    <div class="d-flex gap-5">
+        <p class="m-0 textgray">490 KB</p>
+        <p class="m-0 textgray">27 jan 2025</p>
+    </div>
+</div>
+                </div>
+            </div>
+                        <div class="col-12 p-0">     <div class="d-flex gap-3">
+<i class="bi bi-file-earmark-text doc"></i>
+<div class="d-flex flex-column">
+    <p class="fw-bold fs-5 m-0">Schedile VCT ApAC.pdf</p>
+    <div class="d-flex gap-5">
+        <p class="m-0 textgray">490 KB</p>
+        <p class="m-0 textgray">27 jan 2025</p>
+    </div>
+</div>
+                </div>
+            </div>
+
+                                    <div class="col-12 p-0">     <div class="d-flex gap-3">
+<i class="bi bi-file-earmark-text doc"></i>
+<div class="d-flex flex-column">
+    <p class="fw-bold fs-5 m-0">Schedile VCT ApAC.pdf</p>
+    <div class="d-flex gap-5">
+        <p class="m-0 textgray">490 KB</p>
+        <p class="m-0 textgray">27 jan 2025</p>
+    </div>
+</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+`
+
+
+    ExpandedChat.innerHTML =
+      `
+ <div class="head sticky-top" id="activechathead">
+    <img src="${activechat.img}" alt="">
+    <div class="d-flex w-100 justify-content-between">
+    <div class="d-flex flex-column py-2 px-2">
+  <h3 class="m-0">  ${activechat.name}</h3>
+  <p class="m-0 textgray">${activechat.online ? activechat.typing ? "Typing ..." : "Online" : "Offline"}</p>
+  </div>
+  <div class="d-flex align-items-center py-2 px-2 gap-3 fs-5">
+   ${activechat.online ? '<div class="onlinestate"></div>' : ''} 
+    <i class="bi bi-camera-video"></i>
+<i class="bi bi-telephone"></i>
+<i class="bi bi-three-dots-vertical"></i>
+  </div>
+  </div>
+</div>
+<div class="body hide-scrollbar scrollable" id="textcontainer">
+
+
+  ${activechat.chat.map((chattext,index) => `
+  <div class="message">
+
+${
+  activechat.chat[index + 1] && activechat.chat[index].side === activechat.chat[index + 1].side
+        ?(activechat.chat[index - 1] && activechat.chat[index].side === activechat.chat[index - 1].side
+        ? (chattext.side === "recived"
+        ?`<img src="${activechat.img}" class="imginchat opacity-0 pe-none"><div class="messagecontent 1 ${chattext.side} sub">${chattext.text}</div>`
+        :`<div class="messagecontent 2 ${chattext.side} sub">${chattext.text}</div>`)
+        : (chattext.side === "recived" ? `<img src="${activechat.img}" class="imginchat"><div class="messagecontent 3 ${chattext.side} sub">${chattext.text}</div>`
+        :`<div class="messagecontent 4 ${chattext.side}">${chattext.text}</div>`))
+        : (chattext.side === "recived" ? (activechat.chat[index - 1] && activechat.chat[index].side === activechat.chat[index - 1].side
+        ?`<img src="${activechat.img}" class="imginchat opacity-0 pe-none"><div class="messagecontent sub ${chattext.side} mb-3">${chattext.text}</div>`
+        :`<img src="${activechat.img}" class="imginchat"><div class="messagecontent 5 ${chattext.side} sub mb-3">${chattext.text}</div>`
+        ):`<div class="messagecontent sub ${chattext.side}">${chattext.text}</div>`)}
+  </div>
+`).join('')}
+
+
+
+</div>
+<div class="submit sticky-bottom">
+    <button>
+<i class="bi bi-image"></i>
+</button>
+<button>
+<i class="bi bi-emoji-smile"></i>
+</button>
+<div class="linegap"></div>
+<input type="text" placeholder="Write a message ...">
+<button>
+<i class="bi bi-send"></i>
+</button>
+</div>
+ `
+    const textContainer = document.getElementById("textcontainer")
+    if (activechat.chat.length > 2) {
+      textContainer.scrollTop = textContainer.scrollHeight;
+    } else {
+      textContainer.scrollTop = 0;
+    }
+
+
   }
-})
-})
-})
 
+  chats.forEach((chat, index) => {
+let lastrecivedcount = 0;
 
+for (let i = chat.chat.length - 1; i >= 0; i--) {
+  if (chat.chat[i].side === "recived") {
+    lastrecivedcount++;
+  } else {
+    break; // stop counting when a non-received message is found
+  }
+}
+
+console.log(lastrecivedcount);
+
+chatheads += `
+      <div class="chat px-4 py-3 d-flex ${chat.active ? 'active' : ''}" onclick="openChat(${index})">
+        <div class="online">
+          <img src="${chat.img}" alt="">
+          ${chat.online ? "<div class='onlineicon'></div>" : ""}
+        </div>
+        <div class="w-100 d-flex flex-column">
+          <div class="w-100 d-flex justify-content-between py-1 px-3 head">
+            <h6 class="m-0">${chat.name}</h6>
+            <p class="m-0">10:42 AM</p>
+          </div>
+          <div class="w-100 d-flex justify-content-between py-1 px-3 body">
+          
+            ${chat.chat[chat.chat.length - 1].side === "sent" ? `  <h6 class="m-0 textgray"><i class="bi bi-check2-all"></i>  ${chat.chat[chat.chat.length - 1].text}   </h6>` : 
+            
+            `  <h6>  ${chat.chat[chat.chat.length - 1].text}  </h6> <p>${lastrecivedcount}</p>`}
+          
+          </div>
+        </div>
+      </div>
+    `;
+
+    if (chat.online) {
+      onlinepeople += `
+        <button class="online" onclick="openChat(${index})">
+          <img src="${chat.img}" alt="">
+          <div class="onlineicon"></div>
+        </button>
+      `;
+    }
+  });
+
+  chatscontainer.innerHTML = chatheads;
+  onlinecontainer.innerHTML = onlinepeople;
+}
+
+function openChat(i) {
+  chats.forEach(chat => chat.active = false);
+  chats[i].active = true;
+  activechat = chats[i]
+  render();
+}
+
+fetch("chats.json")
+  .then(response => response.json())
+  .then(data => {
+    chats = data;
+    render();
+  })
+  .catch(error => console.log(error));
