@@ -694,7 +694,9 @@ table {
     font-size: 12px;
     font-weight: 500;
 }
-
+.section.Chats{
+    max-width: calc(100vw - 250px);
+}
 .Revenue h1 {
     margin: 0;
 }
@@ -1381,16 +1383,14 @@ body {
 
 .notificationbarcontainer {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.075);
-
+z-index: 300;
     position: fixed;
-    z-index: 50;
     right: 0;
     width: 100vw;
     height: 100vh;
     border-radius: 0px;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.198);
-    transition: 0.5s ease all;
     border: var(--thead-border-bottom);
     pointer-events: none;
 }
@@ -1398,8 +1398,12 @@ body {
 .notificationbarcontainer.active {
     pointer-events: all;
     opacity: 1;
-}
+    z-index: 300;
 
+}
+.notificationbar,.notificationlist {
+    z-index: 300;
+}
 .notificationbar {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.075);
 
@@ -1474,12 +1478,15 @@ body {
     background-color: var(--bg);
 
 }
-
+.ExpandedChat .head .bi-arrow-left{
+    display: none;
+}
 .notificationlist {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
     height: 100%;
+    z-index: 500;
 }
 
 .notificationlist p {
@@ -1490,7 +1497,6 @@ body {
 color: var(--maintext);
     font-weight: 500;
 }
-
 
 .notificationhead p {
 font-size: 12px !important;
@@ -2423,6 +2429,7 @@ padding: 0 0 0 15px;
 border-radius: 5px;
 display: flex;
 align-items: center;
+overflow: hidden;
 
 }
 .sticky-top{
@@ -2471,15 +2478,20 @@ width: 100%;
     border-radius: 50px;
 }
 .chats .chatscontainer .chat img{
-    height: 100%;
-    width: 100%;
+    min-height: 60px;
+    min-width: 60px;
     object-fit: cover;
     border-radius: 50px;
+    max-height: 60px;
+    max-width: 60px;
 }
 
 .chats .chatscontainer .chat .body p{
-width: 25px;
-height: 25px;
+min-width: 18px;
+min-height: 18px;
+max-width: 18px;
+max-height: 18px;
+font-size: 10px;
     background-color: #23bf03;
     display: flex;
     align-items: center;
@@ -2490,7 +2502,8 @@ height: 25px;
 .chatscontainer .chat{
     transition: 0.1s ease all;
     cursor: pointer;
-
+ display: flex;
+align-items: center;
 }
 .chatscontainer .chat:hover{
 background-color: rgba(224, 224, 224, 0.271);
@@ -2557,9 +2570,24 @@ background-color: transparent;
  font-weight: bold;
  font-size: 18px;
 }
+    .chatscontainer .body h6{
+        font-size: 12px;
+        margin: 0;
+  max-width: 100%;      
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        min-width: 0;
+         overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    }
 .chatscontainer .head p{
     color: rgb(170, 170, 170);
     font-size: 12px;
+}
+.chat .body p {
+    flex-shrink: 0; /* keep the number visible */
 }
 .ExpandedChat{
     display: flex;
@@ -2569,6 +2597,9 @@ flex-direction: column;
 .ExpandedChat .head {
     padding: 50px;
     display: flex;
+border-bottom: 1px solid #dfdfdf;
+background-color: #f8fafb;
+gap: 10px;
 }
 .ExpandedChat .head img{
    height: 70px;
@@ -2578,27 +2609,29 @@ flex-direction: column;
 }
 .ExpandedChat .body{
 overflow-y: auto;
-background-color:#e9ecf1 ;
 display: flex;
 flex-direction: column;
-padding: 10px 50px;
+padding: 10px 0px;
 }
 .ExpandedChat .message{
     width: 100%;
     display: flex;
-           padding: 0 0px 0 20px;
-margin-bottom: 5px;
-gap: 5px;
+    margin-bottom: 5px;
+    gap: 5px;
 }
 .ExpandedChat .message:has(.messagecontent.sent){
    justify-content: end;
-    padding: 0 20px 0 0;
+    padding: 0 20px 0 65px;
 flex-direction: row-reverse;
+}
+.ExpandedChat .message:has(.messagecontent.recived ){
+    padding: 0 20px 0 20px;
 }
 .ExpandedChat .message .messagecontent{
 padding: 5px 15px;
 max-width: 100%;
 word-wrap: break-word;
+min-width: 0;
 }
 .ExpandedChat .message .messagecontent.recived{
 background-color: white;
@@ -2649,6 +2682,9 @@ color: white;
     font-size: 25px;
     padding: 0px 20px;
     align-items: center;
+    margin: 0;
+    border-top: 1px solid #dfdfdf;
+    background-color: #f8fafb;
 }
 .submit button{
     border: none;
@@ -2663,8 +2699,16 @@ color: white;
     margin-left: 15px;
     flex-grow: 1;
         font-size: 15px;
+        height: 100%;
 }
-
+.submit .send{
+    pointer-events: none;
+}
+.submit input:not(:placeholder-shown) + .send {
+  color: black;
+  cursor: pointer;
+pointer-events: all;
+}
 .linegap{
     height: 50%;
     width: 1px;
@@ -2710,8 +2754,8 @@ aspect-ratio: 1/1;
 overflow: hidden;
 }
 .chatmedia .profilehead img{
-width: 150px;
-height: 150px;
+width: 130px;
+height: 130px;
 }
 .chatmedia img{
 border-radius: 50%;
@@ -2720,9 +2764,7 @@ object-fit: cover;
 .chatmedia p{
     font-size: 12px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ 
 }
 .mediacontainer{
     gap: 15px;
@@ -2733,21 +2775,26 @@ object-fit: cover;
     max-width: 100%;
 }
 .link {
-    background-color: #eeeeee;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 0;
 border-radius: 15px;
 overflow: hidden;
+border: 1px solid rgb(218, 218, 218);
 }
 .link img{
-    width: 60px;
-    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+        max-width: 60px;
+    max-height: 60px;
+
 }
 .link .head p{
     color: rgb(0, 119, 255);
     word-break: break-all;
+    display: flex;
+    align-items: center;
 }
 .link .foot{
     display: flex;
@@ -2900,7 +2947,104 @@ cursor: pointer;
     }
 }
 
+@media (max-width : 1441px){
+    .section.Chats{
+max-width: calc(100vw - 174px);
+    }
+    .mediacontainer .doc{
+        padding: 20px;
+    }
+    .link img{
+    min-width: 40px;
+    min-height: 40px;
+        max-width: 40px;
+    max-height: 40px;
 
+}
+    .messagecontent {
+        font-size: 14px;
+    }
+    .chatmedia h3{
+        font-size: 18px;
+    }
+       .chatmedia h4{
+        font-size: 16px;
+    }
+    .chatmedia p{
+        font-size: 10px;
+    }
+        .chatmedia .profilehead  p{
+        font-size: 12px;
+    }
+    .chatmedia .profilehead img{
+        height: 100px;
+        width: 100px;
+    }
+    .onlinestate{
+        width: 12px;
+        height: 12px;
+    }
+    .ExpandedChat .head img{
+        height: 50px;
+        width: 50px;
+    }
+    .ExpandedChat .head h3{
+        font-size: 16px;
+    }
+        .ExpandedChat .head p{
+        font-size: 11px;
+    }
+    .ExpandedChat .head i{
+        font-size: 15px;
+    }
+    .ExpandedChat .head{
+        align-items: center;
+        padding: 20px 25px;
+    }
+    .onlinecontainer h4 {
+font-size: 18px;
+    }
+    .chatscontainer h4 {
+font-size: 18px;
+    }
+    .chats .chatscontainer .chat .body p{
+        min-width: 15px;
+        min-height: 15px;
+        max-height: 15px;
+        max-width: 15px;
+        font-size: 10px;
+    }
+    .chatscontainer .head h6{
+        font-size: 14px;
+        margin: 0;
+    }
+      .chatscontainer .body h6{
+        font-size: 12px;
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        max-width: 220px;
+            }
+    .chats .chatscontainer .online{
+         min-height:50px;
+    min-width: 50px;
+    max-height: 50px;
+    max-width: 50px;
+    }
+.chats .chatscontainer .chat img{
+    min-height:50px;
+    min-width: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+}
 @media (max-width: 1300px) {
 
     .imgcontainer p {
@@ -2960,7 +3104,37 @@ cursor: pointer;
 
 }
 
-@media (max-width : 1200px) {
+@media (max-width : 1199px) {
+    .ExpandedChat .head .bi-arrow-left{
+    display: flex;
+    padding: 10px;
+    font-size: 20px;
+}
+    .Chats .component{
+        height: 100vh;
+    }
+    #chatpagescontainer:has(.chatpage3.active) .chatpage2{
+        width: 75% !important;
+    }
+    .chatpage3{
+        z-index: 150;
+        max-height: 100vh;
+        right: 0;
+        background-color: #f3f7fe;
+    }
+    .chatpagecomponent{
+     position: absolute;
+     pointer-events: none;
+     opacity: 0;
+    }
+    .chatpagecomponent.active{
+          pointer-events: all;
+     opacity: 1;
+     overflow-y: scroll;
+    }
+       .section.Chats{
+max-width: calc(100vw - 50px);
+    }
     .navv {
         font-size: 15px !important;
         gap: 25px;
@@ -2994,10 +3168,6 @@ cursor: pointer;
         font-size: 15px !important;
     }
 
-    #content {
-        padding: 20px;
-        margin-left: 20px;
-    }
 
     .mobilesidebbar {
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.074);
@@ -3012,7 +3182,7 @@ cursor: pointer;
         justify-content: space-between;
         color: var(--text);
         font-size: 35px;
-        z-index: 4;
+        z-index: 200;
     }
 
     .sidebarcontainer {
@@ -3023,12 +3193,12 @@ cursor: pointer;
         width: 250px !important;
         transform: translateX(-260px);
         transition: 0.3s ease all;
-        z-index: 5;
+        z-index: 210;
     }
 
     .sidebar.active {
         transform: translateX(0px);
-
+z-index: 210;
     }
 
     .filter {
@@ -3245,10 +3415,15 @@ cursor: pointer;
         width: 200px;
     }
 
+.seciton.Chats{
+    max-width: calc(100vw - 174px);
+}
     .sidebar {
-        width: 200px;
+        width: 174px;
     }
-
+.sidebarcontainer{
+    min-width: inherit;
+}
     .profilecomponent .project {
         padding: 15px;
     }
@@ -3448,6 +3623,9 @@ cursor: pointer;
 }
 
 @media (max-width : 992px) {
+    .section.Chats{
+        width: calc(100vw - 80px ) !important;
+    }
     .notificationbarcontainer {
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.075);
 opacity: 0;
@@ -3461,7 +3639,9 @@ opacity: 0;
         padding: 0;
         transition: 0.5s ease all;
     }
-
+    #chatpagescontainer:has(.chatpage3.active) .chatpage2{
+        width: 66.66666667% !important;
+    }
     .notificationbarcontainer.active {
 opacity: 1;   
  }
@@ -3660,8 +3840,9 @@ opacity: 1;
     }
 
     .mobilesidebbar {
-        width: 100px;
-        font-size: 45px;
+        width: 80px;
+        font-size: 35px;
+        z-index: 200;
     }
 
     .sidebarcontainer {
@@ -3777,8 +3958,34 @@ opacity: 1;
 
 /* mobile screens                                              */
 
-
+@media (max-width: 768px) {
+    .submit{
+        padding: 5px;
+    }
+    .submit button{
+        padding: 20px 10px;
+        font-size: 18px;
+    }
+    .sidebarcontainer{
+        width: 80px !important;
+    }
+.done button{
+    padding: 10px 25px;
+    background-color: rgb(232, 232, 232);
+    border-radius: 5px;
+    font-weight: 500;
+}
+.section.Chats{
+    width: calc(100vw - 80px) !important;
+}
+    #content{
+        width: calc(100vw - 100px);
+    }
+}
 @media (max-width: 576px) {
+    #content,.section.Chats{
+        width: calc(100vw - 50px) !important;
+    }
 .searchmobilecontainer{
     display: flex;
 width: 100vw;
@@ -3928,7 +4135,7 @@ height: 100%;
     }
 
     .sidebarcontainer {
-        width: 40px !important;
+        width: 50px !important;
     }
 
     .mobilesidebbar {

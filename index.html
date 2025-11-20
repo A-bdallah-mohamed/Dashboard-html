@@ -630,7 +630,7 @@
                             <a href="#">
                                 <i class="bi bi-person-fill"></i>Profile
                             </a></li>
-                                <li  class="active">
+                                <li  class="active" id="chatpagebtn">
                             <a href="#">
                                 <i class="bi bi-chat-dots-fill"></i>Chats
                             </a></li>
@@ -1403,7 +1403,7 @@
                         <ul>
                             <li>
                                 <div class="balancecontainer">
-                                    <img src="./Assets/Icon.png" alt="" class="headereth"> 1,924 ETH
+                                    <img src="./Assets/Icon.png" alt="" class="headereth"><p> 1,924 ETH</p>
                                 </div>
                             </li>
                             <li id="notificationtoggle">
@@ -3246,8 +3246,8 @@
 
 <div class="Chats section active h-100">
               
-<div class="row" style="margin: 0;">
-    <div class="col-4 p-0 hide-scrollbar scrollable chatcolborder">
+<div class="row position-relative" style="margin: 0;" id="chatpagescontainer">
+    <div class="col-xl-4 col-12 p-0 hide-scrollbar scrollable chatcolborder chatpagecomponent chatpage1 active" id="chatspagecomponent">
         <div class="chatheads component">
             <div class="p-4 sticky-top" >
 <div class="chats-searchcontainer ">
@@ -3445,7 +3445,7 @@
 
 </div>
     </div>
-    <div class="col-5 p-0 chatcolborder">
+    <div class="col-xl-5 col-12 p-0 chatcolborder chatpagecomponent chatpage2" id="activechatcomponent">
   <div class="ExpandedChat component" id="ExpandedChat">
 <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center fs-1 textgray fw-bold">
     <i class="bi bi-chat-dots"></i>
@@ -3453,7 +3453,7 @@
 </div>
         </div>  
       </div>
-    <div class="col-3 p-0 chatcolborder hide-scrollbar scrollable">
+    <div class="col-lg-3 col-md-4 col-12 p-0 chatcolborder hide-scrollbar scrollable chatpagecomponent  chatpage3" id="mediacomponent">
   <div class="chatmedia component" id="chatmedia">
     
         </div> 

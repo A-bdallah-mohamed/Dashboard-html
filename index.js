@@ -832,7 +832,6 @@ document.addEventListener('click', (e) => {
 
 
 
-/*Dropdown Menu*/
 $('.datedropdown').click(function () {
   $(this).attr('tabindex', 1).focus();
   $(this).toggleClass('active');
@@ -1027,8 +1026,21 @@ function render() {
 
   if (activechat) {
 
+const chatspagecomponent = document.getElementById("chatspagecomponent")
+const activechatcomponent = document.getElementById("activechatcomponent")
+const mediacomponent = document.getElementById("mediacomponent")
+
+chatspagecomponent.classList.remove("active")
+activechatcomponent.classList.add('active')
+
+const chatpagebtn = document.getElementById("chatpagebtn")
+chatpagebtn.addEventListener("click" , () => {
+  activechat = null
+})
+
     chatmedia.innerHTML =
       `
+      <div class="d-flex align-items-center justify-content-start w-100 done d-md-none"> <i class="bi bi-arrow-left fs-4" id="done"></i></div>
 <div class="d-flex flex-column gap-1 align-items-center w-100 profilehead ">
         <img src="${activechat.img}" alt="">
 <h3 class="m-0">Bankaii</h3>
@@ -1047,7 +1059,7 @@ ${activechat.online ? '<p class="m-0">Online</p>' : '<p class="m-0">Offline</p>'
         <div class=" mediacontainer images">
      <div class="col"> <button ><img src="${activechat.media[0].src}" alt=""></button></div>
                 <div class="col"> <button ><img src="${activechat.media[1].src}" alt=""></button></div>
-                <div class="col"><button class="lastimg"><img src="${activechat.media[2].src}" alt="">   <p>${activechat.media.length - 2}+</p></button></div>
+                <div class="col"><button class="lastimg"><img src="${activechat.media[2].src}" alt="">   <p class="d-flex align-items-center justify-content-center">${activechat.media.length - 2}+</p></button></div>
 
             
          
@@ -1079,12 +1091,12 @@ ${activechat.online ? '<p class="m-0">Online</p>' : '<p class="m-0">Offline</p>'
             <h4 class="m-0 d-flex align-items-center ">Files <p class="textgray m-0">10</p></h4>
             <p class="m-0 textgray">View All <i class="bi bi-chevron-right"></i></p>
         </div>
-        <div class="row mediacontainer">
+        <div class="row mediacontainer mb-2">
             <div class="col-12 p-0">
                 <div class="d-flex gap-3">
 <i class="bi bi-file-earmark-text doc"></i>
 <div class="d-flex flex-column">
-    <p class="fw-bold fs-5 m-0">Schedile VCT ApAC.pdf</p>
+    <p class="fw-bold m-0">Schedile VCT ApAC.pdf</p>
     <div class="d-flex gap-5">
         <p class="m-0 textgray">490 KB</p>
         <p class="m-0 textgray">27 jan 2025</p>
@@ -1095,7 +1107,7 @@ ${activechat.online ? '<p class="m-0">Online</p>' : '<p class="m-0">Offline</p>'
                         <div class="col-12 p-0">     <div class="d-flex gap-3">
 <i class="bi bi-file-earmark-text doc"></i>
 <div class="d-flex flex-column">
-    <p class="fw-bold fs-5 m-0">Schedile VCT ApAC.pdf</p>
+    <p class="fw-bold m-0">Schedile VCT ApAC.pdf</p>
     <div class="d-flex gap-5">
         <p class="m-0 textgray">490 KB</p>
         <p class="m-0 textgray">27 jan 2025</p>
@@ -1107,7 +1119,7 @@ ${activechat.online ? '<p class="m-0">Online</p>' : '<p class="m-0">Offline</p>'
                                     <div class="col-12 p-0">     <div class="d-flex gap-3">
 <i class="bi bi-file-earmark-text doc"></i>
 <div class="d-flex flex-column">
-    <p class="fw-bold fs-5 m-0">Schedile VCT ApAC.pdf</p>
+    <p class="fw-bold m-0">Schedile VCT ApAC.pdf</p>
     <div class="d-flex gap-5">
         <p class="m-0 textgray">490 KB</p>
         <p class="m-0 textgray">27 jan 2025</p>
@@ -1124,9 +1136,10 @@ ${activechat.online ? '<p class="m-0">Online</p>' : '<p class="m-0">Offline</p>'
     ExpandedChat.innerHTML =
       `
  <div class="head sticky-top" id="activechathead">
+ <i class="bi bi-arrow-left" id="closeexpandedchat"></i>
     <img src="${activechat.img}" alt="">
     <div class="d-flex w-100 justify-content-between">
-    <div class="d-flex flex-column py-2 px-2">
+    <div class="d-flex flex-column py-2 ">
   <h3 class="m-0">  ${activechat.name}</h3>
   <p class="m-0 textgray">${activechat.online ? activechat.typing ? "Typing ..." : "Online" : "Offline"}</p>
   </div>
@@ -1134,7 +1147,7 @@ ${activechat.online ? '<p class="m-0">Online</p>' : '<p class="m-0">Offline</p>'
    ${activechat.online ? '<div class="onlinestate"></div>' : ''} 
     <i class="bi bi-camera-video"></i>
 <i class="bi bi-telephone"></i>
-<i class="bi bi-three-dots-vertical"></i>
+<i class="bi bi-three-dots-vertical" id="openmediacomponent"></i>
   </div>
   </div>
 </div>
@@ -1155,14 +1168,14 @@ ${
         : (chattext.side === "recived" ? (activechat.chat[index - 1] && activechat.chat[index].side === activechat.chat[index - 1].side
         ?`<img src="${activechat.img}" class="imginchat opacity-0 pe-none"><div class="messagecontent sub ${chattext.side} mb-3">${chattext.text}</div>`
         :`<img src="${activechat.img}" class="imginchat"><div class="messagecontent 5 ${chattext.side} sub mb-3">${chattext.text}</div>`
-        ):`<div class="messagecontent sub ${chattext.side}">${chattext.text}</div>`)}
+        ):`<div class="messagecontent sub ${chattext.side} mb-3">${chattext.text}</div>`)}
   </div>
 `).join('')}
 
 
 
 </div>
-<div class="submit sticky-bottom">
+<form class="submit sticky-bottom" onsubmit="readonchange(event)">
     <button>
 <i class="bi bi-image"></i>
 </button>
@@ -1171,19 +1184,38 @@ ${
 </button>
 <div class="linegap"></div>
 <input type="text" placeholder="Write a message ...">
-<button>
+<button class="send" type="submit">
 <i class="bi bi-send"></i>
 </button>
-</div>
+</form>
  `
+const closeexpandedchat = document.getElementById("closeexpandedchat")
+closeexpandedchat.addEventListener('click', ()=> {
+  
+chatspagecomponent.classList.add("active")
+activechatcomponent.classList.remove('active')
+mediacomponent.classList.remove('active')
+
+})
+
+const done = document.getElementById("done")
+done.addEventListener('click',()=>{
+  mediacomponent.classList.remove('active')
+activechatcomponent.classList.add('active')
+
+})
+
+const openmediacomponent = document.getElementById("openmediacomponent")
+openmediacomponent.addEventListener('click', ()=> {
+chatspagecomponent.classList.remove("active")
+mediacomponent.classList.toggle('active')
+})
     const textContainer = document.getElementById("textcontainer")
     if (activechat.chat.length > 2) {
       textContainer.scrollTop = textContainer.scrollHeight;
     } else {
       textContainer.scrollTop = 0;
     }
-
-
   }
 
   chats.forEach((chat, index) => {
@@ -1193,7 +1225,7 @@ for (let i = chat.chat.length - 1; i >= 0; i--) {
   if (chat.chat[i].side === "recived") {
     lastrecivedcount++;
   } else {
-    break; // stop counting when a non-received message is found
+    break; 
   }
 }
 
@@ -1205,16 +1237,16 @@ chatheads += `
           <img src="${chat.img}" alt="">
           ${chat.online ? "<div class='onlineicon'></div>" : ""}
         </div>
-        <div class="w-100 d-flex flex-column">
+        <div class="w-100 d-flex flex-column" style="min-width: 0;">
           <div class="w-100 d-flex justify-content-between py-1 px-3 head">
             <h6 class="m-0">${chat.name}</h6>
             <p class="m-0">10:42 AM</p>
           </div>
-          <div class="w-100 d-flex justify-content-between py-1 px-3 body">
+          <div class="w-100 d-flex justify-content-between py-1 px-3 body gap-2">
           
             ${chat.chat[chat.chat.length - 1].side === "sent" ? `  <h6 class="m-0 textgray"><i class="bi bi-check2-all"></i>  ${chat.chat[chat.chat.length - 1].text}   </h6>` : 
             
-            `  <h6>  ${chat.chat[chat.chat.length - 1].text}  </h6> <p>${lastrecivedcount}</p>`}
+            `  <h6>  ${chat.chat[chat.chat.length - 1].text}  </h6> <p class="m-0">${lastrecivedcount}</p>`}
           
           </div>
         </div>
@@ -1241,6 +1273,40 @@ function openChat(i) {
   activechat = chats[i]
   render();
 }
+
+function readonchange(event) {
+  event.preventDefault(); 
+  if (!activechat) return;
+
+  const form = event.target;
+  const input = form.querySelector('input');
+  const text = input.value.trim();
+  if (!text) return;
+
+  
+  activechat.chat.push({
+    text: text,
+    side: 'sent',
+    time: new Date().toISOString()
+  });
+
+ 
+  const selectionStart = input.selectionStart;
+  const selectionEnd = input.selectionEnd;
+
+  input.value = '';
+
+  render(); 
+
+  const newInput = document.querySelector('.submit input');
+  if (newInput) {
+    newInput.focus();
+    newInput.setSelectionRange(selectionStart, selectionEnd);
+  }
+}
+
+
+
 
 fetch("chats.json")
   .then(response => response.json())
