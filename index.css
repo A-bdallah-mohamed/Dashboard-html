@@ -766,7 +766,9 @@ table {
 span.dt-column-order {
     display: none;
 }
-
+#onlinecontainer {
+    gap: 5px;
+}
 table.dataTable thead>tr>th.dt-orderable-asc:hover,
 table.dataTable thead>tr>th.dt-orderable-desc:hover,
 table.dataTable thead>tr>td.dt-orderable-asc:hover,
@@ -2511,6 +2513,7 @@ font-size: 10px;
     cursor: pointer;
  display: flex;
 align-items: center;
+padding: 10px 20px;
 }
 .chatscontainer .chat:hover{
 background-color: rgba(224, 224, 224, 0.271);
@@ -2959,6 +2962,12 @@ cursor: pointer;
 }
 
 @media (max-width : 1441px){
+    .chats .onlinecontainer .online{
+        min-width: 40px;
+        min-height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+    }
     .section.Chats{
 max-width: calc(100vw - 174px);
     }
@@ -3026,11 +3035,19 @@ font-size: 18px;
         font-size: 10px;
     }
     .chatscontainer .head h6{
-        font-size: 14px;
-        margin: 0;
+        font-size: 11px;
+        margin-top: 10px !important;
+    }
+    .chatscontainer .head p{
+        font-size: 8px;
+                margin-top: 10px !important;
+
+    }
+    .chatscontainer .chat{
+        padding: 0px 10px;
     }
       .chatscontainer .body h6{
-        font-size: 12px;
+        font-size: 9px;
         margin: 0;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -3041,18 +3058,18 @@ font-size: 18px;
         max-width: 220px;
             }
     .chats .chatscontainer .online{
-         min-height:50px;
-    min-width: 50px;
-    max-height: 50px;
-    max-width: 50px;
+         min-height:40px;
+    min-width: 40px;
+    max-height: 40px;
+    max-width: 40px;
     }
 .chats .chatscontainer .chat img{
-    min-height:45px;
-    min-width: 45px;
+    min-height:40px;
+    min-width: 40px;
     object-fit: cover;
     border-radius: 45px;
-    max-height: 45px;
-    max-width: 45px;
+    max-height: 40px;
+    max-width: 40px;
 }
 
 }

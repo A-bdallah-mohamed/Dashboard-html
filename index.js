@@ -1247,7 +1247,7 @@ const time = date.toLocaleTimeString([],{
   hour: "2-digit",minute:"2-digit"
 })
 chatheads += `
-      <div class="chat px-4 py-2 d-flex ${chat.active ? 'active' : ''}" onclick="openChat(${index})">
+      <div class="chat  d-flex ${chat.active ? 'active' : ''}" onclick="openChat(${index})">
         <div class="online">
           <img src="${chat.img}" alt="">
           ${chat.online ? "<div class='onlineicon'></div>" : ""}
