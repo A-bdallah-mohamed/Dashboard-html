@@ -1057,12 +1057,32 @@ ${activechat.online ? '<p class="m-0">Online</p>' : '<p class="m-0">Offline</p>'
             <p class="m-0 textgray">View All <i class="bi bi-chevron-right"></i></p>
         </div>
         <div class=" mediacontainer images">
-     <div class="col"> <button ><img src="${activechat.media[0].src}" alt=""></button></div>
-                <div class="col"> <button ><img src="${activechat.media[1].src}" alt=""></button></div>
-                <div class="col"><button class="lastimg"><img src="${activechat.media[2].src}" alt="">   <p class="d-flex align-items-center justify-content-center">${activechat.media.length - 2}+</p></button></div>
+       <div class="row">
+${activechat.media.slice(0, 3).map((media, index) => `
+  <div class="col-4">
+    <a href="${media.src}" class="glightbox h-100 position-relative d-flex rounded-3 overflow-hidden" data-gallery="chat-group">
 
-            
-         
+      ${index === 2 && activechat.media.length > 3
+        ? `
+          <div class="h-100 position-absolute top-0 start-0 w-100 d-flex align-items-center justify-content-center bg-black bg-opacity-50 text-white">
+              +${activechat.media.length - 3}
+          </div>
+        `
+        : ''
+      }
+
+      <img src="${media.src}" class="w-100 h-100 object-fit-cover"/>
+    </a>
+  </div>
+`).join('')}
+
+<!-- Hidden links for remaining images -->
+${activechat.media.slice(3).map(media => `
+  <a href="${media.src}" class="glightbox d-none" data-gallery="chat-group"></a>
+`).join('')}
+</div>
+
+
         </div>
     </div>
 
@@ -1131,7 +1151,14 @@ ${activechat.online ? '<p class="m-0">Online</p>' : '<p class="m-0">Offline</p>'
         </div>
     </div>
 `
+let lightbox = GLightbox({
+    selector: '.glightbox'
+});
 
+function refreshLightbox() {
+    if (lightbox) lightbox.destroy(); // remove old instance
+    lightbox = GLightbox({ selector: '.glightbox' });
+}
 
     ExpandedChat.innerHTML =
       `
@@ -1287,6 +1314,8 @@ function openChat(i) {
   chats[i].active = true;
   activechat = chats[i]
   render();
+  refreshLightbox();
+
 }
 
 function readonchange(event) {

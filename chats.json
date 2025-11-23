@@ -21,7 +21,11 @@
       {"side":"sent","type":"img","src":"https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg"},
       {"side":"recived","type":"img","src":"https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg"},
       {"side":"recived","type":"img","src":"https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg"},
-      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg"}
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg"},
+            {"side":"sent","type":"img","src":"https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg"},
+   {"side":"sent","type":"img","src":"https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg"}   ,   {"side":"sent","type":"img","src":"https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg"}
+
+
     ]
   },
 
