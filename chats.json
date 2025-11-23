@@ -1,182 +1,379 @@
 [
-    {
-        "name": "Bankaii","typing": true,"online": true,
-        "active":false,
-        "img": "./Assets/ChatGPT Image Nov 17, 2025, 09_58_57 AM.png",
-   "chat": [
-    {"text":"Hey! Did you watch the new Marvel movie?", "time":"2025-11-15T11:28:35Z","side":"sent"},
-    {"text":"Not yet, but I’ve heard it’s amazing! Did you see it?", "time":"2025-11-15T11:29:05Z","side":"recived"},
-    {"text":"Yeah! I loved it. The action scenes were insane.", "time":"2025-11-15T11:31:55Z","side":"sent"},
-    {"text":"Nice! Who was your favorite character?", "time":"2025-11-15T11:35:25Z","side":"recived"},
-    {"text":"Definitely Spider-Man. His humor is just perfect.", "time":"2025-11-15T12:05:35Z","side":"sent"},
-    {"text":"Haha, I knew you’d say that. I liked Doctor Strange though.", "time":"2025-11-15T12:28:50Z","side":"recived"},
-    {"text":"Oh yeah, his powers are insane. That final fight was epic!", "time":"2025-11-15T12:59:40Z","side":"sent"},
-    {"text":"Totally! I can’t wait for the next one.", "time":"2025-11-15T13:32:35Z","side":"recived"},
-    {"text":"Same here. Want to watch it together when it comes out?", "time":"2025-11-15T14:36:45Z","side":"sent"},
-    {"text":"Absolutely! Let’s plan for next weekend.", "time":"2025-11-15T15:47:15Z","side":"recived"}
-]
-,
-        "media": [ 
-            {"side":"sent","type":"img","src":"https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"},
-            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"},
-                        {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
-,            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
-
-        ]
-    },
-        {
-        "name": "Luna","typing": false,"online": false,
-        "active":false,
-        "img": "./Assets/Avatar.png",
-  "chat": [
-      {"text":"Did you finish the math homework?", "time":"2025-11-16T09:10:00Z","side":"sent"},
-      {"text":"Almost! Just the last problem is tricky.", "time":"2025-11-16T09:12:15Z","side":"recived"},
-      {"text":"I can help if you want.", "time":"2025-11-16T09:13:00Z","side":"sent"},
-      {"text":"Thanks! That would be great.", "time":"2025-11-16T09:14:30Z","side":"recived"}
+ 
+  {
+    "name": "Leo",
+    "typing": false,
+    "online": true,
+    "active": false,
+    "img": "./Assets/people/male2.png ",
+    "chat": [
+      {"text":"Guess who failed their math quiz 😐", "time":"2025-11-18T08:30:00Z","side":"sent"},
+      {"text":"YOU??? No way 😂", "time":"2025-11-18T08:32:00Z","side":"recived"},
+      {"text":"Bro I studied for hours.", "time":"2025-11-18T08:34:30Z","side":"sent"},
+      {"text":"What was the score?", "time":"2025-11-18T08:35:10Z","side":"recived"},
+      {"text":"Don’t ask 💀", "time":"2025-11-18T08:35:40Z","side":"sent"},
+      {"text":"Oh… that bad 😭", "time":"2025-11-18T08:36:15Z","side":"recived"},
+      {"text":"Very.", "time":"2025-11-18T08:36:45Z","side":"sent"},
+      {"text":".", "time":"2025-11-18T08:37:10Z","side":"recived"},
+      {"text":"..", "time":"2025-11-18T08:37:25Z","side":"recived"}
     ],
-        "media": [ 
-            {"side":"sent","type":"img","src":"https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"},
-            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"},
-                        {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
-,            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg"}
+    ]
+  },
 
-        ]
-    },
- {
-    "name": "Alex",
+  {
+    "name": "Sofia",
+    "typing": false,
+    "online": true,
+    "active": false,
+    "img": "./Assets/people/female3.png ",
+    "chat": [
+      {"text":"Are we still going hiking Sunday?", "time":"2025-11-15T08:00:00Z","side":"sent"},
+      {"text":"Yesss I bought new shoes for it 😄", "time":"2025-11-15T08:04:30Z","side":"recived"},
+      {"text":"Nice! Bring water too 😭", "time":"2025-11-15T08:05:20Z","side":"sent"},
+      {"text":"I always do lol", "time":"2025-11-15T08:06:10Z","side":"recived"},
+      {"text":"Also I made a playlist.", "time":"2025-11-15T08:10:00Z","side":"sent"},
+      {"text":"Oooo send it!", "time":"2025-11-15T08:11:15Z","side":"recived"},
+      {"text":"Bet, one sec.", "time":"2025-11-15T08:12:00Z","side":"sent"},
+      {"text":"I'm excited 😄", "time":"2025-11-15T08:13:00Z","side":"recived"}
+    ],
+    "media": [
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1022052/pexels-photo-1022052.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1022052/pexels-photo-1022052.jpeg"},
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1022052/pexels-photo-1022052.jpeg"}
+    ]
+  },
+
+  {
+    "name": "Darius",
+    "typing": false,
+    "online": false,
+    "active": false,
+    "img": "./Assets/people/male3.png ",
+    "chat": [
+      {"text":"Bro the gym was packed today 😭", "time":"2025-11-15T09:00:00Z","side":"sent"},
+      {"text":"I KNOW I waited 20 minutes for a bench 💀", "time":"2025-11-15T09:01:15Z","side":"recived"},
+      {"text":"Planet Fitness moment.", "time":"2025-11-15T09:02:30Z","side":"sent"},
+      {"text":"LOL facts", "time":"2025-11-15T09:03:00Z","side":"recived"},
+      {"text":"Tomorrow we go early.", "time":"2025-11-15T09:04:10Z","side":"sent"},
+      {"text":"Deal." , "time":"2025-11-15T09:05:00Z","side":"recived"},
+      {"text":"Also bring preworkout.", "time":"2025-11-15T09:05:40Z","side":"sent"},
+      {"text":"Already packed.", "time":"2025-11-15T09:06:05Z","side":"recived"},
+      {"text":"Good man.", "time":"2025-11-15T09:06:30Z","side":"sent"},
+      {"text":"Chest day?", "time":"2025-11-15T09:06:55Z","side":"recived"}
+    ],
+    "media": [
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg"},
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg"}
+    ]
+  },
+
+  {
+    "name": "Lana",
+    "typing": false,
+    "online": true,
+    "active": false,
+    "img": "./Assets/people/female4.png",
+    "chat": [
+      {"text":"I made brownies.", "time":"2025-11-19T14:00:00Z","side":"sent"},
+      {"text":"Bring me some 😭", "time":"2025-11-19T14:02:00Z","side":"recived"},
+      {"text":"Maybe.", "time":"2025-11-19T14:03:00Z","side":"sent"},
+      {"text":"I’ll pay in compliments.", "time":"2025-11-19T14:04:00Z","side":"recived"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/45202/brownie-dessert-chocolate-baking-45202.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg"}
+    ]
+  },
+
+  {
+    "name": "Omar",
+    "typing": false,
+    "online": false,
+    "active": false,
+    "img": "./Assets/people/anon.jpg ",
+    "chat": [
+      {"text":"Bro the match yesterday was insane!", "time":"2025-11-20T18:00:00Z","side":"sent"},
+      {"text":"Madrid cooked 😂", "time":"2025-11-20T18:01:30Z","side":"recived"},
+      {"text":"Bellingham is HIM.", "time":"2025-11-20T18:03:00Z","side":"sent"},
+      {"text":"Facts 🤝", "time":"2025-11-20T18:05:00Z","side":"recived"},
+      {"text":"Next week’s game gonna be crazy too.", "time":"2025-11-20T18:06:00Z","side":"sent"},
+      {"text":"We should watch it together.", "time":"2025-11-20T18:07:00Z","side":"recived"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg"}
+    ]
+  },
+
+  {
+    "name": "Nora",
+    "typing": false,
+    "online": true,
+    "active": false,
+    "img": "./Assets/people/female5.png",
+    "chat": [
+      {"text":"Can you help me with my resume?", "time":"2025-11-21T12:30:00Z","side":"sent"},
+      {"text":"Sure! Send it.", "time":"2025-11-21T12:31:00Z","side":"recived"},
+      {"text":"I want it to look professional.", "time":"2025-11-21T12:32:00Z","side":"sent"},
+      {"text":"Easy, I got you 😄", "time":"2025-11-21T12:33:00Z","side":"recived"},
+      {"text":"Thanks bestieeee", "time":"2025-11-21T12:33:30Z","side":"sent"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg"}
+    ]
+  },
+
+  {
+    "name": "Hannah",
     "typing": true,
     "online": true,
     "active": false,
-    "img": "./Assets/young-bearded-man-with-striped-shirt_273609-5677.avif",
+    "img": "./Assets/people/female1.png ",
     "chat": [
-      {"text":"Hey, did you watch the new episode of that series?", "time":"2025-11-18T08:30:00Z","side":"sent"},
-      {"text":"Not yet, I was busy. Was it good?", "time":"2025-11-18T08:31:30Z","side":"recived"},
-      {"text":"It was amazing! So many twists.", "time":"2025-11-18T08:32:10Z","side":"sent"},
-      {"text":"I can’t wait to watch it tonight!", "time":"2025-11-18T08:33:00Z","side":"recived"},      {"text":"....", "time":"2025-11-18T08:33:30Z","side":"recived"}
-,      {"text":"...", "time":"2025-11-18T08:34:00Z","side":"recived"}
-
+      {"text":"I saw your drawing on IG!", "time":"2025-11-23T10:00:00Z","side":"sent"},
+      {"text":"You liked it??", "time":"2025-11-23T10:01:00Z","side":"recived"},
+      {"text":"It’s so good omg 😭", "time":"2025-11-23T10:02:00Z","side":"sent"},
+      {"text":"Thank you!! I’ve been practicing a lot.", "time":"2025-11-23T10:03:00Z","side":"recived"},
+      {"text":"It shows fr.", "time":"2025-11-23T10:04:00Z","side":"sent"},
+      {"text":"I’ll post more soon 😄", "time":"2025-11-23T10:05:00Z","side":"recived"},
+      {"text":"Do it!", "time":"2025-11-23T10:06:00Z","side":"sent"}
     ],
     "media": [
-      {"side":"sent","type":"img","src":"https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"},
-      {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/macaw-bird_488145-3540.jpg"},
-      {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/macaw-bird_488145-3540.jpg"},
-      {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/macaw-bird_488145-3540.jpg"}
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/1895246/pexels-photo-1895246.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg"}
     ]
   },
-      {
-        "name": "Karen","typing": false,"online": true,
-        "active":false,
-        "img": "./Assets/premium_photo-1690407617542-2f210cf20d7e.jpg",
-       "chat": [
-    {"text":"Hey! Are you awake?", "time":"2025-11-15T08:00:00Z","side":"sent"},
-    {"text":"I wanted to ask you something.", "time":"2025-11-15T08:01:00Z","side":"sent"},
-    {"text":"Can we meet later today?", "time":"2025-11-15T08:02:00Z","side":"sent"},
-    {"text":"Hey! Just woke up now 😅", "time":"2025-11-15T08:05:00Z","side":"recived"},
-    {"text":"Yeah, we can meet. What time works for you?", "time":"2025-11-15T08:06:00Z","side":"recived"},
-    {"text":"Maybe around 3 PM?", "time":"2025-11-15T08:06:30Z","side":"recived"},
-    {"text":"Perfect, see you then!", "time":"2025-11-15T08:10:00Z","side":"sent"},
-    {"text":"Also, I was thinking we could grab some coffee.", "time":"2025-11-15T08:10:30Z","side":"sent"},
-    {"text":"And maybe check out that new bookstore.", "time":"2025-11-15T08:11:00Z","side":"sent"},
-    {"text":"Sounds awesome! ☕📚", "time":"2025-11-15T08:15:00Z","side":"recived"},
-    {"text":"Do you want to bring your laptop?", "time":"2025-11-15T08:16:00Z","side":"recived"},
-    {"text":"We could work on that project together.", "time":"2025-11-15T08:16:30Z","side":"recived"},
-    {"text":"Good idea! I’ll bring mine.", "time":"2025-11-15T08:20:00Z","side":"sent"},
-    {"text":"Great. By the way, did you watch the latest episode of that show?", "time":"2025-11-15T08:21:00Z","side":"sent"},
-    {"text":"Yes! I can’t believe that plot twist 😱", "time":"2025-11-15T08:22:00Z","side":"sent"},
-    {"text":"Right? I did not see that coming at all.", "time":"2025-11-15T08:22:30Z","side":"sent"},
-    {"text":"Haha, I know! I screamed so loud 😆", "time":"2025-11-15T08:23:00Z","side":"recived"},
-    {"text":"Same here, it was insane!", "time":"2025-11-15T08:23:30Z","side":"recived"},
-    {"text":"Also, don’t forget to bring the notes for class.", "time":"2025-11-15T08:24:00Z","side":"recived"},
-    {"text":"Yeah, got them right here.", "time":"2025-11-15T08:25:00Z","side":"sent"},
-    {"text":"Awesome, can’t wait to meet you!", "time":"2025-11-15T08:25:30Z","side":"sent"},
-    {"text":"Me too! It’s going to be fun.", "time":"2025-11-15T08:26:00Z","side":"recived"},
-     {"text":"See you", "time":"2025-11-15T08:26:10Z","side":"recived"}
-],
-  "media": [ 
-            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"},
-                        {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
-,            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
-        ,    {"side":"sent","type":"img","src":"https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"}
 
-        ]
+  {
+    "name": "Samir",
+    "typing": false,
+    "online": false,
+    "active": false,
+    "img": "./Assets/people/male4.png ",
+    "chat": [
+      {"text":"Do you still have my charger?", "time":"2025-11-21T22:00:00Z","side":"sent"},
+      {"text":"Yes I keep forgetting to give it back 😭", "time":"2025-11-21T22:02:00Z","side":"recived"},
+      {"text":"Bro I’ve been suffering.", "time":"2025-11-21T22:03:00Z","side":"sent"},
+      {"text":"I'll bring it tomorrow!", "time":"2025-11-21T22:04:00Z","side":"recived"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/533417/pexels-photo-533417.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/533417/pexels-photo-533417.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/533417/pexels-photo-533417.jpeg"}
+    ]
+  },
 
-    },
-      {
-        "name": "Aleck","typing": false,"online": false,
-        "active":false,
-        "img": "./Assets/istockphoto-661799106-612x612.jpg",
-      "chat": [
-    {"text":"Yoo", "time":"2025-11-15T08:59:40Z","side":"sent"},
-        {"text":"Yo bro, you up?", "time":"2025-11-15T09:00:00Z","side":"sent"},
+  {
+    "name": "Isla",
+    "typing": false,
+    "online": true,
+    "active": false,
+    "img": "./Assets/people/male5.jpg",
+    "chat": [
+      {"text":"Are you coming to the study group?", "time":"2025-11-24T16:00:00Z","side":"sent"},
+      {"text":"Yep! On my way.", "time":"2025-11-24T16:01:00Z","side":"recived"},
+      {"text":"Bring snacks pls.", "time":"2025-11-24T16:02:00Z","side":"sent"},
+      {"text":"Say no more 🍪", "time":"2025-11-24T16:03:00Z","side":"recived"},
+      {"text":"Legend.", "time":"2025-11-24T16:04:00Z","side":"sent"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/1819669/pexels-photo-1819669.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/890877/pexels-photo-890877.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/890877/pexels-photo-890877.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/890877/pexels-photo-890877.jpeg"}
+    ]
+  },
 
-    {"text":"Yeah man, just got up. What’s up?", "time":"2025-11-15T09:01:30Z","side":"recived"},
-    {"text":"Thinking of playing some FIFA later.", "time":"2025-11-15T09:02:00Z","side":"sent"},
-    {"text":"Oh nice, I’m down!", "time":"2025-11-15T09:02:30Z","side":"recived"},
-    {"text":"We could try that new ultimate team mode.", "time":"2025-11-15T09:03:00Z","side":"sent"},
-    {"text":"Yeah, I heard it’s crazy with those new packs.", "time":"2025-11-15T09:03:45Z","side":"recived"},
-    {"text":"Exactly. Got a few coins saved up from last week.", "time":"2025-11-15T09:04:30Z","side":"sent"},
-    {"text":"Sweet! I still need to grind some matches.", "time":"2025-11-15T09:05:00Z","side":"recived"},
-    {"text":"No worries, we can play a few friendlies to warm up.", "time":"2025-11-15T09:05:30Z","side":"sent"},
-    {"text":"Bet! Also, did you see Dad’s car? It’s so clean now 😆", "time":"2025-11-15T09:06:00Z","side":"recived"},
-    {"text":"Haha yeah, he spent like an hour waxing it yesterday.", "time":"2025-11-15T09:06:30Z","side":"sent"},
-    {"text":"I was thinking, maybe we can take it for a spin this weekend?", "time":"2025-11-15T09:07:00Z","side":"recived"},
-    {"text":"Sounds fun. Let’s hit the highway and play some music loud.", "time":"2025-11-15T09:07:30Z","side":"sent"},
-    {"text":"I’ll bring the playlist. Got some new rap tracks.", "time":"2025-11-15T09:08:00Z","side":"recived"},
-    {"text":"Perfect. We should also grab snacks before we go.", "time":"2025-11-15T09:08:30Z","side":"sent"},
-    {"text":"Bet, chips and soda it is.", "time":"2025-11-15T09:09:00Z","side":"recived"},
-    {"text":"Bro, by the way, did you finish your homework?", "time":"2025-11-15T09:09:30Z","side":"sent"},
-    {"text":"Yeah, finally. Physics took forever 😓", "time":"2025-11-15T09:10:00Z","side":"recived"},
-    {"text":"Haha classic. At least we’re free for the weekend now.", "time":"2025-11-15T09:10:30Z","side":"sent"},
-    {"text":"Exactly! Can’t wait. Gaming + car ride + snacks = perfect weekend 😎", "time":"2025-11-15T09:11:00Z","side":"recived"},
-    {"text":"Agreed, bro. It’s gonna be epic.", "time":"2025-11-15T09:11:30Z","side":"sent"}
-],
-  "media": [ 
-                            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
-,
-            {"side":"sent","type":"img","src":"https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"},
-            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"},
-           {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
+  {
+    "name": "Jamal",
+    "typing": false,
+    "online": false,
+    "active": false,
+    "img": "./Assets/people/male6.jpg",
+    "chat": [
+      {"text":"You watched the new Spider-Man?", "time":"2025-11-25T18:00:00Z","side":"sent"},
+      {"text":"NOT YET DON’T SPOIL 😭", "time":"2025-11-25T18:01:00Z","side":"recived"},
+      {"text":"Okay okay I won’t 😭", "time":"2025-11-25T18:01:30Z","side":"sent"},
+      {"text":"I’m watching it tonight.", "time":"2025-11-25T18:02:30Z","side":"recived"},
+      {"text":"You better.", "time":"2025-11-25T18:03:00Z","side":"sent"},
+      {"text":"I heard it’s peak though.", "time":"2025-11-25T18:04:00Z","side":"recived"},
+      {"text":"It IS.", "time":"2025-11-25T18:05:00Z","side":"sent"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/698139/pexels-photo-698139.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg"}
+    ]
+  },
 
-        ]
+  {
+    "name": "Talia",
+    "typing": false,
+    "online": true,
+    "active": false,
+    "img": "./Assets/people/male7.png",
+    "chat": [
+      {"text":"I JUST SAW THE CUTEST CAT EVER", "time":"2025-11-26T14:00:00Z","side":"sent"},
+      {"text":"Pics or it didn’t happen.", "time":"2025-11-26T14:01:00Z","side":"recived"},
+      {"text":"Sending rn", "time":"2025-11-26T14:02:00Z","side":"sent"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/20787/pexels-photo.jpg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg"}
+    ]
+  },
 
-    },
-     {
-        "name": "Aleck","typing": false,"online": true,
-        "active":false,
-        "img": "./Assets/istockphoto-874234668-612x612.jpg",
-      "chat": [
-    {"text":"Yoo", "time":"2025-11-15T08:59:40Z","side":"sent"},
-        {"text":"Yo bro, you up?", "time":"2025-11-15T09:00:00Z","side":"sent"},
+  {
+    "name": "Marcus",
+    "typing": true,
+    "online": false,
+    "active": false,
+    "img": "./Assets/people/male8.png",
+    "chat": [
+      {"text":"You free later?", "time":"2025-11-27T10:00:00Z","side":"sent"},
+      {"text":"Yeah what’s up?", "time":"2025-11-27T10:01:00Z","side":"recived"},
+      {"text":"Wanna hoop?", "time":"2025-11-27T10:02:00Z","side":"sent"},
+      {"text":"Bet I’ll bring my ball.", "time":"2025-11-27T10:03:00Z","side":"recived"},
+      {"text":"Meet you at the court at 6.", "time":"2025-11-27T10:04:00Z","side":"sent"},
+      {"text":"Say less.", "time":"2025-11-27T10:05:00Z","side":"recived"},
+      {"text":"We running 1v1 too.", "time":"2025-11-27T10:06:00Z","side":"sent"},
+      {"text":"I’m cooking you.", "time":"2025-11-27T10:07:00Z","side":"recived"},
+      {"text":"Cap.", "time":"2025-11-27T10:07:30Z","side":"sent"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/1761021/pexels-photo-1761021.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/697923/pexels-photo-697923.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/697923/pexels-photo-697923.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/697923/pexels-photo-697923.jpeg"}
+    ]
+  },
 
-    {"text":"Yeah man, just got up. What’s up?", "time":"2025-11-15T09:01:30Z","side":"recived"},
-    {"text":"Thinking of playing some FIFA later.", "time":"2025-11-15T09:02:00Z","side":"sent"},
-    {"text":"Oh nice, I’m down!", "time":"2025-11-15T09:02:30Z","side":"recived"},
-    {"text":"We could try that new ultimate team mode.", "time":"2025-11-15T09:03:00Z","side":"sent"},
-    {"text":"Yeah, I heard it’s crazy with those new packs.", "time":"2025-11-15T09:03:45Z","side":"recived"},
-    {"text":"Exactly. Got a few coins saved up from last week.", "time":"2025-11-15T09:04:30Z","side":"sent"},
-    {"text":"Sweet! I still need to grind some matches.", "time":"2025-11-15T09:05:00Z","side":"recived"},
-    {"text":"No worries, we can play a few friendlies to warm up.", "time":"2025-11-15T09:05:30Z","side":"sent"},
-    {"text":"Bet! Also, did you see Dad’s car? It’s so clean now 😆", "time":"2025-11-15T09:06:00Z","side":"recived"},
-    {"text":"Haha yeah, he spent like an hour waxing it yesterday.", "time":"2025-11-15T09:06:30Z","side":"sent"},
-    {"text":"I was thinking, maybe we can take it for a spin this weekend?", "time":"2025-11-15T09:07:00Z","side":"recived"},
-    {"text":"Sounds fun. Let’s hit the highway and play some music loud.", "time":"2025-11-15T09:07:30Z","side":"sent"},
-    {"text":"I’ll bring the playlist. Got some new rap tracks.", "time":"2025-11-15T09:08:00Z","side":"recived"},
-    {"text":"Perfect. We should also grab snacks before we go.", "time":"2025-11-15T09:08:30Z","side":"sent"},
-    {"text":"Bet, chips and soda it is.", "time":"2025-11-15T09:09:00Z","side":"recived"},
-    {"text":"Bro, by the way, did you finish your homework?", "time":"2025-11-15T09:09:30Z","side":"sent"},
-    {"text":"Yeah, finally. Physics took forever 😓", "time":"2025-11-15T09:10:00Z","side":"recived"},
-    {"text":"Haha classic. At least we’re free for the weekend now.", "time":"2025-11-15T09:10:30Z","side":"sent"},
-    {"text":"Exactly! Can’t wait. Gaming + car ride + snacks = perfect weekend 😎", "time":"2025-11-15T09:11:00Z","side":"recived"},
-    {"text":"It’s gonna be epic.", "time":"2025-11-15T09:11:30Z","side":"sent"}
-],
-  "media": [ 
-                            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
-,
-            {"side":"sent","type":"img","src":"https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"},
-            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"},
-           {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
+  {
+    "name": "Dina",
+    "typing": false,
+    "online": true,
+    "active": false,
+    "img": "./Assets/people/male9.png",
+    "chat": [
+      {"text":"Can you send me the recipe?", "time":"2025-11-28T11:00:00Z","side":"sent"},
+      {"text":"Which one?", "time":"2025-11-28T11:01:00Z","side":"recived"},
+      {"text":"The pasta you made yesterday!", "time":"2025-11-28T11:02:00Z","side":"sent"},
+      {"text":"Ohhh ok I’ll type it out.", "time":"2025-11-28T11:03:00Z","side":"recived"},
+      {"text":"Thank uu", "time":"2025-11-28T11:04:00Z","side":"sent"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"}
+    ]
+  },
 
-        ]
+  {
+    "name": "Kai",
+    "typing": false,
+    "online": false,
+    "active": false,
+    "img": "./Assets/people/male10.png",
+    "chat": [
+      {"text":"Yo you home?", "time":"2025-11-29T18:00:00Z","side":"sent"},
+      {"text":"Yeah what’s up?", "time":"2025-11-29T18:01:00Z","side":"recived"},
+      {"text":"Come outside.", "time":"2025-11-29T18:02:00Z","side":"sent"},
+      {"text":"Why? 👀", "time":"2025-11-29T18:03:00Z","side":"recived"},
+      {"text":"Trust.", "time":"2025-11-29T18:03:30Z","side":"sent"},
+      {"text":"I’m scared.", "time":"2025-11-29T18:04:00Z","side":"recived"},
+      {"text":"Come outside 😂", "time":"2025-11-29T18:04:30Z","side":"sent"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/303510/pexels-photo-303510.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/906106/pexels-photo-906106.jpeg"},
+      {"side":"recived","type":"img","src":"httpsimages.pexels.com/photos/906106/pexels-photo-906106.jpeg"},
+      {"side":"recived","type":"img","src":"httpsimages.pexels.com/photos/906106/pexels-photo-906106.jpeg"}
+    ]
+  },
 
-    }
+  {
+    "name": "Sarah",
+    "typing": false,
+    "online": true,
+    "active": false,
+    "img": "./Assets/people/male11.png",
+    "chat": [
+      {"text":"My exam is tomorrow, I’m dying.", "time":"2025-11-30T09:00:00Z","side":"sent"},
+      {"text":"Same 😭😭", "time":"2025-11-30T09:01:00Z","side":"recived"},
+      {"text":"We’re not surviving this.", "time":"2025-11-30T09:02:00Z","side":"sent"},
+      {"text":"It was nice knowing you.", "time":"2025-11-30T09:03:00Z","side":"recived"},
+      {"text":"Goodbye world.", "time":"2025-11-30T09:04:00Z","side":"sent"},
+      {"text":"😭😭😭", "time":"2025-11-30T09:04:30Z","side":"recived"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/414535/pexels-photo-414535.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg"}
+    ]
+  },
+   {
+    "name": "Ryder",
+    "typing": false,
+    "online": true,
+    "active": false,
+    "img": "./Assets/people/male1.png ",
+    "chat": [
+      {"text":"Bro did you watch the GTA 6 trailer?!", "time":"2025-11-15T11:28:35Z","side":"sent"},
+      {"text":"YESSS it looks insane 🤯", "time":"2025-11-15T11:29:15Z","side":"recived"},
+      {"text":"2025 can’t come fast enough 😭", "time":"2025-11-15T11:32:05Z","side":"sent"},
+      {"text":"For real, graphics are crazy.", "time":"2025-11-15T11:35:25Z","side":"recived"},
+      {"text":"We’re no-lifing that game.", "time":"2025-11-15T12:05:35Z","side":"sent"},
+      {"text":"Already planning my first heist 😂", "time":"2025-11-15T12:12:00Z","side":"recived"},
+      {"text":"Same bro.", "time":"2025-11-15T12:12:40Z","side":"sent"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/3815750/pexels-photo-3815750.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/258293/pexels-photo-258293.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/258293/pexels-photo-258293.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/258293/pexels-photo-258293.jpeg"}
+    ]
+  },
+
+  {
+    "name": "Mia",
+    "typing": true,
+    "online": false,
+    "active": false,
+    "img": "./Assets/people/female1.png ",
+    "chat": [
+      {"text":"Did you pack for the trip?", "time":"2025-11-16T09:10:00Z","side":"sent"},
+      {"text":"Not yet 😭 I’m procrastinating.", "time":"2025-11-16T09:12:30Z","side":"recived"},
+      {"text":"Girl the flight is tomorrow 💀", "time":"2025-11-16T09:13:05Z","side":"sent"},
+      {"text":"I know I know 😭", "time":"2025-11-16T09:14:00Z","side":"recived"}
+    ],
+    "media": [
+      {"side":"sent","type":"img","src":"https://images.pexels.com/photos/707250/pexels-photo-707250.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg"},
+      {"side":"recived","type":"img","src":"https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg"},
+      {"side":"recived","type":"img","src":"httpsimages.pexels.com/photos/1008155/pexels-photo-1008155.jpeg"}
+    ]
+  }
 ]

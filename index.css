@@ -425,7 +425,12 @@ table {
     border-radius: 15px;
     height: 100%;
 }
-
+.ExpandedChat .head button{
+    height: 100%;
+    border: none;
+    background-color: inherit;
+    padding: 10px;
+}
 .profilecomponent {
     background-color: var(--bgcomponent);
     border-radius: 15px;
@@ -441,7 +446,9 @@ table {
     height: 100%;
     gap: 20px;
 }
-
+#closeexpandedchat{
+    padding: 0;
+}
 .profilecomponent h4 {
     font-weight: bold;
     font-size: 18px;
@@ -2478,12 +2485,12 @@ width: 100%;
     border-radius: 50px;
 }
 .chats .chatscontainer .chat img{
-    min-height: 60px;
-    min-width: 60px;
+    min-height: 45px;
+    min-width:45;
     object-fit: cover;
     border-radius: 50px;
-    max-height: 60px;
-    max-width: 60px;
+    max-height: 45px;
+    max-width: 45px;
 }
 
 .chats .chatscontainer .chat .body p{
@@ -2525,10 +2532,10 @@ background-color: inherit;
     position: relative;
     border: none;
     padding: 0;
-    min-width: 60px;
-    min-height: 60px;
-    max-width: 60px;
-max-height: 60px;
+    min-width: 45px;
+    min-height: 45px;
+    max-width: 45px;
+max-height: 45px;
 background-color: transparent;
 }
 .chat .online{
@@ -2567,7 +2574,7 @@ background-color: transparent;
     height: 100vh;
 }
 .chatscontainer .head h6{
- font-weight: bold;
+ font-weight: 500;
  font-size: 18px;
 }
     .chatscontainer .body h6{
@@ -2595,15 +2602,19 @@ justify-content: space-between;
 flex-direction: column;
 }
 .ExpandedChat .head {
-    padding: 50px;
+    padding: 20px 30px;
     display: flex;
 border-bottom: 1px solid #dfdfdf;
 background-color: #f8fafb;
 gap: 10px;
+align-items: center;
+}
+.ExpandedChat .head p{
+    font-size: 12px;
 }
 .ExpandedChat .head img{
-   height: 70px;
-   width: 70px;
+   height: 50px;
+   width: 50px;
    border-radius: 50px;
    object-fit: cover;
 }
@@ -2754,8 +2765,8 @@ aspect-ratio: 1/1;
 overflow: hidden;
 }
 .chatmedia .profilehead img{
-width: 130px;
-height: 130px;
+width:80px;
+height:80px;
 }
 .chatmedia img{
 border-radius: 50%;
@@ -2977,8 +2988,8 @@ max-width: calc(100vw - 174px);
         font-size: 12px;
     }
     .chatmedia .profilehead img{
-        height: 100px;
-        width: 100px;
+        height: 60px;
+        width: 60px;
     }
     .onlinestate{
         width: 12px;
@@ -3036,12 +3047,12 @@ font-size: 18px;
     max-width: 50px;
     }
 .chats .chatscontainer .chat img{
-    min-height:50px;
-    min-width: 50px;
+    min-height:45px;
+    min-width: 45px;
     object-fit: cover;
-    border-radius: 50px;
-    max-height: 50px;
-    max-width: 50px;
+    border-radius: 45px;
+    max-height: 45px;
+    max-width: 45px;
 }
 
 }
@@ -3105,6 +3116,9 @@ font-size: 18px;
 }
 
 @media (max-width : 1199px) {
+    #closeexpandedchat{
+        padding: 10px;
+    }
     .ExpandedChat .head .bi-arrow-left{
     display: flex;
     padding: 10px;

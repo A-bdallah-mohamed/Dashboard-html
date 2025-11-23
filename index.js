@@ -1136,18 +1136,30 @@ ${activechat.online ? '<p class="m-0">Online</p>' : '<p class="m-0">Offline</p>'
     ExpandedChat.innerHTML =
       `
  <div class="head sticky-top" id="activechathead">
- <i class="bi bi-arrow-left" id="closeexpandedchat"></i>
+ <button id="closeexpandedchat">
+ <i class="bi bi-arrow-left" ></i>
+ </button>
+
     <img src="${activechat.img}" alt="">
     <div class="d-flex w-100 justify-content-between">
-    <div class="d-flex flex-column py-2 ">
-  <h3 class="m-0">  ${activechat.name}</h3>
+    <div class="d-flex flex-column  ">
+  <h5 class="m-0">  ${activechat.name}</h5>
   <p class="m-0 textgray">${activechat.online ? activechat.typing ? "Typing ..." : "Online" : "Offline"}</p>
   </div>
-  <div class="d-flex align-items-center py-2 px-2 gap-3 fs-5">
-   ${activechat.online ? '<div class="onlinestate"></div>' : ''} 
-    <i class="bi bi-camera-video"></i>
+  <div class="d-flex align-items-center gap-3 fs-5">
+  
+  ${activechat.online ? '<div class="onlinestate"></div>' : ''} 
+      <button>
+  <i class="bi bi-camera-video"></i>
+  </button>
+
+    <button>
 <i class="bi bi-telephone"></i>
+</button>
+
+<button>
 <i class="bi bi-three-dots-vertical" id="openmediacomponent"></i>
+</button>
   </div>
   </div>
 </div>
@@ -1230,9 +1242,12 @@ for (let i = chat.chat.length - 1; i >= 0; i--) {
 }
 
 console.log(lastrecivedcount);
-
+const date = new Date(chat.chat[chat.chat.length - 1].time)
+const time = date.toLocaleTimeString([],{
+  hour: "2-digit",minute:"2-digit"
+})
 chatheads += `
-      <div class="chat px-4 py-3 d-flex ${chat.active ? 'active' : ''}" onclick="openChat(${index})">
+      <div class="chat px-4 py-2 d-flex ${chat.active ? 'active' : ''}" onclick="openChat(${index})">
         <div class="online">
           <img src="${chat.img}" alt="">
           ${chat.online ? "<div class='onlineicon'></div>" : ""}
@@ -1240,7 +1255,7 @@ chatheads += `
         <div class="w-100 d-flex flex-column" style="min-width: 0;">
           <div class="w-100 d-flex justify-content-between py-1 px-3 head">
             <h6 class="m-0">${chat.name}</h6>
-            <p class="m-0">10:42 AM</p>
+            <p class="m-0">${time}</p>
           </div>
           <div class="w-100 d-flex justify-content-between py-1 px-3 body gap-2">
           
