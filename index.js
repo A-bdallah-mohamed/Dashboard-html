@@ -1297,10 +1297,12 @@ chatheads += `
 
     if (chat.online) {
       onlinepeople += `
+      <div class="swiper-slide">
         <button class="online" onclick="openChat(${index})">
           <img src="${chat.img}" alt="">
           <div class="onlineicon"></div>
         </button>
+         </div>
       `;
     }
   });
@@ -1359,3 +1361,20 @@ fetch("chats.json")
     render();
   })
   .catch(error => console.log(error));
+const swiper = new Swiper(".mySwiper", {
+  loop: true,              // Enable infinite loop
+  slidesPerView: 8,        // Number of slides visible
+  spaceBetween: 10,        // Space in px between slides
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+});

@@ -767,7 +767,7 @@ span.dt-column-order {
     display: none;
 }
 #onlinecontainer {
-    gap: 5px;
+    gap: 10px;
 }
 table.dataTable thead>tr>th.dt-orderable-asc:hover,
 table.dataTable thead>tr>th.dt-orderable-desc:hover,
@@ -775,7 +775,9 @@ table.dataTable thead>tr>td.dt-orderable-asc:hover,
 table.dataTable thead>tr>td.dt-orderable-desc:hover {
     outline: none;
 }
-
+.swiper-slide{
+    width: auto !important;
+}
 .dt-orderable-desc i {
     transition: 0.2s ease all;
     opacity: 0.1;
