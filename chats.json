@@ -2,7 +2,7 @@
     {
         "name": "Bankaii","typing": true,"online": true,
         "active":false,
-        "img": "./assets/ChatGPT Image Nov 17, 2025, 09_58_57 AM.png",
+        "img": "./Assets/ChatGPT Image Nov 17, 2025, 09_58_57 AM.png",
    "chat": [
     {"text":"Hey! Did you watch the new Marvel movie?", "time":"2025-11-15T11:28:35Z","side":"sent"},
     {"text":"Not yet, but I’ve heard it’s amazing! Did you see it?", "time":"2025-11-15T11:29:05Z","side":"recived"},
@@ -27,7 +27,7 @@
         {
         "name": "Luna","typing": false,"online": false,
         "active":false,
-        "img": "./assets/Avatar.png",
+        "img": "./Assets/Avatar.png",
   "chat": [
       {"text":"Did you finish the math homework?", "time":"2025-11-16T09:10:00Z","side":"sent"},
       {"text":"Almost! Just the last problem is tricky.", "time":"2025-11-16T09:12:15Z","side":"recived"},
@@ -47,7 +47,7 @@
     "typing": true,
     "online": true,
     "active": false,
-    "img": "./assets/young-bearded-man-with-striped-shirt_273609-5677.avif",
+    "img": "./Assets/young-bearded-man-with-striped-shirt_273609-5677.avif",
     "chat": [
       {"text":"Hey, did you watch the new episode of that series?", "time":"2025-11-18T08:30:00Z","side":"sent"},
       {"text":"Not yet, I was busy. Was it good?", "time":"2025-11-18T08:31:30Z","side":"recived"},
@@ -66,7 +66,7 @@
       {
         "name": "Karen","typing": false,"online": true,
         "active":false,
-        "img": "./assets/premium_photo-1690407617542-2f210cf20d7e.jpg",
+        "img": "./Assets/premium_photo-1690407617542-2f210cf20d7e.jpg",
        "chat": [
     {"text":"Hey! Are you awake?", "time":"2025-11-15T08:00:00Z","side":"sent"},
     {"text":"I wanted to ask you something.", "time":"2025-11-15T08:01:00Z","side":"sent"},
@@ -104,7 +104,7 @@
       {
         "name": "Aleck","typing": false,"online": false,
         "active":false,
-        "img": "./assets/istockphoto-661799106-612x612.jpg",
+        "img": "./Assets/istockphoto-661799106-612x612.jpg",
       "chat": [
     {"text":"Yoo", "time":"2025-11-15T08:59:40Z","side":"sent"},
         {"text":"Yo bro, you up?", "time":"2025-11-15T09:00:00Z","side":"sent"},

@@ -1,0 +1,6 @@
+.t-Header,.t-Body-na,.t-Body-contentInner,.t-Body-content{
+    display: none !important;
+}
+.t-Body-main{
+    display: flex;
+}
