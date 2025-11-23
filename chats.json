@@ -139,5 +139,44 @@
 
         ]
 
+    },
+     {
+        "name": "Aleck","typing": false,"online": true,
+        "active":false,
+        "img": "./Assets/istockphoto-874234668-612x612.jpg",
+      "chat": [
+    {"text":"Yoo", "time":"2025-11-15T08:59:40Z","side":"sent"},
+        {"text":"Yo bro, you up?", "time":"2025-11-15T09:00:00Z","side":"sent"},
+
+    {"text":"Yeah man, just got up. What’s up?", "time":"2025-11-15T09:01:30Z","side":"recived"},
+    {"text":"Thinking of playing some FIFA later.", "time":"2025-11-15T09:02:00Z","side":"sent"},
+    {"text":"Oh nice, I’m down!", "time":"2025-11-15T09:02:30Z","side":"recived"},
+    {"text":"We could try that new ultimate team mode.", "time":"2025-11-15T09:03:00Z","side":"sent"},
+    {"text":"Yeah, I heard it’s crazy with those new packs.", "time":"2025-11-15T09:03:45Z","side":"recived"},
+    {"text":"Exactly. Got a few coins saved up from last week.", "time":"2025-11-15T09:04:30Z","side":"sent"},
+    {"text":"Sweet! I still need to grind some matches.", "time":"2025-11-15T09:05:00Z","side":"recived"},
+    {"text":"No worries, we can play a few friendlies to warm up.", "time":"2025-11-15T09:05:30Z","side":"sent"},
+    {"text":"Bet! Also, did you see Dad’s car? It’s so clean now 😆", "time":"2025-11-15T09:06:00Z","side":"recived"},
+    {"text":"Haha yeah, he spent like an hour waxing it yesterday.", "time":"2025-11-15T09:06:30Z","side":"sent"},
+    {"text":"I was thinking, maybe we can take it for a spin this weekend?", "time":"2025-11-15T09:07:00Z","side":"recived"},
+    {"text":"Sounds fun. Let’s hit the highway and play some music loud.", "time":"2025-11-15T09:07:30Z","side":"sent"},
+    {"text":"I’ll bring the playlist. Got some new rap tracks.", "time":"2025-11-15T09:08:00Z","side":"recived"},
+    {"text":"Perfect. We should also grab snacks before we go.", "time":"2025-11-15T09:08:30Z","side":"sent"},
+    {"text":"Bet, chips and soda it is.", "time":"2025-11-15T09:09:00Z","side":"recived"},
+    {"text":"Bro, by the way, did you finish your homework?", "time":"2025-11-15T09:09:30Z","side":"sent"},
+    {"text":"Yeah, finally. Physics took forever 😓", "time":"2025-11-15T09:10:00Z","side":"recived"},
+    {"text":"Haha classic. At least we’re free for the weekend now.", "time":"2025-11-15T09:10:30Z","side":"sent"},
+    {"text":"Exactly! Can’t wait. Gaming + car ride + snacks = perfect weekend 😎", "time":"2025-11-15T09:11:00Z","side":"recived"},
+    {"text":"It’s gonna be epic.", "time":"2025-11-15T09:11:30Z","side":"sent"}
+],
+  "media": [ 
+                            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
+,
+            {"side":"sent","type":"img","src":"https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp"},
+            {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"},
+           {"side":"recived","type":"img","src":"https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"}
+
+        ]
+
     }
 ]
