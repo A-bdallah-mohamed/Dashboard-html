@@ -1324,10 +1324,10 @@ chatheads += `
   chatscontainer.innerHTML = chatheads;
     
 const myswiper = new Swiper(".mySwiper", {
-  // loop: true,
-  slidesPerView: 'auto',
+  loop: true,
+  slidesPerView: 2,
 
-  spaceBetween: 15,
+  spaceBetween: 10,
 
 
   // breakpoints: {
