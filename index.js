@@ -1105,8 +1105,8 @@ ${activechat.media.slice(3).map(media => `
   <a href="${media.src}" class="glightbox d-none" data-gallery="chat-group"></a>
 `).join('')}
 </div>
-
-
++
+ 
         </div>
     </div>
 
@@ -1324,19 +1324,19 @@ chatheads += `
   chatscontainer.innerHTML = chatheads;
     
 const myswiper = new Swiper(".mySwiper", {
-  loop: true,
-        slidesPerView: 9,
+  // loop: true,
+  slidesPerView: 'auto',
 
-  spaceBetween: 0,
+  // spaceBetween: 0,
 
 
-  breakpoints: {
-    1200: {
-      slidesPerView: 8,
-      spaceBetween: 0,
-    },
+  // breakpoints: {
+  //   1200: {
+  //     slidesPerView: 'auto',
+  //     spaceBetween: 0,
+  //   },
    
-  },
+  // },
 });
 
 }
