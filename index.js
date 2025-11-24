@@ -1243,7 +1243,7 @@ ${
 <i class="bi bi-image"></i>
 </button>
 <button>
-<emoji-picker></emoji-picker>
+<i class="bi bi-emoji-smile"></i>
 </button>
 <div class="linegap"></div>
 <input type="text" placeholder="Write a message ...">
@@ -1252,11 +1252,6 @@ ${
 </button>
 </form>
  `
- document.querySelector('emoji-picker')
-  .addEventListener('emoji-click', e => {
-    console.log(e.detail.unicode); // Insert this into your input
-  });
-
 const closeexpandedchat = document.getElementById("closeexpandedchat")
 closeexpandedchat.addEventListener('click', ()=> {
   
