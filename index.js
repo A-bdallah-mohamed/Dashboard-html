@@ -1327,7 +1327,7 @@ const myswiper = new Swiper(".mySwiper", {
   // loop: true,
   slidesPerView: 'auto',
 
-  // spaceBetween: 0,
+  spaceBetween: 15,
 
 
   // breakpoints: {
