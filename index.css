@@ -2790,6 +2790,15 @@ object-fit: cover;
     border-radius: 10px !important;
     max-width: 100%;
 }
+.mediacontainer  .col-4{
+    padding: 0 10px;
+}
+.chatscontainer .chat .head{
+    margin-top: 5px;
+}
+.chatscontainer .chat .body{
+    margin-bottom: 10px;
+}
 .link {
     border-radius: 5px;
     display: flex;
@@ -3038,7 +3047,8 @@ font-size: 18px;
     }
     .chatscontainer .head h6{
         font-size: 11px;
-        margin-top: 10px !important;
+        display: flex;
+        align-items: end;
     }
     .chatscontainer .head p{
         font-size: 8px;
@@ -3076,6 +3086,9 @@ font-size: 18px;
 
 }
 @media (max-width: 1300px) {
+.chats-searchcontainer input,.chats-searchcontainer i{
+    font-size: 10px;
+}
 
     .imgcontainer p {
         white-space: nowrap;
@@ -3135,6 +3148,32 @@ font-size: 18px;
 }
 
 @media (max-width : 1199px) {
+    .ExpandedChat .head button{
+        padding: 6px;
+    }
+    .ExpandedChat .head{
+        padding: 10px 25px 10px 0;
+    }
+    .swiper{
+        margin-left: 0  !important;
+        margin-right: 0 !important;
+        width: 100%;
+ }
+    .chats .chatscontainer .online{
+        max-height: 50px;
+        max-width: 50px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+    .chats .chatscontainer .chat img{
+    min-height:50px;
+    min-width: 50px;
+    object-fit: cover;
+    border-radius: 45px;
+    max-height: 50px;
+    max-width: 50px;
+}
+
     #closeexpandedchat{
         padding: 10px;
     }
@@ -3166,7 +3205,7 @@ font-size: 18px;
      overflow-y: scroll;
     }
        .section.Chats{
-max-width: calc(100vw - 50px);
+max-width: calc(100vw - 80px);
     }
     .navv {
         font-size: 15px !important;
@@ -3211,7 +3250,7 @@ max-width: calc(100vw - 50px);
         display: flex;
         flex-direction: column;
         position: fixed;
-        width: 50px;
+        width: 80px;
         justify-content: space-between;
         color: var(--text);
         font-size: 35px;
@@ -3219,7 +3258,7 @@ max-width: calc(100vw - 50px);
     }
 
     .sidebarcontainer {
-        width: 50px !important;
+        width: 87px !important;
     }
 
     .sidebar {
@@ -3452,7 +3491,7 @@ z-index: 210;
     max-width: calc(100vw - 174px);
 }
     .sidebar {
-        width: 174px;
+        width: 170px;
     }
 .sidebarcontainer{
     min-width: inherit;
@@ -4017,7 +4056,7 @@ opacity: 1;
 }
 @media (max-width: 576px) {
     #content,.section.Chats{
-        width: calc(100vw - 50px) !important;
+        min-width: calc(100vw - 50px) !important;
     }
 .searchmobilecontainer{
     display: flex;

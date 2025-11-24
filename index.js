@@ -814,7 +814,9 @@ monthDiv.addEventListener('click', (e) => {
   console.log(yearBtn)
   const year = yearBtn ? yearBtn.textContent : '';
   // console.log(btn.textContent,yearBtn.textContent,)
-  if (yearBtn.textContent == 2025) {}
+  if (yearBtn.textContent == 2025) {
+    
+  }
 
   console.log(`Clicked month: ${monthName}, Index: ${monthIndex}, Year: ${year}`);
   currentyear = year
@@ -1008,7 +1010,6 @@ inputcontainer.forEach(input => {
 
 
 
-const onlinecontainer = document.getElementById("onlinecontainer");
 const chatscontainer = document.getElementById("chatscontainer");
 const activechathead = document.getElementById("activechathead")
 const ExpandedChat = document.getElementById("ExpandedChat")
@@ -1019,8 +1020,31 @@ let activechat
 
 let chats = [];
 
-function render() {
+
+function renderonlineswiper(chats) {
+const onlinecontainer = document.getElementById("onlinecontainer");
   let onlinepeople = "";
+
+chats.forEach((chat,index) => {
+  
+    if (chat.online) {
+      onlinepeople += `
+      <div class="swiper-slide">
+        <button class="online" onclick="openChat(${index})">
+          <img src="${chat.img}" alt="">
+          <div class="onlineicon"></div>
+        </button>
+         </div>
+      `;
+      
+    }
+
+})
+  onlinecontainer.innerHTML = onlinepeople;
+
+}
+
+function render() {
   let chatheads = "";
 
 
@@ -1295,20 +1319,26 @@ chatheads += `
       </div>
     `;
 
-    if (chat.online) {
-      onlinepeople += `
-      <div class="swiper-slide">
-        <button class="online" onclick="openChat(${index})">
-          <img src="${chat.img}" alt="">
-          <div class="onlineicon"></div>
-        </button>
-         </div>
-      `;
-    }
   });
 
   chatscontainer.innerHTML = chatheads;
-  onlinecontainer.innerHTML = onlinepeople;
+    
+const myswiper = new Swiper(".mySwiper", {
+  loop: true,
+        slidesPerView: 9,
+
+  spaceBetween: 0,
+
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 8,
+      spaceBetween: 0,
+    },
+   
+  },
+});
+
 }
 
 function openChat(i) {
@@ -1351,30 +1381,15 @@ function readonchange(event) {
   }
 }
 
-
-
-
 fetch("chats.json")
   .then(response => response.json())
   .then(data => {
     chats = data;
     render();
+    renderonlineswiper(chats);
   })
   .catch(error => console.log(error));
-const swiper = new Swiper(".mySwiper", {
-  loop: true,              // Enable infinite loop
-  slidesPerView: 8,        // Number of slides visible
-  spaceBetween: 10,        // Space in px between slides
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
-});
+
+
+
+
