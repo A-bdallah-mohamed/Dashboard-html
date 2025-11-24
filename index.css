@@ -1470,7 +1470,6 @@ z-index: 300;
 .searchcontainer ul li {
     opacity: 1;
     height: 36px;
-    width: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1748,7 +1747,7 @@ table.dataTable td.dt-type-numeric {
     border-radius: 50px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
 }
 
 .searchcontainer img {
@@ -1775,6 +1774,7 @@ table.dataTable td.dt-type-numeric {
     border-radius: 50px;
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
 .balancecontainer {
@@ -2489,12 +2489,12 @@ width: 100%;
     border-radius: 50px;
 }
 .chats .chatscontainer .chat img{
-    min-height: 45px;
-    min-width:45;
+    min-height: 55px;
+    min-width:55px;
     object-fit: cover;
     border-radius: 50px;
-    max-height: 45px;
-    max-width: 45px;
+    max-height: 55px;
+    max-width: 55px;
 }
 
 .chats .chatscontainer .chat .body p{
@@ -2537,10 +2537,10 @@ background-color: inherit;
     position: relative;
     border: none;
     padding: 0;
-    min-width: 45px;
-    min-height: 45px;
-    max-width: 45px;
-max-height: 45px;
+    min-width: 55px;
+    min-height: 55px;
+    max-width: 55px;
+max-height: 55px;
 background-color: transparent;
 }
 .chat .online{
@@ -2791,7 +2791,7 @@ object-fit: cover;
     max-width: 100%;
 }
 .mediacontainer  .col-4{
-    padding: 0 10px;
+    padding: 0 5px;
 }
 .chatscontainer .chat .head{
     margin-top: 5px;
